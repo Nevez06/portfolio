@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos | Portfólio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Galeria completa de todos os meus projetos de desenvolvimento e design">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Portfólio<span></span></a>
+                <ul class="nav-links">
+                   <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#about">Sobre</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#portfolio">Portfólio</a></li>
+                    <li><a href="../index.html#blog" class="active">Blog</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="portfolio-page">
+        <section class="portfolio-hero">
+            <div class="container">
+                <h1>Meus Projetos</h1>
+                <p>Explore minha jornada criativa através desses trabalhos que representam minha evolução e habilidades</p>
+            </div>
+            <div class="hero-shape"></div>
+        </section>
+
+        <section class="portfolio-filter">
+            <div class="container">
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                    <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-grid">
+            <div class="container">
+                <div class="grid">
+                    <!-- Projeto 1 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="https://picsum.photos/800/600?random=1" alt="Projeto E-commerce">
+                                <div class="portfolio-overlay">
+                                    <a href="projetos/ecommerce.html" class="view-btn">Ver Detalhes</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Loja Virtual Moderna</h3>
+                                <p>E-commerce completo com carrinho, checkout e integração com pagamentos</p>
+                                <div class="portfolio-tags">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2 -->
+                    <div class="portfolio-item" data-category="mobile">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="https://picsum.photos/800/600?random=2" alt="App de Finanças">
+                                <div class="portfolio-overlay">
+                                    <a href="projetos/financas.html" class="view-btn">Ver Detalhes</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>App de Gestão Financeira</h3>
+                                <p>Aplicativo para controle de gastos pessoais com gráficos e relatórios</p>
+                                <div class="portfolio-tags">
+                                    <span>Flutter</span>
+                                    <span>Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3 -->
+                    <div class="portfolio-item" data-category="design">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="https://picsum.photos/800/600?random=3" alt="Identidade Visual">
+                                <div class="portfolio-overlay">
+                                    <a href="projetos/identidade-visual.html" class="view-btn">Ver Detalhes</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Identidade Visual Empresarial</h3>
+                                <p>Design completo de marca para startup de tecnologia</p>
+                                <div class="portfolio-tags">
+                                    <span>Adobe Illustrator</span>
+                                    <span>Branding</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 4 -->
+                    <div class="portfolio-item" data-category="fullstack">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="https://picsum.photos/800/600?random=4" alt="Rede Social">
+                                <div class="portfolio-overlay">
+                                    <a href="projetos/rede-social.html" class="view-btn">Ver Detalhes</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Plataforma de Rede Social</h3>
+                                <p>Rede social especializada com feed, mensagens e notificações</p>
+                                <div class="portfolio-tags">
+                                    <span>Vue.js</span>
+                                    <span>Laravel</span>
+                                    <span>MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 5 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="https://picsum.photos/800/600?random=5" alt="Landing Page">
+                                <div class="portfolio-overlay">
+                                    <a href="projetos/landing-page.html" class="view-btn">Ver Detalhes</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Landing Page de Alta Conversão</h3>
+                                <p>Página otimizada para campanha de marketing digital</p>
+                                <div class="portfolio-tags">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 6 -->
+                    <div class="portfolio-item" data-category="mobile">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="https://picsum.photos/800/600?random=6" alt="App de Receitas">
+                                <div class="portfolio-overlay">
+                                    <a href="projetos/receitas.html" class="view-btn">Ver Detalhes</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>App de Receitas Culinárias</h3>
+                                <p>Aplicativo com banco de receitas e modo passo-a-passo</p>
+                                <div class="portfolio-tags">
+                                    <span>React Native</span>
+                                    <span>GraphQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-cta">
+            <div class="container">
+                <h2>Interessado em trabalhar juntos?</h2>
+                <p>Estou disponível para novos projetos e oportunidades. Vamos conversar sobre como posso ajudar no seu próximo projeto.</p>
+                <a href="index.html#contact" class="cta-btn">Entre em Contato</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">Portfólio<span>.</span></a>
+                    <p>Desenvolvendo soluções digitais criativas e funcionais que fazem a diferença.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                        <li><a href="portfolio.html">Projetos</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> email@exemplo.com</li>
+                        <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/portfolio.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
