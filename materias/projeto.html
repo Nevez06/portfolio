@@ -1,65 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Integrador | Portfólio</title>
+    <title>João Neves</title>
+    <meta name="description"
+        content="João Neves é o desenvolvedor Frontend e Designer UX/UI mais premiado do mundo, criando experiências digitais que transcendem o comum.">
+
+    <meta property="og:title" content="João Neves | Portfólio de Classe Mundial – Onde a Inovação Ganha Vida">
+    <meta property="og:description"
+        content="Explore o universo de João Neves: Projetos inovadores, design de vanguarda e a mente por trás das experiências digitais mais impactantes do mercado.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
+    <meta property="og:url" content="https://joaoneves.dev">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./projeto.css">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+
 </head>
+
 <body>
-    <!-- Header -->
-    <header id="header">
+    <header>
         <div class="container header-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <span>Portfólio</span>
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
             </a>
-            
             <nav class="nav-links">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.html#about">Sobre</a></li>
-                    <li><a href="index.html#services">Serviços</a></li>
-                    <li><a href="todos_projetos.html">Projetos</a></li>
-                    <li><a href="index.html#contact">Contato</a></li>
-                </ul>
+               <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+               <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
             </nav>
-            
-            <button class="theme-toggle" id="themeToggle">
+            <button class="theme-toggle" aria-label="Alternar tema">
                 <i class="fas fa-moon"></i>
             </button>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="nav-overlay" id="navOverlay">
-        <button class="close-btn" id="closeBtn">
+    <div class="nav-overlay">
+        <button class="close-btn" aria-label="Fechar menu mobile">
             <i class="fas fa-times"></i>
         </button>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="index.html#about">Sobre</a></li>
-                <li><a href="index.html#services">Serviços</a></li>
-                <li><a href="todos_projetos.html">Projetos</a></li>
-                <li><a href="index.html#contact">Contato</a></li>
-            </ul>
+        <nav class="nav-links-mobile">
+           <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+               <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
         </nav>
-        
-        <button class="theme-toggle" id="themeToggleMobile">
+        <button class="theme-toggle" aria-label="Alternar tema">
             <i class="fas fa-moon"></i>
         </button>
     </div>
@@ -68,18 +81,19 @@
     <section id="project-content" class="section">
         <div class="container">
             <h2 class="section-title">Projeto Integrador I</h2>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Visão Geral</h3>
                 <p class="content-text">
-                    O Projeto Integrador I visa aplicar conhecimentos adquiridos nas disciplinas iniciais do curso de ADS, 
+                    O Projeto Integrador I visa aplicar conhecimentos adquiridos nas disciplinas iniciais do curso de
+                    ADS,
                     através do desenvolvimento de soluções tecnológicas para problemas reais ou simulados.
                 </p>
                 <p class="content-text">
                     Neste projeto, utilizaremos o Git e GitHub para controle de versão e colaboração em equipe.
                 </p>
             </div>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Controle de Versionamento com Git</h3>
                 <p class="content-text">
@@ -108,15 +122,16 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Git vs GitHub</h3>
                 <p class="content-text">
-                    Git é o sistema de controle de versão, enquanto GitHub é um serviço de hospedagem de código que usa Git. 
+                    Git é o sistema de controle de versão, enquanto GitHub é um serviço de hospedagem de código que usa
+                    Git.
                     Eles são coisas diferentes!
                 </p>
             </div>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Configuração Inicial do Git</h3>
                 <p class="content-text">
@@ -133,7 +148,7 @@
                     <code>git config --list</code>
                 </div>
             </div>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Fluxo Básico de Trabalho</h3>
                 <div class="workflow-steps">
@@ -174,11 +189,12 @@
                     <code>git log <span class="comment"># Mostra o histórico de commits</span></code>
                 </div>
             </div>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Trabalhando com Branches</h3>
                 <p class="content-text">
-                    Branches são ramificações no projeto usadas para desenvolver funcionalidades sem impactar a versão principal.
+                    Branches são ramificações no projeto usadas para desenvolver funcionalidades sem impactar a versão
+                    principal.
                 </p>
                 <h4 class="content-subtitle">Comandos para Branches:</h4>
                 <div class="code-block">
@@ -189,10 +205,11 @@
                 </div>
                 <div class="tip-box">
                     <i class="fas fa-lightbulb"></i>
-                    <p>Mantenha a branch principal (main/master) estável e crie branches para cada nova funcionalidade.</p>
+                    <p>Mantenha a branch principal (main/master) estável e crie branches para cada nova funcionalidade.
+                    </p>
                 </div>
             </div>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Trabalhando com GitHub</h3>
                 <p class="content-text">
@@ -227,7 +244,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Trabalho em Equipe com Pull Requests</h3>
                 <p class="content-text">
@@ -256,14 +273,15 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Resolvendo Conflitos</h3>
                 <p class="content-text">
-                    Quando há alterações conflitantes, é necessário editar manualmente os arquivos marcados pelo Git antes de completar o merge.
+                    Quando há alterações conflitantes, é necessário editar manualmente os arquivos marcados pelo Git
+                    antes de completar o merge.
                 </p>
             </div>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Boas Práticas</h3>
                 <div class="content-list">
@@ -289,7 +307,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="content-card">
                 <h3 class="content-title">Etapas do Projeto</h3>
                 <div class="timeline">
@@ -329,12 +347,13 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="content-card conclusion">
                 <h3 class="content-title">Conclusão</h3>
                 <p class="content-text">
-                    Este projeto representa o início da jornada prática dos estudantes no mundo da tecnologia. 
-                    O uso de Git e GitHub fortalece o trabalho em equipe, a organização do código e a colaboração eficiente.
+                    Este projeto representa o início da jornada prática dos estudantes no mundo da tecnologia.
+                    O uso de Git e GitHub fortalece o trabalho em equipe, a organização do código e a colaboração
+                    eficiente.
                 </p>
                 <p class="content-text">
                     Dominar essas ferramentas é essencial para qualquer desenvolvedor de software profissional.
@@ -355,7 +374,7 @@
                 </div>
                 <span>Portfólio</span>
             </a>
-            
+
             <nav class="footer-nav">
                 <ul>
                     <li><a href="index.html">Início</a></li>
@@ -365,7 +384,7 @@
                     <li><a href="index.html#contact">Contato</a></li>
                 </ul>
             </nav>
-            
+
             <div class="footer-social">
                 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -373,14 +392,16 @@
                 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
             </div>
-            
+
             <p class="footer-bottom-text">
-                &copy; 2023 Portfólio. Todos os direitos reservados.
+                &copy; 2025 Portfólio. Todos os direitos reservados.
             </p>
         </div>
     </footer>
 
-     <script src="./projeto.js"></script>
+    <script src="./materia.js"></script>
     <script src="../script.js"></script>
+    <script src="./projeto.js"></script>
 </body>
+
 </html>

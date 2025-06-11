@@ -1,0 +1,747 @@
+/* Melhoria: Definição de variáveis CSS para cores - Facilita a manutenção e consistência */
+:root {
+    --primary-color: #2a5298; /* Azul principal */
+    --secondary-color: #1e3c72; /* Azul mais escuro */
+    --text-color-dark: #333;
+    --text-color-medium: #555;
+    --text-color-light: #666;
+    --background-light: #f8f9fa;
+    --border-color: #eee;
+    --error-color-burn: #ff4d4d;
+    --error-color-heartbeat: #ff9500;
+}
+
+/* Estilos gerais para o post */
+.blog-post-full {
+    background: #fff;
+    color: var(--text-color-dark); /* Usando variável */
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 3rem;
+}
+
+.post-header {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%); /* Usando variáveis */
+    color: white;
+    padding: 4rem 0 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Melhoria: Substituir por uma imagem real e otimizada */
+    background: url('https://picsum.photos/1200/600?random=15') center/cover; 
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.post-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.back-to-blog {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    transition: opacity 0.3s;
+}
+
+.back-to-blog:hover {
+    opacity: 0.8;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.post-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post-header h1 {
+    font-size: 2.8rem;
+    margin: 1.5rem 0;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    font-weight: 700;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Melhoria: Sombra mais suave para um visual moderno */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    margin-top: 2rem;
+}
+
+.post-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.post-content h2 {
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+    color: var(--secondary-color); /* Usando variável */
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.post-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color); /* Usando variável */
+    border-radius: 3px;
+}
+
+.intro {
+    font-size: 1.2rem;
+    border-left: 4px solid var(--primary-color); /* Usando variável */
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    color: var(--text-color-medium); /* Usando variável */
+    font-style: italic;
+}
+
+/* Timeline estilizada */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--border-color); /* Usando variável */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    /* Melhoria: Adicionado uma transição para o hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    /* Melhoria: Efeito sutil de elevação no hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-year {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--primary-color); /* Usando variável */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    top: 15px;
+    z-index: 1;
+    /* Melhoria: Transição para o efeito highlight */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+    right: -50px;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+    left: -50px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    position: relative;
+    /* Melhoria: Transição para o hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    top: 30px;
+    transform: rotate(45deg);
+    box-shadow: 3px -3px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::after {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+    left: -10px;
+}
+
+.timeline-item.highlight .timeline-content {
+    background: var(--background-light); /* Usando variável */
+    border: 2px solid var(--primary-color); /* Usando variável */
+}
+
+.timeline-item.highlight .timeline-year {
+    background: var(--secondary-color); /* Usando variável */
+    transform: scale(1.1);
+}
+
+.lesson {
+    background: #f0f7ff;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    border-left: 3px solid var(--primary-color); /* Usando variável */
+}
+
+.skills-learned {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.skills-learned li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+.skills-learned i {
+    color: var(--primary-color); /* Usando variável */
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+.two-columns {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.two-columns .column {
+    flex: 1;
+}
+
+.two-columns h4 {
+    color: var(--primary-color); /* Usando variável */
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.two-columns ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.two-columns li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.two-columns li::before {
+    content: "•";
+    color: var(--primary-color); /* Usando variável */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Cards de erros */
+.mistakes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.mistake-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Melhoria: Sombra mais suave */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mistake-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra mais pronunciada no hover */
+}
+
+.mistake-header {
+    background: linear-gradient(135deg, var(--error-color-burn) 0%, #f94444 100%); /* Usando variável */
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mistake-header i {
+    font-size: 1.5rem;
+}
+
+.mistake-card:nth-child(2) .mistake-header {
+    background: linear-gradient(135deg, var(--error-color-heartbeat) 0%, #ff7b00 100%); /* Usando variável */
+}
+
+.mistake-card ul {
+    padding: 1.5rem;
+    list-style-type: none;
+}
+
+.mistake-card li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.mistake-card li::before {
+    content: "•";
+    color: var(--primary-color); /* Usando variável */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Conselhos de carreira */
+.career-advice {
+    display: flex;
+    gap: 2rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.advice-card {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    /* Melhoria: Sombra mais suave */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Sombra mais pronunciada no hover */
+}
+
+.advice-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-color); /* Usando variável */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+}
+
+.advice-card:nth-child(2) .advice-icon {
+    background: var(--secondary-color); /* Usando variável */
+}
+
+.advice-card h3 {
+    color: var(--primary-color); /* Usando variável */
+    margin-bottom: 1rem;
+}
+
+.advice-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.advice-card li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.advice-card li::before {
+    content: "•";
+    color: var(--primary-color); /* Usando variável */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Botões de compartilhamento */
+.share-buttons {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: var(--background-light); /* Usando variável */
+    border-radius: 8px;
+}
+
+.social-share {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-share a {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s, opacity 0.3s; /* Melhoria: Adicionado transição para opacidade */
+}
+
+.social-share a:hover {
+    transform: translateY(-3px);
+    opacity: 0.9; /* Melhoria: Leve opacidade no hover */
+}
+
+.social-share .twitter { background: #1DA1F2; }
+.social-share .linkedin { background: #0077B5; }
+.social-share .facebook { background: #4267B2; }
+
+/* Seção de comentários */
+.comments-section {
+    margin: 4rem 0;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-color); /* Usando variável */
+}
+
+.comment-form {
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    /* Melhoria: Transição para foco */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color); /* Borda primária no foco */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.2); /* Sombra suave no foco */
+}
+
+.comment-form button {
+    background: var(--primary-color); /* Usando variável */
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease; /* Melhoria: Transição para transform */
+}
+
+.comment-form button:hover {
+    background: var(--secondary-color); /* Usando variável */
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
+}
+
+/* Rodapé do post */
+.post-footer {
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color); /* Usando variável */
+    padding-top: 3rem;
+}
+
+.author-bio {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.author-bio img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color); /* Usando variável */
+}
+
+.author-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.author-social a {
+    color: var(--primary-color); /* Usando variável */
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.2s ease; /* Melhoria: Adicionado transição para transform */
+}
+
+.author-social a:hover {
+    color: var(--secondary-color); /* Usando variável */
+    transform: translateY(-3px); /* Pequeno efeito de elevação */
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.post-navigation a {
+    color: var(--primary-color); /* Usando variável */
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    transition: all 0.3s;
+    text-decoration: none;
+    border: 1px solid transparent; /* Para evitar CLS no hover */
+}
+
+.post-navigation a:hover {
+    background: #f0f7ff;
+    text-decoration: none;
+    border-color: #dbe9ff; /* Borda sutil no hover */
+}
+
+.newsletter {
+    background: var(--background-light); /* Usando variável */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.newsletter h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color); /* Melhoria: Cor de destaque para o h3 */
+}
+
+.newsletter p {
+    color: var(--text-color-light); /* Usando variável */
+    margin-bottom: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    border-radius: 4px; /* Para bordas arredondadas nos elementos combinados */
+    overflow: hidden; /* Garante que os filhos respeitem o border-radius */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra sutil no formulário */
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0; /* Remove border-radius individual */
+    font-size: 1rem;
+    border-right: none;
+    /* Melhoria: Transição para foco */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: inset 0 0 0 1px var(--primary-color); /* Sombra interna para foco */
+}
+
+.newsletter-form button {
+    background: var(--primary-color); /* Usando variável */
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 0; /* Remove border-radius individual */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Melhoria: Adicionado transform */
+}
+
+.newsletter-form button:hover {
+    background: var(--secondary-color); /* Usando variável */
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
+}
+
+/* Botão de voltar ao topo */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color); /* Usando variável */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease, transform 0.2s ease; /* Melhoria: Adicionado transform */
+    z-index: 999;
+    border: none;
+}
+
+.back-to-top:hover {
+    background: var(--secondary-color); /* Usando variável */
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-year {
+        width: 60px;
+        height: 60px;
+        left: 0;
+        right: auto;
+        font-size: 1rem; /* Ajuste para telas menores */
+        top: 20px; /* Ajuste de posição */
+    }
+    /* Melhoria: Ajuste da seta do timeline-content para mobile */
+    .timeline-content::after {
+        left: 15px;
+        right: auto;
+        box-shadow: -3px 3px 10px rgba(0,0,0,0.1); /* Sombra ajustada para o lado esquerdo */
+    }
+    
+    .two-columns {
+        flex-direction: column;
+    }
+    
+    .post-header h1 {
+        font-size: 2rem;
+    }
+    
+    .post-navigation {
+        flex-direction: column;
+    }
+    
+    .post-navigation a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .author-bio {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .author-social {
+        justify-content: center;
+    }
+
+    .social-share a {
+        flex-grow: 1; /* Faz com que os botões ocupem o máximo de espaço */
+        justify-content: center; /* Centraliza o ícone e texto */
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Coluna em telas muito pequenas */
+    }
+    .newsletter-form input,
+    .newsletter-form button {
+        border-radius: 4px; /* Arredonda os cantos para botões e inputs em coluna */
+        margin-bottom: 0.5rem; /* Espaçamento entre eles */
+        border-right: 1px solid #ddd; /* Garante borda no input */
+    }
+}
