@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Neves</title>
+    <meta name="description" content="João Neves é o desenvolvedor Frontend e Designer UX/UI mais premiado do mundo, criando experiências digitais que transcendem o comum.">
+    
+    <meta property="og:title" content="João Neves | Portfólio de Classe Mundial – Onde a Inovação Ganha Vida">
+    <meta property="og:description" content="Explore o universo de João Neves: Projetos inovadores, design de vanguarda e a mente por trás das experiências digitais mais impactantes do mercado.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=1"> 
+    <meta property="og:url" content="https://joaoneves.dev"> 
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../index.html#testimonials">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="nav-overlay">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile">
+            <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../index.html#testimonials">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    <section class="materias-section">
+        <div class="container">
+            <h2 class="section-title">Matérias e Conhecimentos</h2>
+            <p class="section-subtitle">Áreas de estudo que domino e tecnologias que utilizo</p>
+            
+            <div class="materias-container">
+                <!-- Matéria 1 -->
+                <div class="materia-card">
+                    <div class="materia-header">
+                       <i class="fa-solid fa-network-wired"></i>
+                        <h3>Projeto Integrador I</h3>
+                    </div>
+                    <div class="materia-content">
+                        <ul class="skills-list">
+                            <li><span class="skill-name">HTML5</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 95%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">CSS3/SASS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">React.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="materia-footer">
+                           
+                        </div>
+                         <a href="./projeto.html" class="view-btn">Ver Detalhes</a>
+                    </div>
+                </div>
+
+                <!-- Matéria 2 -->
+                <div class="materia-card">
+                    <div class="materia-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Desenvolvimento Backend</h3>
+                    </div>
+                    <div class="materia-content">
+                        <ul class="skills-list">
+                            <li><span class="skill-name">Node.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">Express</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">APIs REST</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="materia-footer">
+                            <span class="materia-time"><i class="far fa-clock"></i> 1.5 anos de experiência</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matéria 3 -->
+                <div class="materia-card">
+                    <div class="materia-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Banco de Dados</h3>
+                    </div>
+                    <div class="materia-content">
+                        <ul class="skills-list">
+                            <li><span class="skill-name">MySQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">MongoDB</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">PostgreSQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">Firebase</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 65%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="materia-footer">
+                            <span class="materia-time"><i class="far fa-clock"></i> 1 ano de experiência</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matéria 4 -->
+                <div class="materia-card">
+                    <div class="materia-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Desenvolvimento Mobile</h3>
+                    </div>
+                    <div class="materia-content">
+                        <ul class="skills-list">
+                            <li><span class="skill-name">React Native</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">Flutter</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 60%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">UI/UX Mobile</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">Publicação em Stores</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 65%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="materia-footer">
+                            <span class="materia-time"><i class="far fa-clock"></i> 1 ano de experiência</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matéria 5 -->
+                <div class="materia-card">
+                    <div class="materia-header">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Design & UX</h3>
+                    </div>
+                    <div class="materia-content">
+                        <ul class="skills-list">
+                            <li><span class="skill-name">UI Design</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">Adobe XD/Figma</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">Prototipagem</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">Design System</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="materia-footer">
+                            <span class="materia-time"><i class="far fa-clock"></i> 3 anos de experiência</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matéria 6 -->
+                <div class="materia-card">
+                    <div class="materia-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Outras Habilidades</h3>
+                    </div>
+                    <div class="materia-content">
+                        <ul class="skills-list">
+                            <li><span class="skill-name">Git/GitHub</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">Docker</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 60%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">SEO</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li><span class="skill-name">Scrum/Agile</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="materia-footer">
+                            <span class="materia-time"><i class="far fa-clock"></i> Variada experiência</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+       <div class="container footer-container">
+            <a href="#" class="footer-logo">
+                <span class="footer-logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#testimonials">Matérias</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social social-links">
+                <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn de João Neves"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/joaoneves" target="_blank" aria-label="GitHub de João Neves"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/joaoneves" target="_blank" aria-label="Twitter de João Neves"><i class="fab fa-twitter"></i></a>
+                <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance de João Neves"><i class="fab fa-behance"></i></a>
+            </div>
+            <p class="footer-bottom-text">&copy; 2025 João Neves. Todos os direitos reservados. Feito com paixão e tecnologia em Jales, SP.</p>
+        </div>
+    </footer>
+
+    <script src="./materia.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

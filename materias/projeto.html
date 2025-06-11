@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador | Portfólio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./projeto.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span>Portfólio</span>
+            </a>
+            
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#services">Serviços</a></li>
+                    <li><a href="todos_projetos.html">Projetos</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="navOverlay">
+        <button class="close-btn" id="closeBtn">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#about">Sobre</a></li>
+                <li><a href="index.html#services">Serviços</a></li>
+                <li><a href="todos_projetos.html">Projetos</a></li>
+                <li><a href="index.html#contact">Contato</a></li>
+            </ul>
+        </nav>
+        
+        <button class="theme-toggle" id="themeToggleMobile">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Project Content Section -->
+    <section id="project-content" class="section">
+        <div class="container">
+            <h2 class="section-title">Projeto Integrador I</h2>
+            
+            <div class="content-card">
+                <h3 class="content-title">Visão Geral</h3>
+                <p class="content-text">
+                    O Projeto Integrador I visa aplicar conhecimentos adquiridos nas disciplinas iniciais do curso de ADS, 
+                    através do desenvolvimento de soluções tecnológicas para problemas reais ou simulados.
+                </p>
+                <p class="content-text">
+                    Neste projeto, utilizaremos o Git e GitHub para controle de versão e colaboração em equipe.
+                </p>
+            </div>
+            
+            <div class="content-card">
+                <h3 class="content-title">Controle de Versionamento com Git</h3>
+                <p class="content-text">
+                    Git é um sistema de controle de versão distribuído criado em 2005 por Linus Torvalds.
+                </p>
+                <div class="content-list">
+                    <div class="list-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Gratuito e open source</span>
+                    </div>
+                    <div class="list-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Alta performance</span>
+                    </div>
+                    <div class="list-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Operações locais (sem necessidade de servidor)</span>
+                    </div>
+                    <div class="list-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Integridade dos dados</span>
+                    </div>
+                    <div class="list-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Suporte a diferentes workflows</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <h3 class="content-title">Git vs GitHub</h3>
+                <p class="content-text">
+                    Git é o sistema de controle de versão, enquanto GitHub é um serviço de hospedagem de código que usa Git. 
+                    Eles são coisas diferentes!
+                </p>
+            </div>
+            
+            <div class="content-card">
+                <h3 class="content-title">Configuração Inicial do Git</h3>
+                <p class="content-text">
+                    Para começar a usar o Git, é necessário configurar seu usuário:
+                </p>
+                <div class="code-block">
+                    <code>git config --global user.name "Seu Nome"</code>
+                    <code>git config --global user.email "seu@email.com"</code>
+                </div>
+                <p class="content-text">
+                    Para verificar as configurações:
+                </p>
+                <div class="code-block">
+                    <code>git config --list</code>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <h3 class="content-title">Fluxo Básico de Trabalho</h3>
+                <div class="workflow-steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Working Directory</h4>
+                            <p>Arquivos modificados, inseridos ou excluídos</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Staging Area</h4>
+                            <p>Arquivos rastreados e prontos para serem versionados (git add)</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="step-content">
+                            <h4>Repository</h4>
+                            <p>Alterações efetivadas (git commit)</p>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="content-subtitle">Comandos Essenciais:</h4>
+                <div class="code-block">
+                    <code>git init <span class="comment"># Inicializa um repositório</span></code>
+                    <code>git status <span class="comment"># Verifica o estado dos arquivos</span></code>
+                    <code>git add . <span class="comment"># Adiciona todas as alterações</span></code>
+                    <code>git commit -m "mensagem" <span class="comment"># Registra as alterações</span></code>
+                    <code>git log <span class="comment"># Mostra o histórico de commits</span></code>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <h3 class="content-title">Trabalhando com Branches</h3>
+                <p class="content-text">
+                    Branches são ramificações no projeto usadas para desenvolver funcionalidades sem impactar a versão principal.
+                </p>
+                <h4 class="content-subtitle">Comandos para Branches:</h4>
+                <div class="code-block">
+                    <code>git branch <span class="comment"># Lista branches</span></code>
+                    <code>git branch nome_branch <span class="comment"># Cria nova branch</span></code>
+                    <code>git checkout nome_branch <span class="comment"># Muda para a branch</span></code>
+                    <code>git merge nome_branch <span class="comment"># Mescla branches</span></code>
+                </div>
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Mantenha a branch principal (main/master) estável e crie branches para cada nova funcionalidade.</p>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <h3 class="content-title">Trabalhando com GitHub</h3>
+                <p class="content-text">
+                    GitHub é uma plataforma para hospedar repositórios Git e colaborar em projetos.
+                </p>
+                <h4 class="content-subtitle">Fluxo Básico:</h4>
+                <div class="content-list">
+                    <div class="list-item">
+                        <span class="number">1</span>
+                        <span>Crie um repositório no GitHub</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="number">2</span>
+                        <span>Conecte seu repositório local:</span>
+                        <div class="code-block inline">
+                            <code>git remote add origin URL_DO_REPOSITORIO</code>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <span class="number">3</span>
+                        <span>Envie suas alterações:</span>
+                        <div class="code-block inline">
+                            <code>git push origin main</code>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <span class="number">4</span>
+                        <span>Para baixar atualizações:</span>
+                        <div class="code-block inline">
+                            <code>git pull origin main</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <h3 class="content-title">Trabalho em Equipe com Pull Requests</h3>
+                <p class="content-text">
+                    Pull Requests permitem revisão de código antes de mesclar alterações:
+                </p>
+                <div class="content-list">
+                    <div class="list-item">
+                        <span class="number">1</span>
+                        <span>Crie uma branch para sua funcionalidade</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="number">2</span>
+                        <span>Faça e commit suas alterações</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="number">3</span>
+                        <span>Envie para o GitHub (git push)</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="number">4</span>
+                        <span>Abra um Pull Request no GitHub</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="number">5</span>
+                        <span>Após revisão, faça o merge</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <h3 class="content-title">Resolvendo Conflitos</h3>
+                <p class="content-text">
+                    Quando há alterações conflitantes, é necessário editar manualmente os arquivos marcados pelo Git antes de completar o merge.
+                </p>
+            </div>
+            
+            <div class="content-card">
+                <h3 class="content-title">Boas Práticas</h3>
+                <div class="content-list">
+                    <div class="list-item">
+                        <i class="fas fa-check"></i>
+                        <span>Faça commits atômicos (uma mudança por commit)</span>
+                    </div>
+                    <div class="list-item">
+                        <i class="fas fa-check"></i>
+                        <span>Escreva mensagens de commit claras e descritivas</span>
+                    </div>
+                    <div class="list-item">
+                        <i class="fas fa-check"></i>
+                        <span>Use o .gitignore para arquivos desnecessários</span>
+                    </div>
+                    <div class="list-item">
+                        <i class="fas fa-check"></i>
+                        <span>Sincronize frequentemente com o repositório remoto</span>
+                    </div>
+                    <div class="list-item">
+                        <i class="fas fa-check"></i>
+                        <span>Revise o código dos colegas antes de fazer merge</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-card">
+                <h3 class="content-title">Etapas do Projeto</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Escolha do Tema / Problema</h4>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Análise e Planejamento</h4>
+                            <p>Incluindo setup do repositório Git</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Modelagem</h4>
+                            <p>Com versionamento de documentos</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Prototipagem</h4>
+                            <p>Usando branches para funcionalidades</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Documentação</h4>
+                            <p>Incluindo README no GitHub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-card conclusion">
+                <h3 class="content-title">Conclusão</h3>
+                <p class="content-text">
+                    Este projeto representa o início da jornada prática dos estudantes no mundo da tecnologia. 
+                    O uso de Git e GitHub fortalece o trabalho em equipe, a organização do código e a colaboração eficiente.
+                </p>
+                <p class="content-text">
+                    Dominar essas ferramentas é essencial para qualquer desenvolvedor de software profissional.
+                </p>
+                <a href="#" class="btn btn-primary">
+                    <i class="fab fa-github"></i> Ver Atividade no GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <a href="#" class="footer-logo">
+                <div class="footer-logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span>Portfólio</span>
+            </a>
+            
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#services">Serviços</a></li>
+                    <li><a href="todos_projetos.html">Projetos</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="footer-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+            </div>
+            
+            <p class="footer-bottom-text">
+                &copy; 2023 Portfólio. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+     <script src="./projeto.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,33 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Projetos | Portfólio</title>
+    <title>João Neves</title>
+    <meta name="description" content="João Neves é o desenvolvedor Frontend e Designer UX/UI mais premiado do mundo, criando experiências digitais que transcendem o comum.">
+    
+    <meta property="og:title" content="João Neves | Portfólio de Classe Mundial – Onde a Inovação Ganha Vida">
+    <meta property="og:description" content="Explore o universo de João Neves: Projetos inovadores, design de vanguarda e a mente por trás das experiências digitais mais impactantes do mercado.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=1"> 
+    <meta property="og:url" content="https://joaoneves.dev"> 
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./portfolio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="description" content="Galeria completa de todos os meus projetos de desenvolvimento e design">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../index.html" class="logo">Portfólio<span></span></a>
-                <ul class="nav-links">
-                   <li><a href="../index.html#home">Home</a></li>
-                    <li><a href="../index.html#about">Sobre</a></li>
-                    <li><a href="../index.html#services">Serviços</a></li>
-                    <li><a href="../index.html#portfolio">Portfólio</a></li>
-                    <li><a href="../index.html#blog" class="active">Blog</a></li>
-                    <li><a href="../index.html#contact">Contato</a></li>
-                </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+               <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
             </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
+
+    <div class="nav-overlay">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile">
+            <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
 
     <main class="portfolio-page">
         <section class="portfolio-hero">
@@ -183,49 +225,38 @@
             <div class="container">
                 <h2>Interessado em trabalhar juntos?</h2>
                 <p>Estou disponível para novos projetos e oportunidades. Vamos conversar sobre como posso ajudar no seu próximo projeto.</p>
-                <a href="index.html#contact" class="cta-btn">Entre em Contato</a>
+                <a href="../index.html#contact" class="cta-btn">Entre em Contato</a>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <a href="index.html" class="logo">Portfólio<span>.</span></a>
-                    <p>Desenvolvendo soluções digitais criativas e funcionais que fazem a diferença.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#about">Sobre</a></li>
-                        <li><a href="portfolio.html">Projetos</a></li>
-                        <li><a href="blog/index.html">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contato</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> email@exemplo.com</li>
-                        <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
-                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
-                    </ul>
-                </div>
+   <footer>
+        <div class="container footer-container">
+            <a href="#" class="footer-logo">
+                <span class="footer-logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                   <a href="../materias/principal.html">Matérias</a>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social social-links">
+                <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn de João Neves"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/joaoneves" target="_blank" aria-label="GitHub de João Neves"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/joaoneves" target="_blank" aria-label="Twitter de João Neves"><i class="fab fa-twitter"></i></a>
+                <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance de João Neves"><i class="fab fa-behance"></i></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-behance"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
-                </div>
-            </div>
+            <p class="footer-bottom-text">&copy; 2025 João Neves. Todos os direitos reservados. Feito com paixão e tecnologia em Jales, SP.</p>
         </div>
     </footer>
-
-    <script src="js/portfolio.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>

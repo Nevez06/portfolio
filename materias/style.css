@@ -1,0 +1,137 @@
+/* Estilos da seção de matérias */
+.view-btn {
+    padding: 10px 25px;
+    background: white;
+    color: #3498db;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.materias-section {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.materias-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.materia-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.materia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.materia-header {
+    padding: 20px;
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.materia-header i {
+    font-size: 1.8rem;
+}
+
+.materia-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.materia-content {
+    padding: 20px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.skill-bar {
+    height: 8px;
+    background: #ecf0f1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.materia-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.materia-time {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.materia-time i {
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .materias-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+}
