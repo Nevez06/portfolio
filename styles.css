@@ -1,3 +1,53 @@
+  /* Adicione isso ao seu CSS existente */
+.section-title {
+    
+    padding: 20px;
+}
+
+.materias-container {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+}
+
+.materia-header h3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+ .materias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.materia-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.materia-card:hover {
+    transform: translateY(-5px);
+}
+
+.materia-icon {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.tag-advanced {
+    background: #4CAF50;
+    color: white;
+}
  :root {
             --primary: #6C63FF;
             --primary-dark: #564FC9;
@@ -104,46 +154,47 @@
             border-radius: 3px;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px 40px;
-            border-radius: 50px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            font-size: 1.05rem;
-            transition: var(--transition);
-            cursor: pointer;
-            gap: 12px;
-            position: relative;
-            overflow: hidden;
-            border: none;
-        }
+       .btn {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     padding: 20px 40px;
+     border-radius: 50px;
+     font-weight: 600;
+     letter-spacing: 0.5px;
+     font-size: 1.05rem;
+     transition: var(--transition);
+     cursor: pointer;
+     gap: 12px;
+     position: relative;
+     overflow: hidden;
+     border: none;
+ }
 
-        .btn-primary {
-            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
-            color: var(--white);
-            box-shadow: 0 15px 40px rgba(108, 99, 255, 0.4);
-        }
+ .btn-primary {
+     background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+     color: var(--white);
+     box-shadow: 0 15px 40px rgba(108, 99, 255, 0.4);
+ }
 
-        .btn-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(108, 99, 255, 0.6);
-            background: linear-gradient(45deg, var(--primary-light), var(--primary));
-        }
+ .btn-primary:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 20px 50px rgba(108, 99, 255, 0.6);
+     background: linear-gradient(45deg, var(--primary-light), var(--primary));
+ }
 
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            background: transparent;
-        }
+ .btn-outline {
+     border: 2px solid var(--primary);
+     color: var(--primary);
+     background: transparent;
+ }
 
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: var(--white);
-            box-shadow: 0 15px 40px rgba(108, 99, 255, 0.3);
-        }
+ .btn-outline:hover {
+     background-color: var(--primary);
+     color: var(--white);
+     box-shadow: 0 15px 40px rgba(108, 99, 255, 0.3);
+ }
+
 
         /* Header Ultra Premium */
         header {
