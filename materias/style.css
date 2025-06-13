@@ -1,28 +1,41 @@
-/* Estilos da seção de matérias */
-.view-btn {
-    padding: 10px 25px;
-    background: white;
-    color: #3498db;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
+/* Estilos gerais */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #2c3e50;
+    --light-text: #7f8c8d;
+    --bg-color: #f9f9f9;
+    --card-bg: #ffffff;
+    --shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
+
+[data-theme="dark"] {
+    --primary-color: #2ecc71;
+    --secondary-color: #1a1a2e;
+    --text-color: #f1f1f1;
+    --light-text: #bdc3c7;
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Seção de matérias */
 .materias-section {
     padding: 80px 0;
-    background: #f9f9f9;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: var(--text-color);
     margin-bottom: 15px;
 }
 
 .section-subtitle {
     text-align: center;
-    color: #7f8c8d;
+    color: var(--light-text);
     font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto 50px;
@@ -32,13 +45,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
+    padding: 0 20px;
 }
 
 .materia-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -49,7 +63,7 @@
 
 .materia-header {
     padding: 20px;
-    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
     display: flex;
     align-items: center;
@@ -83,7 +97,7 @@
     display: block;
     margin-bottom: 5px;
     font-weight: 500;
-    color: #34495e;
+    color: var(--text-color);
 }
 
 .skill-bar {
@@ -95,30 +109,80 @@
 
 .skill-level {
     height: 100%;
-    background: linear-gradient(90deg, #3498db, #2ecc71);
+    background: linear-gradient(90deg, var(--primary-color), #2ecc71);
     border-radius: 4px;
     transition: width 1s ease;
 }
 
-.materia-footer {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
+.view-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 15px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.view-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Menu Mobile */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.materia-time {
-    font-size: 0.9rem;
-    color: #7f8c8d;
+.nav-links-mobile {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
 }
 
-.materia-time i {
-    font-size: 0.9rem;
+.nav-links-mobile a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links-mobile a.active {
+    color: var(--primary-color);
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* Responsividade */
@@ -133,5 +197,19 @@
     
     .section-subtitle {
         font-size: 1rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-overlay {
+        display: none !important;
     }
 }

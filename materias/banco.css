@@ -1,0 +1,165 @@
+.database-card {
+            background: var(--glass-effect);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+        
+        .database-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(10, 10, 15, 0.8));
+        }
+        
+        .database-title {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: var(--white);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .database-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+        }
+        
+        .database-subtitle {
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            color: var(--white);
+        }
+        
+        .database-text {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: var(--dark-gray);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            font-weight: 600;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: rgba(108, 99, 255, 0.05);
+        }
+        
+        .code-block {
+            background-color: var(--dark-gray);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            overflow-x: auto;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .code-block code {
+            display: block;
+            color: var(--light-gray);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        .code-keyword {
+            color: var(--primary-light);
+        }
+        
+        .code-string {
+            color: var(--secondary-light);
+        }
+        
+        .code-comment {
+            color: var(--medium-gray);
+            font-style: italic;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-item {
+            background: rgba(108, 99, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-3px);
+            background: rgba(108, 99, 255, 0.1);
+        }
+        
+        .feature-item i {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-item h4 {
+            color: var(--white);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .feature-item p {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .database-card {
+                padding: 30px;
+            }
+            
+            .database-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }

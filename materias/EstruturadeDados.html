@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Dados | Portfólio</title>
+    <meta name="description"
+        content="João Neves é o desenvolvedor Frontend e Designer UX/UI mais premiado do mundo, criando experiências digitais que transcendem o comum.">
+
+    <meta property="og:title" content="João Neves | Portfólio de Classe Mundial – Onde a Inovação Ganha Vida">
+    <meta property="og:description"
+        content="Explore o universo de João Neves: Projetos inovadores, design de vanguarda e a mente por trás das experiências digitais mais impactantes do mercado.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
+    <meta property="og:url" content="https://joaoneves.dev">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./estrutura.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-sitemap"></i>
+                </div>
+                <span>Estrutura de Dados</span>
+             </a>
+            <nav class="nav-links">
+               <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+               <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="nav-overlay">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile">
+           <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+               <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    <!-- Data Structures Content Section -->
+    <section id="ds-content" class="section">
+        <div class="container">
+            <h2 class="section-title">Estruturas de Dados</h2>
+            
+            <div class="ds-card">
+                <h3 class="ds-title">1. Vetores (Arrays)</h3>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-random"></i>
+                        <h4>Vetores Não Ordenados</h4>
+                        <ul>
+                            <li>Elementos armazenados sem ordem específica</li>
+                            <li>Inserção sempre no final</li>
+                            <li>Busca linear <span class="complexity-badge badge-On">O(n)</span></li>
+                            <li>Remoção requer deslocamento de elementos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-sort-amount-up"></i>
+                        <h4>Vetores Ordenados</h4>
+                        <ul>
+                            <li>Elementos mantidos em ordem crescente/decrescente</li>
+                            <li>Inserção requer encontrar posição correta e deslocar elementos</li>
+                            <li>Busca binária possível <span class="complexity-badge badge-Ologn">O(log n)</span></li>
+                            <li>Vantagens: busca rápida, facilita operações como união e interseção</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h4 class="ds-subtitle">Alocação de Memória</h4>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Exemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Estática</td>
+                            <td>Tamanho fixo definido em tempo de compilação</td>
+                            <td><code>int vetor[10];</code></td>
+                        </tr>
+                        <tr>
+                            <td>Dinâmica</td>
+                            <td>Tamanho definido em tempo de execução (malloc)</td>
+                            <td><code>int *v = malloc(10 * sizeof(int));</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="ds-card">
+                <h3 class="ds-title">2. Estruturas (Structs)</h3>
+                
+                <p class="ds-text">
+                    Agrupamento de variáveis de tipos diferentes sob um único nome. Permite criar tipos de dados personalizados.
+                </p>
+                
+                <h4 class="ds-subtitle">Exemplo:</h4>
+                <div class="code-block">
+                    <code>
+                        <span class="code-keyword">struct</span> <span class="code-type">Aluno</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-type">char</span> nome[50];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-type">int</span> idade;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-type">float</span> nota;<br>
+                        };
+                    </code>
+                </div>
+                
+                <p class="ds-text">
+                    Ponteiros para structs permitem passagem por referência e alocação dinâmica.
+                </p>
+            </div>
+            
+            <div class="ds-card">
+                <h3 class="ds-title">3. Listas Encadeadas</h3>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-link"></i>
+                        <h4>Lista Simplesmente Encadeada</h4>
+                        <ul>
+                            <li>Cada nó contém dados e ponteiro para próximo nó</li>
+                            <li>Vantagens: tamanho dinâmico, inserções/remoções eficientes</li>
+                            <li>Desvantagens: acesso sequencial, maior uso de memória</li>
+                        </ul>
+                        
+                        <div class="visualization">
+                            <div class="node">5</div>
+                            <div class="node-arrow">→</div>
+                            <div class="node">10</div>
+                            <div class="node-arrow">→</div>
+                            <div class="node">15</div>
+                            <div class="node-arrow">→</div>
+                            <div class="node">NULL</div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h4>Lista Duplamente Encadeada</h4>
+                        <ul>
+                            <li>Cada nó contém ponteiros para anterior e próximo</li>
+                            <li>Permite navegação bidirecional</li>
+                            <li>Mais eficiente para remoções em posições arbitrárias</li>
+                        </ul>
+                        
+                        <div class="visualization">
+                            <div class="node">NULL</div>
+                            <div class="node-arrow">⇄</div>
+                            <div class="node">5</div>
+                            <div class="node-arrow">⇄</div>
+                            <div class="node">10</div>
+                            <div class="node-arrow">⇄</div>
+                            <div class="node">15</div>
+                            <div class="node-arrow">⇄</div>
+                            <div class="node">NULL</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4 class="ds-subtitle">Operações Básicas</h4>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Operação</th>
+                            <th>Complexidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Inserir no início</td>
+                            <td><span class="complexity-badge badge-O1">O(1)</span></td>
+                        </tr>
+                        <tr>
+                            <td>Inserir no fim</td>
+                            <td><span class="complexity-badge badge-On">O(n)</span></td>
+                        </tr>
+                        <tr>
+                            <td>Buscar elemento</td>
+                            <td><span class="complexity-badge badge-On">O(n)</span></td>
+                        </tr>
+                        <tr>
+                            <td>Remover elemento</td>
+                            <td><span class="complexity-badge badge-On">O(n)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="ds-card">
+                <h3 class="ds-title">4. Pilhas e Filas</h3>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-layer-group"></i>
+                        <h4>Pilhas (LIFO)</h4>
+                        <ul>
+                            <li>Último a entrar é o primeiro a sair</li>
+                            <li>Operações básicas: push (empilhar) e pop (desempilhar)</li>
+                            <li>Complexidade: <span class="complexity-badge badge-O1">O(1)</span> para ambas operações</li>
+                            <li>Aplicações: chamadas de função, undo/redo, avaliação de expressões</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-stream"></i>
+                        <h4>Filas (FIFO)</h4>
+                        <ul>
+                            <li>Primeiro a entrar é o primeiro a sair</li>
+                            <li>Operações básicas: enqueue (enfileirar) e dequeue (desenfileirar)</li>
+                            <li>Complexidade: <span class="complexity-badge badge-O1">O(1)</span> para ambas operações</li>
+                            <li>Implementações: com vetor (tamanho fixo ou circular) ou com lista encadeada</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-star"></i>
+                        <h4>Fila com Prioridade</h4>
+                        <ul>
+                            <li>Elementos com maior prioridade são atendidos primeiro</li>
+                            <li>Pode ser implementada com duas filas separadas ou usando heap</li>
+                            <li>Complexidade: inserção <span class="complexity-badge badge-Ologn">O(log n)</span>, remoção <span class="complexity-badge badge-O1">O(1)</span></li>
+                            <li>Aplicações: escalonamento de processos, algoritmos como Dijkstra</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ds-card">
+                <h3 class="ds-title">5. Comparação de Estruturas</h3>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Estrutura</th>
+                            <th>Vantagens</th>
+                            <th>Desvantagens</th>
+                            <th>Melhor Caso de Uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vetor</td>
+                            <td>Acesso rápido por índice, baixo overhead</td>
+                            <td>Tamanho fixo, inserções/remoções custosas</td>
+                            <td>Quando o tamanho é conhecido e há muitos acessos aleatórios</td>
+                        </tr>
+                        <tr>
+                            <td>Lista Encadeada</td>
+                            <td>Tamanho dinâmico, inserções/remoções eficientes</td>
+                            <td>Acesso sequencial, maior uso de memória</td>
+                            <td>Quando o tamanho varia muito e há muitas inserções/remoções</td>
+                        </tr>
+                        <tr>
+                            <td>Pilha</td>
+                            <td>Operações rápidas <span class="complexity-badge badge-O1">O(1)</span>, simples</td>
+                            <td>Acesso limitado ao topo</td>
+                            <td>Chamadas de função, undo/redo, avaliação de expressões</td>
+                        </tr>
+                        <tr>
+                            <td>Fila</td>
+                            <td>Operações rápidas <span class="complexity-badge badge-O1">O(1)</span>, ordem justa</td>
+                            <td>Acesso limitado às extremidades</td>
+                            <td>Processamento em ordem de chegada, buffers</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="ds-card">
+                <h3 class="ds-title">Dicas Importantes</h3>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-search"></i>
+                        <h4>Otimização de Busca</h4>
+                        <p>Para vetores grandes com muitas buscas, prefira ordenados com busca binária</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-edit"></i>
+                        <h4>Inserções/Remoções</h4>
+                        <p>Para aplicações com muitas inserções/remoções, prefira listas encadeadas</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-memory"></i>
+                        <h4>Gerenciamento de Memória</h4>
+                        <p>Sempre libere memória alocada dinamicamente com free()</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Desempenho</h4>
+                        <p>Use passagem por referência (ponteiros) para structs grandes para melhor desempenho</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fab fa-github"></i> Ver Atividade no GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <a href="#" class="footer-logo">
+                <div class="footer-logo-icon">
+                    <i class="fas fa-sitemap"></i>
+                </div>
+                <span>Estruturas de Dados</span>
+            </a>
+            
+            <nav class="footer-nav">
+                <ul>
+                   <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#projects">Projetos</a></li>
+                    <li><a href="../index.html#testimonials">Matérias</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="footer-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Nevez06" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+            </div>
+            
+            <p class="footer-bottom-text">
+                &copy; 2023 Portfólio. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="./materia.js"></script>
+    <script src="../script.js"></script>
+    <script src="./projeto.js"></script>
+</body>
+</html>

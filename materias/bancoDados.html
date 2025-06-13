@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnicas Avançadas de Banco de Dados | Portfólio</title>
+<meta name="description"
+        content="João Neves é o desenvolvedor Frontend e Designer UX/UI mais premiado do mundo, criando experiências digitais que transcendem o comum.">
+
+    <meta property="og:title" content="João Neves | Portfólio de Classe Mundial – Onde a Inovação Ganha Vida">
+    <meta property="og:description"
+        content="Explore o universo de João Neves: Projetos inovadores, design de vanguarda e a mente por trás das experiências digitais mais impactantes do mercado.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
+    <meta property="og:url" content="https://joaoneves.dev">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./banco.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-database"></i></span>
+                <span>Banco de Dados</span>
+           </a>
+            <nav class="nav-links">
+               <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+               <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="nav-overlay">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile">
+           <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+               <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Database Content Section -->
+    <section id="database-content" class="section">
+        <div class="container">
+            <h2 class="section-title">Técnicas Avançadas de Banco de Dados</h2>
+            
+            <div class="database-card">
+                <h3 class="database-title">Introdução</h3>
+                <p class="database-text">
+                    Este resumo aborda técnicas de banco de dados no PostgreSQL, com foco em Stored Procedures, Functions e Data Control Language (DCL).
+                </p>
+            </div>
+            
+            <div class="database-card">
+                <h3 class="database-title">Diferenças entre Procedures e Functions</h3>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Function</th>
+                            <th>Procedure</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Retorno</td>
+                            <td>Sempre retorna um valor</td>
+                            <td>Pode retornar ou não</td>
+                        </tr>
+                        <tr>
+                            <td>Chamada</td>
+                            <td>Usada em SELECT, WHERE, etc.</td>
+                            <td>Executada com CALL</td>
+                        </tr>
+                        <tr>
+                            <td>Uso comum</td>
+                            <td>Cálculos, transformações</td>
+                            <td>Ações como INSERT, DELETE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="database-card">
+                <h3 class="database-title">Tipos de Funções no PostgreSQL</h3>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-code"></i>
+                        <h4>SQL Functions</h4>
+                        <p>Apenas comandos SQL básicos</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>PL/pgSQL Functions</h4>
+                        <p>Suportam lógica com IF, LOOP, variáveis</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Linguagens Externas</h4>
+                        <p>Usam C, Python, Java (maior desempenho, exigem configuração)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="database-card">
+                <h3 class="database-title">Vantagens de Procedures e Functions</h3>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-redo"></i>
+                        <h4>Reutilização de código</h4>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-network-wired"></i>
+                        <h4>Menor tráfego de rede</h4>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Melhor desempenho</h4>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Segurança</h4>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <i class="fas fa-brain"></i>
+                        <h4>Centralização da lógica</h4>
+                    </div>
+                </div>
+                
+                <div class="database-text" style="margin-top: 30px;">
+                    <strong>Desvantagem:</strong> Dependência da plataforma/SGBD.
+                </div>
+            </div>
+            
+            <div class="database-card">
+                <h3 class="database-title">Exemplos</h3>
+                
+                <h4 class="database-subtitle">Function: Olá Pessoal</h4>
+                <div class="code-block">
+                    <code>
+                        <span class="code-keyword">CREATE FUNCTION</span> sp_ola() <span class="code-keyword">RETURNS</span> TEXT <span class="code-keyword">LANGUAGE</span> SQL <span class="code-keyword">AS</span> $$<br>
+                        <span class="code-keyword">SELECT</span> <span class="code-string">'Olá, Pessoal!'</span>;<br>
+                        $$;
+                    </code>
+                </div>
+                
+                <h4 class="database-subtitle">Procedure: Olá Pessoal</h4>
+                <div class="code-block">
+                    <code>
+                        <span class="code-keyword">CREATE PROCEDURE</span> nome() <span class="code-keyword">LANGUAGE</span> plpgsql <span class="code-keyword">AS</span> $$<br>
+                        <span class="code-keyword">BEGIN</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;RAISE NOTICE <span class="code-string">'Olá, Pessoal!'</span>;<br>
+                        <span class="code-keyword">END</span>;<br>
+                        $$;
+                    </code>
+                </div>
+                
+                <h4 class="database-subtitle">Função com retorno:</h4>
+                <div class="code-block">
+                    <code>
+                        <span class="code-keyword">CREATE FUNCTION</span> total_clientes() <span class="code-keyword">RETURNS</span> BIGINT <span class="code-keyword">LANGUAGE</span> SQL <span class="code-keyword">AS</span> $$<br>
+                        <span class="code-keyword">SELECT</span> COUNT(*) <span class="code-keyword">FROM</span> cliente;<br>
+                        $$;
+                    </code>
+                </div>
+            </div>
+            
+            <div class="database-card">
+                <h3 class="database-title">DCL – Data Control Language</h3>
+                <p class="database-text">
+                    Gerencia usuários, permissões e papéis no PostgreSQL.
+                </p>
+                
+                <h4 class="database-subtitle">Comandos:</h4>
+                <div class="code-block">
+                    <code>
+                        <span class="code-keyword">CREATE ROLE</span> nome_papel;<br>
+                        <span class="code-keyword">ALTER ROLE</span> nome_papel <span class="code-keyword">WITH</span> ENCRYPTED PASSWORD <span class="code-string">'123'</span>;<br>
+                        <span class="code-keyword">DROP ROLE</span> nome_papel;<br>
+                        <span class="code-keyword">GRANT</span> UPDATE <span class="code-keyword">ON</span> tabela <span class="code-keyword">TO</span> papel;<br>
+                        <span class="code-keyword">REVOKE</span> ALL <span class="code-keyword">ON</span> tabela <span class="code-keyword">FROM</span> PUBLIC;
+                    </code>
+                </div>
+                
+                <h4 class="database-subtitle">Opções de CREATE ROLE:</h4>
+                <div class="database-text">
+                    LOGIN, SUPERUSER, CREATEDB, CREATEROLE<br>
+                    PASSWORD 'senha', CONNECTION LIMIT, VALID UNTIL<br>
+                    IN ROLE, NOINHERIT, etc.
+                </div>
+            </div>
+            
+            <div class="database-card">
+                <h3 class="database-title">Grupos e Permissões</h3>
+                <p class="database-text">
+                    Grupos são papéis sem LOGIN
+                </p>
+                
+                <h4 class="database-subtitle">Adicionar usuários a um grupo:</h4>
+                <div class="code-block">
+                    <code>
+                        <span class="code-keyword">GRANT</span> nome_grupo <span class="code-keyword">TO</span> user1, user2;
+                    </code>
+                </div>
+                
+                <h4 class="database-subtitle">Remover:</h4>
+                <div class="code-block">
+                    <code>
+                        <span class="code-keyword">REVOKE</span> nome_grupo <span class="code-keyword">FROM</span> user2;
+                    </code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <a href="#" class="footer-logo">
+                <div class="footer-logo-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <span>Banco de Dados</span>
+            </a>
+            
+            <nav class="footer-nav">
+                <ul>
+                      <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#projects">Projetos</a></li>
+                    <li><a href="../index.html#testimonials">Matérias</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <div class="footer-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Nevez06" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+            </div>
+            
+            <p class="footer-bottom-text">
+                &copy; 2023 Portfólio. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+     <script src="./materia.js"></script>
+    <script src="../script.js"></script>
+    <script src="./banco.js"></script>
+</body>
+</html>
