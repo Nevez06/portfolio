@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Avançado .NET + PostgreSQL | João Neves</title>
+    <meta name="description" content="Sistema CRUD completo com relacionamento 1-N desenvolvido com .NET 7, Entity Framework Core e PostgreSQL">
+    
+    <meta property="og:title" content="CRUD Avançado .NET + PostgreSQL - João Neves">
+    <meta property="og:description" content="Implementação profissional com arquitetura limpa, padrões de projeto e boas práticas">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1627398242454-45a1465c2479"> 
+    <meta property="og:url" content="https://joaoneves.dev/projetos/crud-avancado-dotnet"> 
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./pw.css">
+    <link rel="icon" type="image/png" href="../favicon-32x32.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#hero">Início</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#contact">Contato</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="nav-overlay">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile">
+            <a href="../index.html#hero">Início</a>
+            <a href="../index.html#projects">Projetos</a>
+            <a href="../materias/principal.html">Matérias</a>
+            <a href="../index.html#contact">Contato</a>
+        </nav>
+    </div>
+
+    <main class="projeto-detalhe">
+        <!-- Hero Section -->
+        <section class="projeto-hero" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <span class="projeto-categoria">Sistema Enterprise</span>
+                        <h1>CRUD Avançado .NET</h1>
+                        <p class="hero-subtitle">Sistema completo de gestão de produtos e fornecedores com PostgreSQL e Entity Framework Core</p>
+                        <div class="projeto-meta">
+                            <span><i class="fas fa-star"></i> Projeto Destaque</span>
+                            <span><i class="fas fa-layer-group"></i> Arquitetura em Camadas</span>
+                            <span><i class="fas fa-code"></i> .NET 7</span>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Linhas de Código</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Classes</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Test Coverage</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="code-window">
+                            <div class="window-header">
+                                <div class="window-buttons">
+                                    <span class="red"></span>
+                                    <span class="yellow"></span>
+                                    <span class="green"></span>
+                                </div>
+                                <div class="window-title">Produto.cs</div>
+                            </div>
+                            <div class="code-content">
+                                <pre><code class="language-csharp">public class Produto : Entity
+{
+    public string Nome { get; private set; }
+    public string Descricao { get; private set; }
+    public decimal Preco { get; private set; }
+    public DateTime DataCadastro { get; private set; }
+    public bool Ativo { get; private set; }
+
+    /* Relacionamento 1-N */
+    public Guid FornecedorId { get; private set; }
+    public Fornecedor Fornecedor { get; private set; }
+
+    // Métodos de domínio
+    public void Ativar() => Ativo = true;
+    public void Desativar() => Ativo = false;
+    
+    // Validações
+    public override bool EhValido()
+    {
+        // Implementação das regras de negócio
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-shape"></div>
+        </section>
+
+        <!-- Sobre o Projeto -->
+        <section class="projeto-sobre">
+            <div class="container">
+                <div class="sobre-grid">
+                    <div class="sobre-texto">
+                        <h2 class="section-title">Arquitetura do Sistema</h2>
+                        <p>Implementação profissional de um sistema de gestão com <strong>relacionamento 1-N</strong> entre produtos e fornecedores, utilizando as melhores práticas de desenvolvimento em .NET 7.</p>
+                        
+                        <div class="arquitetura-diagrama">
+                            <div class="camada">
+                                <div class="camada-icon"><i class="fas fa-desktop"></i></div>
+                                <h4>Presentation Layer</h4>
+                                <p>ASP.NET Core MVC com Razor Pages</p>
+                            </div>
+                            <div class="seta"><i class="fas fa-arrow-down"></i></div>
+                            <div class="camada">
+                                <div class="camada-icon"><i class="fas fa-code"></i></div>
+                                <h4>Application Layer</h4>
+                                <p>Services, DTOs e AutoMapper</p>
+                            </div>
+                            <div class="seta"><i class="fas fa-arrow-down"></i></div>
+                            <div class="camada">
+                                <div class="camada-icon"><i class="fas fa-database"></i></div>
+                                <h4>Domain Layer</h4>
+                                <p>Entidades, Value Objects e Regras</p>
+                            </div>
+                            <div class="seta"><i class="fas fa-arrow-down"></i></div>
+                            <div class="camada">
+                                <div class="camada-icon"><i class="fas fa-server"></i></div>
+                                <h4>Infra Layer</h4>
+                                <p>EF Core, Repositórios e Migrations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sobre-dados">
+                        <div class="dado-card">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Performance</h3>
+                            <p>Consultas otimizadas com AsNoTracking e Dapper para relatórios</p>
+                        </div>
+                        <div class="dado-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Segurança</h3>
+                            <p>Validações em múltiplas camadas e sanitização de dados</p>
+                        </div>
+                        <div class="dado-card">
+                            <i class="fas fa-expand"></i>
+                            <h3>Escalabilidade</h3>
+                            <p>Design preparado para crescimento com padrão CQRS</p>
+                        </div>
+                        <div class="dado-card">
+                            <i class="fas fa-cloud"></i>
+                            <h3>Deploy</h3>
+                            <p>Docker-ready com PostgreSQL e configuração CI/CD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Funcionalidades -->
+        <section class="projeto-funcionalidades">
+            <div class="container">
+                <h2 class="section-title">Funcionalidades Implementadas</h2>
+                <div class="funcionalidades-grid">
+                    <div class="funcionalidade-card">
+                        <div class="func-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3>Arquitetura Limpa</h3>
+                        <ul class="func-lista">
+                            <li>Separação clara de responsabilidades</li>
+                            <li>Inversão de dependência (DI)</li>
+                            <li>Testabilidade garantida</li>
+                        </ul>
+                    </div>
+                    <div class="funcionalidade-card">
+                        <div class="func-icon">
+                            <i class="fas fa-egg"></i>
+                        </div>
+                        <h3>Domínio Rico</h3>
+                        <ul class="func-lista">
+                            <li>Entidades com comportamento</li>
+                            <li>Value Objects para validações</li>
+                            <li>Agregados e raízes de agregação</li>
+                        </ul>
+                    </div>
+                    <div class="funcionalidade-card">
+                        <div class="func-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Relacionamento 1-N</h3>
+                        <ul class="func-lista">
+                            <li>Fluent API do EF Core</li>
+                            <li>Navegação bidirecional</li>
+                            <li>Carregamento otimizado (Eager/Lazy)</li>
+                        </ul>
+                    </div>
+                    <div class="funcionalidade-card">
+                        <div class="func-icon">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <h3>Validações</h3>
+                        <ul class="func-lista">
+                            <li>DataAnnotations para client-side</li>
+                            <li>FluentValidation para server-side</li>
+                            <li>Constraints no banco de dados</li>
+                        </ul>
+                    </div>
+                    <div class="funcionalidade-card">
+                        <div class="func-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>UI Responsiva</h3>
+                        <ul class="func-lista">
+                            <li>Bootstrap 5 com tema customizado</li>
+                            <li>Componentes reutilizáveis</li>
+                            <li>Design adaptável</li>
+                        </ul>
+                    </div>
+                    <div class="funcionalidade-card">
+                        <div class="func-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Performance</h3>
+                        <ul class="func-lista">
+                            <li>Cache com Redis</li>
+                            <li>Pagination e filtros</li>
+                            <li>Consultas otimizadas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnologias -->
+        <section class="projeto-tecnologias">
+            <div class="container">
+                <h2 class="section-title">Stack Tecnológica</h2>
+                <div class="tech-tabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="backend">Backend</button>
+                        <button class="tab-btn" data-tab="frontend">Frontend</button>
+                        <button class="tab-btn" data-tab="devops">DevOps</button>
+                    </div>
+                    <div class="tab-content active" id="backend">
+                        <div class="tech-grid">
+                            <div class="tech-card">
+                                <i class="devicon-dotnetcore-plain colored"></i>
+                                <span>.NET 7</span>
+                                <p>Framework principal</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="devicon-postgresql-plain colored"></i>
+                                <span>PostgreSQL</span>
+                                <p>Banco de dados relacional</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="devicon-entityframework-plain colored"></i>
+                                <span>EF Core 7</span>
+                                <p>ORM para acesso a dados</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fas fa-check-double"></i>
+                                <span>FluentValidation</span>
+                                <p>Validações robustas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="frontend">
+                        <div class="tech-grid">
+                            <div class="tech-card">
+                                <i class="devicon-bootstrap-plain colored"></i>
+                                <span>Bootstrap 5</span>
+                                <p>Framework CSS</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                                <p>Interatividade</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fas fa-table"></i>
+                                <span>DataTables</span>
+                                <p>Listagens paginadas</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Toastr</span>
+                                <p>Notificações</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="devops">
+                        <div class="tech-grid">
+                            <div class="tech-card">
+                                <i class="devicon-docker-plain colored"></i>
+                                <span>Docker</span>
+                                <p>Containerização</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="devicon-github-plain colored"></i>
+                                <span>GitHub Actions</span>
+                                <p>CI/CD Pipeline</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fas fa-server"></i>
+                                <span>Azure</span>
+                                <p>Deploy na nuvem</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fas fa-bug"></i>
+                                <span>SonarCloud</span>
+                                <p>Análise de código</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destaques Técnicos -->
+        <section class="projeto-destaques">
+            <div class="container">
+                <h2 class="section-title">Destaques Técnicos</h2>
+                <div class="destaques-grid">
+                    <div class="destaque-card">
+                        <div class="destaque-header">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>Padrão Repository</h3>
+                        </div>
+                        <div class="destaque-body">
+                            <p>Implementação genérica do padrão Repository com Unit of Work para isolamento da camada de dados:</p>
+                            <div class="code-snippet">
+                                <pre><code class="language-csharp">public interface IRepository<T> where T : class
+{
+    Task<T> GetByIdAsync(Guid id);
+    Task<IEnumerable<T>> GetAllAsync();
+    Task AddAsync(T entity);
+    void Update(T entity);
+    void Delete(T entity);
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destaque-card">
+                        <div class="destaque-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Validações em Camadas</h3>
+                        </div>
+                        <div class="destaque-body">
+                            <p>Estratégia de validação em múltiplos níveis para garantir integridade dos dados:</p>
+                            <ul class="destaque-lista">
+                                <li><strong>Client-side:</strong> DataAnnotations e JavaScript</li>
+                                <li><strong>Application:</strong> FluentValidation e DTOs</li>
+                                <li><strong>Domain:</strong> Regras de negócio nas entidades</li>
+                                <li><strong>Database:</strong> Constraints e triggers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="destaque-card">
+                        <div class="destaque-header">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h3>Performance Tips</h3>
+                        </div>
+                        <div class="destaque-body">
+                            <p>Técnicas avançadas para otimização de performance:</p>
+                            <ul class="destaque-lista">
+                                <li>AsNoTracking para consultas de leitura</li>
+                                <li>Eager Loading com Include/ThenInclude</li>
+                                <li>Pagination com Take/Skip</li>
+                                <li>Bulk Operations para inserções em massa</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="destaque-card">
+                        <div class="destaque-header">
+                            <i class="fas fa-vial"></i>
+                            <h3>Testes Automatizados</h3>
+                        </div>
+                        <div class="destaque-body">
+                            <p>Cobertura abrangente de testes automatizados:</p>
+                            <div class="test-coverage">
+                                <div class="coverage-bar">
+                                    <div class="coverage-fill" style="width: 85%"></div>
+                                </div>
+                                <div class="coverage-labels">
+                                    <span>Unit Tests: 85%</span>
+                                    <span>Integration: 70%</span>
+                                    <span>UI Tests: 60%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demonstração -->
+        <section class="projeto-demo">
+            <div class="container">
+                <div class="demo-content">
+                    <div class="demo-text">
+                        <h2 class="section-title">Demonstração Interativa</h2>
+                        <p>Explore o sistema em funcionamento com esta demonstração simulada:</p>
+                        
+                        <div class="demo-features">
+                            <div class="feature-item">
+                                <i class="fas fa-list"></i>
+                                <div>
+                                    <h4>Listagem Inteligente</h4>
+                                    <p>Paginação, ordenação e busca em tempo real</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-edit"></i>
+                                <div>
+                                    <h4>CRUD Completo</h4>
+                                    <p>Operações Create, Read, Update e Delete</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-link"></i>
+                                <div>
+                                    <h4>Relacionamentos</h4>
+                                    <p>Navegação entre produtos e fornecedores</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-buttons">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fab fa-github"></i> Ver Código Fonte
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-play"></i> Executar Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="demo-image">
+                        <div class="demo-frame">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3" alt="Tela do sistema">
+                            <div class="demo-highlights">
+                                <div class="highlight" style="top: 20%; left: 30%;" data-tooltip="Menu de navegação"></div>
+                                <div class="highlight" style="top: 40%; left: 60%;" data-tooltip="Lista de produtos"></div>
+                                <div class="highlight" style="top: 70%; left: 45%;" data-tooltip="Filtros avançados"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="projeto-cta">
+            <div class="container">
+                <h2>Precisa de uma solução similar?</h2>
+                <p>Posso desenvolver um sistema personalizado para suas necessidades específicas, com a mesma qualidade e atenção aos detalhes.</p>
+                <div class="cta-buttons">
+                    <a href="../index.html#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Solicitar Orçamento
+                    </a>
+                    <a href="../index.html#projects" class="btn btn-outline">
+                        <i class="fas fa-code"></i> Ver Outros Projetos
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <a href="../index.html" class="footer-logo">
+                <span class="footer-logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#projects">Projetos</a></li>
+                    <li><a href="../materias/principal.html">Matérias</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social">
+                <a href="https://github.com/joaoneves" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/joaoneves" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="footer-copyright">&copy; 2023 João Neves. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Tab System
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.funcionalidade-card, .tech-card, .dado-card, .destaque-card');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if(elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial state
+            document.querySelectorAll('.funcionalidade-card, .tech-card, .dado-card, .destaque-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            });
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
+        });
+    </script>
+</body>
+</html>
