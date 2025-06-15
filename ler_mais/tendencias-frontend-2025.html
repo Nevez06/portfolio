@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tendências Frontend 2025: O Futuro do Desenvolvimento Web | [Seu Nome/Nome do Blog]</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="./estilos.css">
-    <link rel="stylesheet" href="./caminho.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Tendências Frontend 2025: O Futuro do Desenvolvimento Web | João Neves</title>
     <meta name="description" content="Explore as 5 principais tendências de Frontend para 2025: desde WebAssembly a IA no desenvolvimento. Prepare-se para o futuro da programação web e mantenha-se à frente.">
     
     <meta property="og:title" content="Tendências Frontend 2025: O Futuro do Desenvolvimento Web">
@@ -15,158 +12,276 @@
     <meta property="og:image" content="https://picsum.photos/1200/630?random=14">
     <meta property="og:url" content="https://seusite.com/tendencias-frontend-2025.html">
     <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./caminho.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../index.html" class="logo">Portfólio<span></span></a>
-                <ul class="nav-links">
-                     <li><a href="../index.html#home">Home</a></li>
-                    <li><a href="../index.html#about">Sobre</a></li>
-                    <li><a href="../index.html#services">Serviços</a></li>
-                    <li><a href="../index.html#portfolio">Portfólio</a></li>
-                    <li><a href="../index.html#blog" class="active">Blog</a></li>
-                    <li><a href="../index.html#contact">Contato</a></li>
-                </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
+    <header>
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#hero">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../index.html#testimonials">Matérias</a>
+                <a href="../index.html#blog" class="active">Blog</a>
+                <a href="../index.html#contact">Contato</a>
             </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
+
+    <div class="nav-overlay">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile">
+            <a href="../index.html#hero">Início</a>
+            <a href="../index.html#about">Sobre</a>
+            <a href="../index.html#services">Serviços</a>
+            <a href="../index.html#projects">Projetos</a>
+            <a href="../index.html#testimonials">Matérias</a>
+            <a href="../index.html#blog">Blog</a>
+            <a href="../index.html#contact">Contato</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
 
     <article class="blog-post-full">
         <header class="post-header">
             <div class="container">
                 <a href="../index.html#blog" class="back-to-blog"><i class="fas fa-arrow-left"></i> Voltar ao Blog</a>
                 <div class="post-meta">
-                    <span><i class="fas fa-calendar-alt"></i> 01 Abril, 2025</span>
-                    <span><i class="fas fa-tag"></i> Frontend Development</span> <span><i class="fas fa-clock"></i> 10 min de leitura</span> </div>
-                <h1>As 5 Tendências Essenciais de Frontend para 2025</h1> <div class="featured-image">
-                    <img src="https://picsum.photos/1200/600?random=14" alt="Visão futurista de código ou interface de usuário" width="1200" height="600"> </div>
+                    <span><i class="fas fa-calendar-alt"></i> 28 Janeiro, 2025</span>
+                    <span><i class="fas fa-tag"></i> Frontend, Tendências</span>
+                    <span><i class="fas fa-clock"></i> 8 min de leitura</span>
+                </div>
+                <h1>As 5 Tendências de Frontend para 2025: Prepare-se para o Futuro do Desenvolvimento Web</h1>
+                <div class="featured-image">
+                    <img src="https://picsum.photos/1200/600?random=16" alt="Desenvolvedor trabalhando em código com elementos de UI futuristas" width="1200" height="600">
+                </div>
             </div>
         </header>
 
         <div class="post-content container">
-            <p class="intro">O cenário do desenvolvimento Frontend está em constante evolução. Descubra as 5 tendências mais impactantes que moldarão o futuro da web em 2025 e como você pode se preparar para dominá-las.</p>
+            <p class="intro">O universo do desenvolvimento Frontend está em constante evolução. Novas ferramentas, paradigmas e tecnologias surgem a cada ano, moldando a forma como construímos a web. Para 2025, algumas tendências já se destacam, prometendo revolucionar a experiência do usuário e o processo de desenvolvimento. Você está pronto para o futuro? Continue lendo e descubra as 5 tendências que você precisa dominar!</p>
             
-            <h2>1. WebAssembly (Wasm): Além do JavaScript</h2>
-            <p>O Wasm está ganhando força, permitindo que linguagens como C++, Rust e Go rodem com performance quase nativa no navegador. Implicações:</p>
+            <h2>1. WebAssembly (Wasm) e a Performance Extrema</h2>
+            <p>WebAssembly não é novidade, mas seu uso está se tornando mais difundido e maduro. Ele permite executar código de linguagens como C++, Rust e Go diretamente no navegador, com performance quase nativa. Em 2025, espere ver Wasm sendo usado para:</p>
             <ul>
-                <li>Jogos complexos e aplicativos intensivos diretamente no navegador</li>
-                <li>Processamento de dados em tempo real mais rápido</li>
-                <li>Ferramentas de desenvolvimento mais poderosas</li>
+                <li>Aplicações web de alta performance (jogos, edição de vídeo, CAD).</li>
+                <li>Componentes críticos de UI que exigem renderização ultrarrápida.</li>
+                <li>Portar bibliotecas e frameworks complexos para a web com maior eficiência.</li>
             </ul>
-            
-            <div class="post-example">
-                <h3>Impacto Prático: Edição de Vídeos no Navegador</h3>
-                <p>Ferramentas de edição de vídeo baseadas em Wasm permitem processamento em tempo real sem a necessidade de upload para servidores, otimizando a UX.</p>
-            </div>
-            
-            <h2>2. Micro-Frontends: Arquiteturas Escaláveis</h2>
-            <p>A modularização de grandes aplicações em pequenos "micro-frontends" independentes para equipes multidisciplinares. Vantagens:</p>
-            
-            <div class="design-tips">
-                <div class="tip">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <h4>Desenvolvimento Independente</h4>
-                    <p>Equipes trabalham em módulos sem impactar outros</p>
-                </div>
-                <div class="tip">
-                    <i class="fas fa-cogs"></i>
-                    <h4>Deploy Contínuo Simplificado</h4>
-                    <p>Cada micro-frontend pode ser atualizado separadamente</p>
-                </div>
-            </div>
-            
-            <h2>3. AI no Desenvolvimento: Code Copilots e Mais</h2>
-            <p>Inteligência Artificial assistindo desenvolvedores, desde a geração de código até a detecção de bugs. O futuro inclui:</p>
-            
-            <div class="data-table">
-                <div style="overflow-x: auto;"> 
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Aplicação da IA</th>
-                                <th>Benefício Estimado</th>
-                                <th>Ferramentas (Exemplos)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Geração de Código</td>
-                                <td>Redução de 30% no tempo de codificação</td>
-                                <td>GitHub Copilot, Tabnine</td>
-                            </tr>
-                            <tr>
-                                <td>Refatoração e Otimização</td>
-                                <td>Melhora de 15% na performance</td>
-                                <td>DeepCode AI, Codiga</td>
-                            </tr>
-                            <tr>
-                                <td>Testes Automatizados</td>
-                                <td>Redução de 50% de bugs em produção</td>
-                                <td>Applitools, Testim.io</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <h2>4. Low-Code/No-Code: Democratizando o Desenvolvimento</h2>
-            <p>Plataformas que permitem criar aplicações com pouca ou nenhuma codificação. Implicações para o Frontend:</p>
-            
-            <div class="case-study">
-                <div class="case-image">
-                    <img src="https://picsum.photos/500/300?random=142" alt="Pessoa utilizando uma plataforma low-code" width="500" height="300"> </div>
-                <div class="case-content">
-                    <p>O uso de ferramentas low-code para prototipagem rápida e MVPs aumentou a velocidade de lançamento em:</p>
-                    <ul>
-                        <li>50% para pequenas e médias empresas</li>
-                        <li>30% para grandes corporações em projetos específicos</li>
-                        <li>Redução de 70% na dependência de devs para apps simples</li>
-                    </ul>
-                </div>
+
+            <h2>2. UI/UX Imersivo com WebXR e 3D no Navegador</h2>
+            <p>A realidade virtual (VR) e aumentada (AR) estão deixando de ser nicho para se tornarem parte da web mainstream. Com APIs como WebXR e bibliotecas 3D como Three.js e Babylon.js cada vez mais robustas, a criação de experiências imersivas no navegador será uma tendência forte:</p>
+            <ul>
+                <li>Lojas online com visualização de produtos em 3D e AR.</li>
+                <li>Portfólios e galerias de arte interativas.</li>
+                <li>Experiências educacionais e de treinamento imersivas.</li>
+            </ul>
+
+            <h2>3. Inteligência Artificial (IA) no Desenvolvimento Frontend</h2>
+            <p>A IA não vai apenas otimizar o backend; ela está chegando ao frontend de maneiras significativas:</p>
+            <ul>
+                <li><strong>Geração de Código e Componentes:</strong> Ferramentas baseadas em IA que geram snippets de código, componentes de UI e até layouts inteiros a partir de descrições textuais ou mockups.</li>
+                <li><strong>Otimização de Performance:</strong> IA analisando padrões de uso para otimizar o carregamento de recursos, prefetching e cache.</li>
+                <li><strong>Testes Automatizados Inteligentes:</strong> Ferramentas de teste que aprendem com o comportamento do usuário para criar cenários de teste mais eficazes.</li>
+            </ul>
+
+            <h2>4. Server Components e Zero-Bundling com Frameworks Modernos</h2>
+            <p>A briga pelo "menor bundle size" e "maior performance de carregamento" está levando a novas arquiteturas. Frameworks como Next.js (com Server Components) e projetos como o "Zero-Bundling" visam reduzir a quantidade de JavaScript enviada para o navegador:</p>
+            <ul>
+                <li>Renderização de componentes no servidor para agilizar o Time To Interactive (TTI).</li>
+                <li>Menos JavaScript enviado ao cliente, resultando em menor consumo de dados e bateria.</li>
+                <li>Experiências mais rápidas e fluidas, especialmente em dispositivos móveis e conexões lentas.</li>
+            </ul>
+
+            <h2>5. Web Components e a Era da Reutilização Acelerada</h2>
+            <p>Embora já existam há algum tempo, os Web Components estão ganhando tração à medida que os navegadores os suportam nativamente e os frameworks adotam uma abordagem mais agnóstica. Eles permitem criar componentes encapsulados e reutilizáveis, independentes de frameworks específicos:</p>
+            <ul>
+                <li>Construção de Design Systems robustos e portáveis.</li>
+                <li>Maior interoperabilidade entre diferentes projetos e tecnologias.</li>
+                <li>Padronização e escalabilidade no desenvolvimento de grandes aplicações.</li>
+            </ul>
+
+            <div class="quote-block">
+                <blockquote>
+                    <p>"O futuro do Frontend não é sobre qual framework usar, mas sim sobre como criar experiências web mais rápidas, imersivas e inteligentes."</p>
+                    <cite>— Lucas Mendes, Arquiteto Frontend Sênior</cite>
+                </blockquote>
             </div>
 
-            <h2>5. Web3 e Blockchains: A Web Descentralizada</h2>
-            <p>O impacto da tecnologia blockchain e dos conceitos de Web3 no desenvolvimento frontend, com foco em:</p>
-            <ul>
-                <li>Integração com carteiras digitais (Wallets)</li>
-                <li>Criação de DApps (Aplicativos Descentralizados)</li>
-                <li>Uso de NFTs e Smart Contracts em interfaces</li>
-            </ul>
+            <p>Preparar-se para 2025 significa ir além do conhecimento de um único framework. É preciso entender os princípios por trás dessas tendências: performance, experiência do usuário e otimização do fluxo de trabalho. Comece a explorar essas tecnologias hoje e posicione-se na vanguarda do desenvolvimento web.</p>
             
-            <div class="post-footer">
-                <div class="author-bio">
-                    <img src="../assets/author.jpg" alt="Foto do Autor">
-                    <div>
-                        <h3>Sobre o Autor</h3>
-                        <p>UX Designer com certificação em Psicologia Cognitiva aplicada a Interfaces. Já trabalhou com empresas como Google, Spotify e Airbnb em projetos de redesign.</p>
-                        <div class="author-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-dribbble"></i></a>
-                            <a href="#"><i class="fab fa-medium"></i></a>
-                        </div>
+            <div class="author-bio">
+                <img src="https://picsum.photos/100/100?random=12" alt="Foto do Autor">
+                <div>
+                    <h3>Sobre o Autor</h3>
+                    <p>João Neves é um desenvolvedor Frontend com paixão por inovação e novas tecnologias. Com anos de experiência em projetos desafiadores, ele está sempre buscando as próximas tendências para construir interfaces de usuário de ponta e otimizadas para performance. É um defensor do conhecimento compartilhado e da comunidade open source.</p>
+                    <div class="author-social">
+                        <a href="https://linkedin.com/in/joaoneves" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Nevez06" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/joaoneves" target="_blank"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                
-                <div class="post-navigation">
-                    <a href="./psicologia-no-ux.html" class="prev-post"><i class="fas fa-arrow-left"></i> O Poder da Psicologia no UX</a>
-                    <a href="./caminho-para-topo-dev.html" class="next-post">De Júnior a Lenda <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="social-share">
-                    <p>Compartilhe este artigo:</p>
-                    <a href="https://twitter.com/intent/tweet?text=Tend%C3%AAncias%20Frontend%202025:%20O%20Futuro%20do%20Desenvolvimento%20Web%20by%20%40seuuser&url=https://seusite.com/tendencias-frontend-2025.html" class="twitter-share" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://seusite.com/tendencias-frontend-2025.html&title=Tend%C3%AAncias%20Frontend%202025:%20O%20Futuro%20do%20Desenvolvimento%20Web&summary=Explore%20as%205%20principais%20tend%C3%AAncias%20de%20Frontend%20para%202025%3A%20desde%20WebAssembly%20a%20IA%20no%20desenvolvimento.%20Prepare-se%20para%20o%20futuro%20da%20programa%C3%A7%C3%A3o%20web%20e%20mantenha-se%20%C3%A0%20frente.&source=seusite.com" class="linkedin-share" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://seusite.com/tendencias-frontend-2025.html" class="facebook-share" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                </div>
+            </div>
+            
+            <div class="post-navigation">
+                <a href="./caminho-para-topo-dev.html" class="prev-post"><i class="fas fa-arrow-left"></i> De Júnior a Lenda</a>
+                <a href="./psicologia-no-ux.html" class="next-post">O Poder da Psicologia no UX <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="social-share">
+                <p>Compartilhe este artigo:</p>
+                <a href="https://twitter.com/intent/tweet?text=Tend%C3%AAncias%20Frontend%202025:%20O%20Futuro%20do%20Desenvolvimento%20Web%20by%20%40joaoneves&url=https%3A%2F%2Fseusite.com%2Ftendencias-frontend-2025.html" target="_blank" class="twitter-share"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fseusite.com%2Ftendencias-frontend-2025.html&title=Tend%C3%AAncias%20Frontend%202025:%20O%20Futuro%20do%20Desenvolvimento%20Web&summary=Explore%20as%205%20principais%20tend%C3%AAncias%20de%20Frontend%20para%202025%3A%20desde%20WebAssembly%20a%20IA%20no%20desenvolvimento.%20Prepare-se%20para%20o%20futuro%20da%20programa%C3%A7%C3%A3o%20web%20e%20mantenha-se%20%C3%A0%20frente." target="_blank" class="linkedin-share"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fseusite.com%2Ftendencias-frontend-2025.html" target="_blank" class="facebook-share"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
     </article>
 
-    <script src="../js/script.js"></script>
+    <footer>
+        <div class="container footer-container">
+            <a href="../index.html" class="footer-logo">
+                <span class="footer-logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#projects">Projetos</a></li>
+                    <li><a href="../index.html#testimonials">Matérias</a></li>
+                    <li><a href="../index.html#blog">Blog</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social social-links">
+                <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn de João Neves"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Nevez06" target="_blank" aria-label="GitHub de João Neves"><i class="fab fa-github"></i></a>
+                <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance de João Neves"><i class="fab fa-behance"></i></a>
+            </div>
+            <p class="footer-bottom-text">&copy; 2025 João Neves. Todos os direitos reservados. Feito com paixão e tecnologia em Jales, SP.</p>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle
+            const themeToggle = document.querySelectorAll('.theme-toggle');
+            const html = document.documentElement;
+
+            themeToggle.forEach(button => {
+                button.addEventListener('click', () => {
+                    const currentTheme = html.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    html.setAttribute('data-theme', newTheme);
+
+                    // Update icons on all theme toggle buttons
+                    themeToggle.forEach(btn => {
+                        const icon = btn.querySelector('i');
+                        icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+                    });
+
+                    // Animation
+                    button.style.transform = 'rotate(360deg)';
+                    setTimeout(() => {
+                        button.style.transform = '';
+                    }, 500);
+                });
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navOverlay = document.querySelector('.nav-overlay');
+            const closeBtn = document.querySelector('.close-btn');
+            const navLinksMobile = document.querySelectorAll('.nav-links-mobile a');
+
+            if (mobileMenuBtn && navOverlay && closeBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navOverlay.classList.add('active');
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    navOverlay.classList.remove('active');
+                });
+
+                navLinksMobile.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navOverlay.classList.remove('active');
+                    });
+                });
+            }
+
+            // Intersection Observer for animations (from original caminho-para-topo-dev.html)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const contentElements = document.querySelectorAll('.post-content p, .post-content h2, .post-content h3, .post-content ul, .quote-block, .author-bio, .post-navigation, .social-share');
+            
+            contentElements.forEach((item, index) => {
+                item.style.opacity = 0;
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = `all 0.4s ease ${index * 0.05}s`; // Staggered animation
+                observer.observe(item);
+            });
+            
+            // Botão de voltar ao topo
+            const backToTop = document.createElement('div');
+            backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            backToTop.className = 'back-to-top';
+            document.body.appendChild(backToTop);
+            
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.style.opacity = '1';
+                    backToTop.style.visibility = 'visible';
+                } else {
+                    backToTop.style.opacity = '0';
+                    backToTop.style.visibility = 'hidden';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -28,30 +28,51 @@
                 themeToggleMobile.innerHTML = '<i class="fas fa-moon"></i>';
             }
         }
-        
+       themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            
+            // Atualizar ícone
+            const icon = themeToggle.querySelector('i');
+            icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+            
+            // Animação
+            themeToggle.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                themeToggle.style.transform = '';
+            }, 500);
+        });
+
         themeToggle.addEventListener('click', toggleTheme);
         themeToggleMobile.addEventListener('click', toggleTheme);
         
-        // Menu mobile
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navOverlay = document.getElementById('navOverlay');
-        const closeBtn = document.getElementById('closeBtn');
-        
+         // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeBtn = document.querySelector('.nav-overlay-mobile .close-btn');
+        const navOverlay = document.querySelector('.nav-overlay-mobile');
+        const navLinksMobile = document.querySelectorAll('.nav-links-mobile-list a');
+
         mobileMenuBtn.addEventListener('click', () => {
-            navOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            navOverlay.classList.add('open');
         });
-        
+
         closeBtn.addEventListener('click', () => {
-            navOverlay.classList.remove('active');
-            document.body.style.overflow = '';
+            navOverlay.classList.remove('open');
         });
-        
-        // Fechar menu ao clicar em um link
-        navOverlay.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navOverlay.classList.remove('active');
-                document.body.style.overflow = '';
+
+        navLinksMobile.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Previne o comportamento padrão para rolar suavemente para as seções
+                e.preventDefault(); 
+                const targetId = e.target.getAttribute('href');
+                if (targetId && targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+                navOverlay.classList.remove('open');
             });
         });
         

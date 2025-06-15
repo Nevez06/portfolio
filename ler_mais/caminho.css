@@ -1,32 +1,22 @@
-/* Melhoria: Definição de variáveis CSS para cores - Facilita a manutenção e consistência */
-:root {
-    --primary-color: #2a5298; /* Azul principal */
-    --secondary-color: #1e3c72; /* Azul mais escuro */
-    --text-color-dark: #333;
-    --text-color-medium: #555;
-    --text-color-light: #666;
-    --background-light: #f8f9fa;
-    --border-color: #eee;
-    --error-color-burn: #ff4d4d;
-    --error-color-heartbeat: #ff9500;
-}
+/* Removendo variáveis de cor duplicadas, usando as do styles.css */
 
 /* Estilos gerais para o post */
 .blog-post-full {
-    background: #fff;
-    color: var(--text-color-dark); /* Usando variável */
+    background: var(--darker); /* Usando background do tema principal */
+    color: var(--light-gray); /* Usando cor de texto do tema principal */
     line-height: 1.6;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif; /* Usando fonte principal do portfólio */
     padding-bottom: 3rem;
 }
 
 .post-header {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%); /* Usando variáveis */
-    color: white;
+    background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%); /* Cores mais escuras do tema */
+    color: var(--white);
     padding: 4rem 0 3rem;
     margin-bottom: 3rem;
     position: relative;
     overflow: hidden;
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .post-header::before {
@@ -36,9 +26,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* Melhoria: Substituir por uma imagem real e otimizada */
-    background: url('https://picsum.photos/1200/600?random=15') center/cover; 
-    opacity: 0.2;
+    background: url('https://picsum.photos/1200/600?random=15') center/cover;
+    opacity: 0.1; /* Ajustado para melhor contraste com tema escuro */
     z-index: 0;
 }
 
@@ -48,26 +37,27 @@
 }
 
 .back-to-blog {
-    color: white;
+    color: var(--light-gray);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
-    transition: opacity 0.3s;
+    transition: var(--transition);
 }
 
 .back-to-blog:hover {
-    opacity: 0.8;
+    color: var(--primary);
+    transform: translateX(-5px);
 }
 
 .post-meta {
     display: flex;
     gap: 1.5rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
+    color: var(--medium-gray); /* Cor de texto mais sutil */
     font-size: 0.9rem;
-    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .post-meta span {
@@ -76,35 +66,57 @@
     gap: 0.5rem;
 }
 
+.post-meta i {
+    color: var(--primary); /* Ícones coloridos */
+}
+
 .post-header h1 {
-    font-size: 2.8rem;
-    margin: 1.5rem 0;
+    font-family: 'Clash Display', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    margin-bottom: 1.5rem;
     line-height: 1.2;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    background: linear-gradient(90deg, var(--white), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     font-weight: 700;
+}
+
+.featured-image {
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .featured-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    /* Melhoria: Sombra mais suave para um visual moderno */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
-    margin-top: 2rem;
+    display: block;
+    object-fit: cover;
 }
 
+/* Conteúdo do post */
 .post-content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 2rem 1.5rem;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--light-gray);
 }
 
 .post-content h2 {
-    font-size: 2rem;
+    font-family: 'Clash Display', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--white);
     margin: 3rem 0 1.5rem;
-    color: var(--secondary-color); /* Usando variável */
     position: relative;
-    padding-bottom: 0.5rem;
+    padding-bottom: 10px;
 }
 
 .post-content h2::after {
@@ -112,33 +124,53 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 80px;
-    height: 3px;
-    background: var(--primary-color); /* Usando variável */
-    border-radius: 3px;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
 }
 
-.intro {
-    font-size: 1.2rem;
-    border-left: 4px solid var(--primary-color); /* Usando variável */
-    padding-left: 1.5rem;
-    margin: 2rem 0;
-    color: var(--text-color-medium); /* Usando variável */
-    font-style: italic;
+
+.post-content h3 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 1.6rem;
+    color: var(--primary-light);
+    margin: 2rem 0 1rem;
 }
 
-/* Timeline estilizada */
+.post-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.post-content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0.8rem;
+    color: var(--light-gray);
+}
+
+.post-content ul li::before {
+    content: "—"; /* Use um traço ou outro ícone */
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Timeline */
 .timeline {
     position: relative;
-    max-width: 1200px;
-    margin: 3rem auto;
+    padding: 20px 0;
+    margin: 3rem 0;
 }
 
 .timeline::after {
     content: '';
     position: absolute;
     width: 4px;
-    background-color: var(--border-color); /* Usando variável */
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
     top: 0;
     bottom: 0;
     left: 50%;
@@ -147,23 +179,12 @@
 }
 
 .timeline-item {
-    padding: 10px 40px;
+    padding: 10px 50px;
     position: relative;
+    background: inherit;
     width: 50%;
-    box-sizing: border-box;
-    /* Melhoria: Adicionado uma transição para o hover */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.timeline-item:hover .timeline-content {
-    /* Melhoria: Efeito sutil de elevação no hover */
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-
-.timeline-item:nth-child(odd) {
-    left: 0;
+    opacity: 0; /* Para animação */
+    transform: translateY(20px); /* Para animação */
 }
 
 .timeline-item:nth-child(even) {
@@ -172,471 +193,348 @@
 
 .timeline-year {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background: var(--primary-color); /* Usando variável */
-    color: white;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background: var(--primary);
+    color: var(--white);
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
     top: 15px;
     z-index: 1;
-    /* Melhoria: Transição para o efeito highlight */
-    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 0 5px var(--darker); /* Ajustado para background principal */
 }
 
 .timeline-item:nth-child(odd) .timeline-year {
-    right: -50px;
+    left: calc(100% - 40px);
+    transform: translateX(-50%);
 }
 
 .timeline-item:nth-child(even) .timeline-year {
-    left: -50px;
+    left: -40px;
+    transform: translateX(50%);
 }
 
 .timeline-content {
     padding: 20px 30px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    background: var(--dark-gray); /* Cor do card */
     position: relative;
-    /* Melhoria: Transição para o hover */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .timeline-content::after {
-    content: '';
+    content: ' ';
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background: white;
-    top: 30px;
-    transform: rotate(45deg);
-    box-shadow: 3px -3px 10px rgba(0,0,0,0.1);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    top: 25px;
 }
 
 .timeline-item:nth-child(odd) .timeline-content::after {
-    right: -10px;
+    border-color: transparent transparent transparent var(--dark-gray); /* Ajustado para a cor do card */
+    left: 100%;
 }
 
 .timeline-item:nth-child(even) .timeline-content::after {
-    left: -10px;
+    border-color: transparent var(--dark-gray) transparent transparent; /* Ajustado para a cor do card */
+    right: 100%;
 }
 
-.timeline-item.highlight .timeline-content {
-    background: var(--background-light); /* Usando variável */
-    border: 2px solid var(--primary-color); /* Usando variável */
-}
-
-.timeline-item.highlight .timeline-year {
-    background: var(--secondary-color); /* Usando variável */
-    transform: scale(1.1);
+.timeline-content h3 {
+    color: var(--primary-light);
+    margin-top: 0;
 }
 
 .lesson {
-    background: #f0f7ff;
-    padding: 1rem;
-    border-radius: 6px;
-    margin-top: 1rem;
-    border-left: 3px solid var(--primary-color); /* Usando variável */
+    background: var(--medium-gray); /* Cor de fundo para lições */
+    padding: 15px;
+    border-left: 4px solid var(--secondary);
+    border-radius: 8px;
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lesson i {
+    color: var(--secondary);
+    font-size: 1.3rem;
 }
 
 .skills-learned {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
 }
 
 .skills-learned li {
-    margin-bottom: 0.5rem;
+    padding-left: 25px;
     position: relative;
-    padding-left: 1.8rem;
+    margin-bottom: 5px;
+    color: var(--light-gray);
 }
 
-.skills-learned i {
-    color: var(--primary-color); /* Usando variável */
+.skills-learned li i {
+    color: var(--primary);
     position: absolute;
     left: 0;
-    top: 3px;
+    top: 5px;
+    font-size: 0.9rem;
 }
 
 .two-columns {
     display: flex;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 20px;
 }
 
 .two-columns .column {
     flex: 1;
+    background: var(--dark-gray); /* Fundo da coluna */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
 }
 
 .two-columns h4 {
-    color: var(--primary-color); /* Usando variável */
-    margin-bottom: 0.5rem;
+    color: var(--white);
+    margin-top: 0;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 10px;
+    font-size: 1.2rem;
 }
 
-.two-columns ul {
-    list-style-type: none;
-    padding-left: 1.5rem;
+.two-columns h4 i {
+    color: var(--primary);
 }
 
-.two-columns li {
-    margin-bottom: 0.5rem;
-    position: relative;
-}
 
-.two-columns li::before {
-    content: "•";
-    color: var(--primary-color); /* Usando variável */
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* Cards de erros */
+/* Erros */
 .mistakes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin: 2rem 0;
+    margin-top: 2rem;
 }
 
 .mistake-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    /* Melhoria: Sombra mais suave */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--dark-gray); /* Fundo do card */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-top: 4px solid var(--secondary); /* Borda superior para erro */
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(20px);
+    border: 1px solid var(--glass-border);
 }
 
 .mistake-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra mais pronunciada no hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .mistake-header {
-    background: linear-gradient(135deg, var(--error-color-burn) 0%, #f94444 100%); /* Usando variável */
-    color: white;
-    padding: 1.5rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
 .mistake-header i {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: var(--secondary); /* Cor do ícone de erro */
 }
 
-.mistake-card:nth-child(2) .mistake-header {
-    background: linear-gradient(135deg, var(--error-color-heartbeat) 0%, #ff7b00 100%); /* Usando variável */
+.mistake-header h3 {
+    margin: 0;
+    color: var(--white);
+    font-size: 1.4rem;
 }
 
-.mistake-card ul {
-    padding: 1.5rem;
-    list-style-type: none;
-}
-
-.mistake-card li {
-    margin-bottom: 0.8rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.mistake-card li::before {
-    content: "•";
-    color: var(--primary-color); /* Usando variável */
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* Conselhos de carreira */
-.career-advice {
-    display: flex;
+/* Conselhos */
+.advice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin: 3rem 0;
-    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .advice-card {
-    flex: 1;
-    min-width: 300px;
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    /* Melhoria: Sombra mais suave */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--dark-gray); /* Fundo do card */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-top: 4px solid var(--primary); /* Borda superior para conselho */
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(20px);
+    border: 1px solid var(--glass-border);
 }
 
 .advice-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Sombra mais pronunciada no hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .advice-icon {
-    width: 70px;
-    height: 70px;
-    background: var(--primary-color); /* Usando variável */
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 1.5rem;
-    font-size: 1.8rem;
-}
-
-.advice-card:nth-child(2) .advice-icon {
-    background: var(--secondary-color); /* Usando variável */
+    font-size: 2rem;
+    color: var(--primary); /* Cor do ícone de conselho */
+    margin-bottom: 15px;
 }
 
 .advice-card h3 {
-    color: var(--primary-color); /* Usando variável */
-    margin-bottom: 1rem;
+    color: var(--white);
+    margin-top: 0;
+    font-size: 1.4rem;
 }
 
-.advice-card ul {
-    list-style-type: none;
-    padding-left: 0;
-    text-align: left;
-    margin-top: 1rem;
-}
-
-.advice-card li {
-    margin-bottom: 0.8rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.advice-card li::before {
-    content: "•";
-    color: var(--primary-color); /* Usando variável */
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* Botões de compartilhamento */
-.share-buttons {
-    text-align: center;
-    margin: 3rem 0;
-    padding: 2rem;
-    background: var(--background-light); /* Usando variável */
-    border-radius: 8px;
-}
-
-.social-share {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.social-share a {
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: transform 0.3s, opacity 0.3s; /* Melhoria: Adicionado transição para opacidade */
-}
-
-.social-share a:hover {
-    transform: translateY(-3px);
-    opacity: 0.9; /* Melhoria: Leve opacidade no hover */
-}
-
-.social-share .twitter { background: #1DA1F2; }
-.social-share .linkedin { background: #0077B5; }
-.social-share .facebook { background: #4267B2; }
-
-/* Seção de comentários */
-.comments-section {
-    margin: 4rem 0;
-    padding-top: 3rem;
-    border-top: 1px solid var(--border-color); /* Usando variável */
-}
-
-.comment-form {
-    max-width: 800px;
-    margin: 2rem auto 0;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: inherit;
-    /* Melhoria: Transição para foco */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--primary-color); /* Borda primária no foco */
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.2); /* Sombra suave no foco */
-}
-
-.comment-form button {
-    background: var(--primary-color); /* Usando variável */
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease, transform 0.2s ease; /* Melhoria: Transição para transform */
-}
-
-.comment-form button:hover {
-    background: var(--secondary-color); /* Usando variável */
-    transform: translateY(-2px); /* Pequeno efeito de elevação */
-}
-
-/* Rodapé do post */
-.post-footer {
-    margin-top: 4rem;
-    border-top: 1px solid var(--border-color); /* Usando variável */
-    padding-top: 3rem;
-}
-
+/* Autor */
 .author-bio {
     display: flex;
-    gap: 2rem;
     align-items: center;
-    margin-bottom: 3rem;
+    gap: 2rem;
+    background: var(--medium-gray); /* Fundo da biografia */
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 4rem;
+    border: 1px solid var(--glass-border);
 }
 
 .author-bio img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--primary-color); /* Usando variável */
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 0 5px var(--dark-gray);
+}
+
+.author-bio h3 {
+    margin-top: 0;
+    color: var(--white);
+    font-size: 1.6rem;
+}
+
+.author-bio p {
+    font-size: 1rem;
+    color: var(--light-gray);
+    margin-bottom: 1rem;
 }
 
 .author-social {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
 }
 
 .author-social a {
-    color: var(--primary-color); /* Usando variável */
-    font-size: 1.2rem;
-    transition: color 0.3s, transform 0.2s ease; /* Melhoria: Adicionado transição para transform */
+    color: var(--light-gray);
+    font-size: 1.4rem;
+    transition: var(--transition);
 }
 
 .author-social a:hover {
-    color: var(--secondary-color); /* Usando variável */
-    transform: translateY(-3px); /* Pequeno efeito de elevação */
+    color: var(--primary);
+    transform: translateY(-3px);
 }
 
+/* Navegação entre posts */
 .post-navigation {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--glass-border);
 }
 
 .post-navigation a {
-    color: var(--primary-color); /* Usando variável */
-    font-weight: 500;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
-    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
     text-decoration: none;
-    border: 1px solid transparent; /* Para evitar CLS no hover */
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: var(--dark-gray);
+    border: 1px solid var(--glass-border);
 }
 
 .post-navigation a:hover {
-    background: #f0f7ff;
-    text-decoration: none;
-    border-color: #dbe9ff; /* Borda sutil no hover */
+    background: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.newsletter {
-    background: var(--background-light); /* Usando variável */
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
+.post-navigation .prev-post {
+    justify-content: flex-start;
+}
+
+.post-navigation .next-post {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+/* Compartilhamento social */
+.social-share {
     margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--glass-border);
+    text-align: center;
 }
 
-.newsletter h3 {
-    margin-bottom: 0.5rem;
-    color: var(--secondary-color); /* Melhoria: Cor de destaque para o h3 */
+.social-share p {
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
 }
 
-.newsletter p {
-    color: var(--text-color-light); /* Usando variável */
-    margin-bottom: 0;
+.social-share a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: var(--transition);
 }
 
-.newsletter-form {
-    display: flex;
-    max-width: 500px;
-    margin: 1.5rem auto 0;
-    border-radius: 4px; /* Para bordas arredondadas nos elementos combinados */
-    overflow: hidden; /* Garante que os filhos respeitem o border-radius */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra sutil no formulário */
+.social-share a:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.newsletter-form input {
-    flex: 1;
-    padding: 0.8rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 0; /* Remove border-radius individual */
-    font-size: 1rem;
-    border-right: none;
-    /* Melhoria: Transição para foco */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.twitter-share {
+    background: #1DA1F2;
 }
 
-.newsletter-form input:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: inset 0 0 0 1px var(--primary-color); /* Sombra interna para foco */
+.linkedin-share {
+    background: #0A66C2;
 }
 
-.newsletter-form button {
-    background: var(--primary-color); /* Usando variável */
-    color: white;
-    border: none;
-    padding: 0 1.5rem;
-    border-radius: 0; /* Remove border-radius individual */
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease; /* Melhoria: Adicionado transform */
-}
-
-.newsletter-form button:hover {
-    background: var(--secondary-color); /* Usando variável */
-    transform: translateY(-2px); /* Pequeno efeito de elevação */
+.facebook-share {
+    background: #1877F2;
 }
 
 /* Botão de voltar ao topo */
@@ -646,23 +544,23 @@
     right: 30px;
     width: 50px;
     height: 50px;
-    background: var(--primary-color); /* Usando variável */
-    color: white;
+    background: var(--primary); /* Usando cor primária do tema */
+    color: var(--white);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease, transform 0.2s ease; /* Melhoria: Adicionado transform */
+    transition: all 0.3s;
     z-index: 999;
     border: none;
 }
 
 .back-to-top:hover {
-    background: var(--secondary-color); /* Usando variável */
+    background: var(--primary-dark); /* Usando var do tema */
     transform: translateY(-3px);
 }
 
@@ -671,17 +569,17 @@
     .timeline::after {
         left: 31px;
     }
-    
+
     .timeline-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
-    
+
     .timeline-item:nth-child(even) {
         left: 0;
     }
-    
+
     .timeline-year {
         width: 60px;
         height: 60px;
@@ -690,25 +588,33 @@
         font-size: 1rem; /* Ajuste para telas menores */
         top: 20px; /* Ajuste de posição */
     }
-    /* Melhoria: Ajuste da seta do timeline-content para mobile */
+
     .timeline-content::after {
         left: 15px;
         right: auto;
-        box-shadow: -3px 3px 10px rgba(0,0,0,0.1); /* Sombra ajustada para o lado esquerdo */
+        border-color: transparent var(--dark-gray) transparent transparent; /* Ajustado para a cor do card */
+        box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.1); /* Sombra ajustada para o lado esquerdo */
     }
-    
+
+    .timeline-item:nth-child(odd) .timeline-content::after {
+        border-color: transparent var(--dark-gray) transparent transparent; /* Ajustado para a cor do card */
+        right: 100%;
+        left: auto;
+    }
+
+
     .two-columns {
         flex-direction: column;
     }
-    
+
     .post-header h1 {
         font-size: 2rem;
     }
-    
+
     .post-navigation {
         flex-direction: column;
     }
-    
+
     .post-navigation a {
         width: 100%;
         text-align: center;
@@ -720,28 +626,33 @@
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .author-bio {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .author-social {
         justify-content: center;
     }
 
     .social-share a {
-        flex-grow: 1; /* Faz com que os botões ocupem o máximo de espaço */
-        justify-content: center; /* Centraliza o ícone e texto */
+        flex-grow: 1; /* Faz com que os botões de compartilhamento preencham o espaço disponível */
     }
 
-    .newsletter-form {
-        flex-direction: column; /* Coluna em telas muito pequenas */
+    .post-content h2 {
+        font-size: 1.6rem;
     }
-    .newsletter-form input,
-    .newsletter-form button {
-        border-radius: 4px; /* Arredonda os cantos para botões e inputs em coluna */
-        margin-bottom: 0.5rem; /* Espaçamento entre eles */
-        border-right: 1px solid #ddd; /* Garante borda no input */
+
+    .post-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .post-content p, .post-content ul li {
+        font-size: 1rem;
+    }
+
+    .timeline-content {
+        padding: 15px 20px;
     }
 }

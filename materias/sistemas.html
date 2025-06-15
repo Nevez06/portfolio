@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitetura de Computadores</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0f;
+      color: #e0e0e0;
+      padding: 20px;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #ffffff;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 25px;
+    }
+    .section {
+      background-color: rgba(20, 20, 30, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #16161d;
+    }
+    th, td {
+      border: 1px solid #2e2e3a;
+      padding: 10px;
+    }
+    th {
+      background-color: #6c63ff;
+      color: white;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1><i class="fas fa-microchip"></i> Arquitetura de Computadores</h1>
+
+  <div class="section">
+    <h2>Componentes Fundamentais</h2>
+    <ul>
+      <li><strong>CPU:</strong> Executa instruções, contém ULA, registradores e unidade de controle</li>
+      <li><strong>Memória:</strong> Cache, RAM, ROM, virtual</li>
+      <li><strong>Dispositivos de Entrada/Saída:</strong> Teclado, monitor, impressora, etc.</li>
+      <li><strong>Barramentos:</strong> Comunicação entre os componentes (dados, endereços e controle)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Hierarquia de Memória</h2>
+    <table>
+      <thead>
+        <tr><th>Tipo</th><th>Velocidade</th><th>Capacidade</th><th>Custo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Registradores</td><td>1–2 ns</td><td>KB</td><td>Alto</td></tr>
+        <tr><td>Cache</td><td>2–10 ns</td><td>MB</td><td>Alto</td></tr>
+        <tr><td>RAM</td><td>10–100 ns</td><td>GB</td><td>Médio</td></tr>
+        <tr><td>Armazenamento</td><td>ms</td><td>TB</td><td>Baixo</td></tr>
+      </tbody>
+    </table>
+    <h3>Memória Virtual</h3>
+    <p>Usa espaço em disco como extensão da RAM, gerenciada via paginação pelo sistema operacional.</p>
+  </div>
+
+  <div class="section">
+    <h2>CPU: Unidade Central de Processamento</h2>
+    <h3>Componentes</h3>
+    <ul>
+      <li><strong>ULA:</strong> Operações matemáticas e lógicas</li>
+      <li><strong>Unidade de Controle:</strong> Coordena instruções</li>
+      <li><strong>Registradores:</strong> Armazenamento temporário</li>
+      <li><strong>Cache:</strong> Dados de uso frequente</li>
+    </ul>
+    <h3>Ciclo de Instrução</h3>
+    <ol>
+      <li>Busca (Fetch)</li>
+      <li>Decodificação (Decode)</li>
+      <li>Execução (Execute)</li>
+      <li>Armazenamento (Store)</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Unidade Lógica e Aritmética (ULA)</h2>
+    <h3>Operações Aritméticas</h3>
+    <ul>
+      <li>Adição, subtração, multiplicação, divisão</li>
+      <li>Complemento de dois</li>
+    </ul>
+    <h3>Operações Lógicas</h3>
+    <ul>
+      <li>AND, OR, NOT, XOR</li>
+      <li>Comparações e deslocamento de bits</li>
+    </ul>
+    <h3>Entradas e Saídas</h3>
+    <ul>
+      <li>Operandos, códigos de operação, resultados, flags</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Técnica de Pipeline</h2>
+    <ol>
+      <li><strong>Fetch:</strong> Busca da instrução</li>
+      <li><strong>Decode:</strong> Decodificação</li>
+      <li><strong>Execute:</strong> Execução</li>
+      <li><strong>Memory:</strong> Acesso à memória</li>
+      <li><strong>Write Back:</strong> Escrita dos resultados</li>
+    </ol>
+    <h3>Desafios (Hazards)</h3>
+    <ul>
+      <li>Data Hazard, Control Hazard, Structural Hazard</li>
+    </ul>
+    <h3>Soluções</h3>
+    <ul>
+      <li>Forwarding</li>
+      <li>Branch Prediction</li>
+      <li>Execução fora de ordem</li>
+      <li>Pipeline superescalar</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Barramentos</h2>
+    <table>
+      <thead>
+        <tr><th>Barramento</th><th>Tipo</th><th>Uso</th><th>Características</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PCI</td><td>Expansão</td><td>Placas internas</td><td>Paralelo, substituído pelo PCIe</td></tr>
+        <tr><td>PCI Express</td><td>Expansão</td><td>Placas de vídeo</td><td>Serial, alta velocidade</td></tr>
+        <tr><td>USB</td><td>E/S</td><td>Periféricos</td><td>Hot plug, versões 2.0/3.0</td></tr>
+        <tr><td>SATA</td><td>Armazenamento</td><td>HDDs/SSDs</td><td>Serial, substituiu IDE</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Dispositivos de Entrada e Saída</h2>
+    <h3>Tipos</h3>
+    <ul>
+      <li><strong>Entrada:</strong> Teclado, mouse, scanner</li>
+      <li><strong>Saída:</strong> Monitor, impressora</li>
+      <li><strong>Armazenamento:</strong> HD externo, pendrive</li>
+      <li><strong>Comunicação:</strong> Modem, roteador</li>
+    </ul>
+    <h3>Desafios</h3>
+    <ul>
+      <li>Compatibilidade com drivers</li>
+      <li>Evitar gargalos de desempenho</li>
+      <li>Segurança contra ameaças externas</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Conteúdo Adicional</h2>
+    <h3>Sistemas Multicore</h3>
+    <ul>
+      <li>Vários núcleos dentro de uma única CPU</li>
+      <li>Paralelismo e aumento de desempenho</li>
+    </ul>
+    <h3>Arquiteturas RISC vs CISC</h3>
+    <ul>
+      <li><strong>RISC:</strong> Conjunto reduzido de instruções, maior eficiência</li>
+      <li><strong>CISC:</strong> Instruções complexas e múltiplas operações</li>
+    </ul>
+    <h3>Memória Flash</h3>
+    <ul>
+      <li>Memória não-volátil usada em SSDs, pendrives</li>
+      <li>Alta velocidade, resistente a impactos</li>
+    </ul>
+    <h3>Firmware e BIOS/UEFI</h3>
+    <ul>
+      <li>Inicializa hardware</li>
+      <li>Carrega o sistema operacional</li>
+    </ul>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engenharia de Software - Conteúdo Completo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-laptop-code"></i> Engenharia de Software</h1>
+        
+        <section class="section">
+            <h2><i class="fas fa-history"></i> Introdução Histórica</h2>
+            <div class="content-block">
+                <p>A Engenharia de Software surgiu como resposta à chamada "Crise do Software" em 1968, quando a NATO organizou a primeira conferência sobre o tema. A incapacidade de gerenciar a crescente complexidade dos sistemas levou à necessidade de abordagens mais sistemáticas.</p>
+                
+                <h3>Evolução da Disciplina</h3>
+                <ul>
+                    <li><strong>Década de 1950-60:</strong> Programação artesanal, sem metodologias formais</li>
+                    <li><strong>1968:</strong> Conferência da NATO marca o nascimento da Engenharia de Software</li>
+                    <li><strong>1970-80:</strong> Surgimento de metodologias estruturadas</li>
+                    <li><strong>1990:</strong> Popularização da orientação a objetos</li>
+                    <li><strong>2000:</strong> Movimento ágil e metodologias leves</li>
+                    <li><strong>2010-presente:</strong> DevOps, microsserviços e engenharia de IA</li>
+                </ul>
+            </div>
+            
+            <div class="content-block">
+                <h3>Conceitos Fundamentais</h3>
+                <p>Engenharia de Software é a aplicação de uma abordagem sistemática, disciplinada e quantificável ao desenvolvimento, operação e manutenção de software.</p>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                        <h4>Engenharia de Software vs Ciência da Computação</h4>
+                        <p>Enquanto a Ciência da Computação foca em teoria e algoritmos, a Engenharia de Software aplica esses conhecimentos para construir sistemas úteis de forma eficiente e confiável.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-box-open"></i></div>
+                        <h4>Tipos de Produtos de Software</h4>
+                        <ul>
+                            <li><strong>Genéricos:</strong> Desenvolvidos para mercado amplo (Windows, Photoshop)</li>
+                            <li><strong>Personalizados:</strong> Desenvolvidos para cliente específico (sistemas bancários)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-star"></i></div>
+                        <h4>Atributos do Bom Software</h4>
+                        <ul>
+                            <li>Manutenibilidade</li>
+                            <li>Confiabilidade</li>
+                            <li>Eficiência</li>
+                            <li>Usabilidade</li>
+                            <li>Escalabilidade</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2><i class="fas fa-project-diagram"></i> Processos de Software</h2>
+            
+            <div class="content-block">
+                <h3>Modelos Tradicionais</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Características</th>
+                            <th>Quando Usar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cascata</td>
+                            <td>Fases sequenciais rígidas, documentação extensa</td>
+                            <td>Requisitos bem definidos e estáveis</td>
+                        </tr>
+                        <tr>
+                            <td>Incremental</td>
+                            <td>Entrega por incrementos funcionais</td>
+                            <td>Quando se pode priorizar funcionalidades</td>
+                        </tr>
+                        <tr>
+                            <td>Espiral</td>
+                            <td>Riscos avaliados em ciclos iterativos</td>
+                            <td>Projetos complexos com alto risco</td>
+                        </tr>
+                        <tr>
+                            <td>RUP</td>
+                            <td>Processo Unificado com 4 fases (iniciação, elaboração, construção, transição)</td>
+                            <td>Projetos grandes e complexos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="content-block">
+                <h3>Atividades Fundamentais</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-search"></i></div>
+                        <h4>Especificação</h4>
+                        <p>Definição dos requisitos e funcionalidades do sistema</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <h4>Desenvolvimento</h4>
+                        <p>Projeto e implementação do software</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-vials"></i></div>
+                        <h4>Validação</h4>
+                        <p>Testes para garantir que atende aos requisitos</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-tools"></i></div>
+                        <h4>Evolução</h4>
+                        <p>Manutenção e adaptação a novas necessidades</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2><i class="fas fa-clipboard-list"></i> Engenharia de Requisitos</h2>
+            
+            <div class="content-block">
+                <h3>Tipos de Requisitos</h3>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-functions"></i></div>
+                        <h4>Funcionais</h4>
+                        <p>O que o sistema deve fazer (cadastrar usuário, gerar relatório)</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-sliders-h"></i></div>
+                        <h4>Não-Funcionais</h4>
+                        <p>Restrições e qualidades do sistema (performance, segurança, usabilidade)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-block">
+                <h3>Técnicas de Elicitação</h3>
+                <ul>
+                    <li><strong>Entrevistas:</strong> Diretas com stakeholders</li>
+                    <li><strong>Workshops:</strong> Reuniões colaborativas (ex: JAD)</li>
+                    <li><strong>Prototipação:</strong> Versões preliminares para feedback</li>
+                    <li><strong>Casos de Uso:</strong> Cenários de interação com o sistema</li>
+                    <li><strong>Observação:</strong> Análise do ambiente de trabalho dos usuários</li>
+                    <li><strong>Questionários:</strong> Para coletar informações de muitos usuários</li>
+                </ul>
+            </div>
+            
+            <div class="content-block">
+                <h3>Documentação de Requisitos</h3>
+                <p>O documento de requisitos (SRS) deve incluir:</p>
+                <ul>
+                    <li>Propósito e escopo do sistema</li>
+                    <li>Descrição geral (perspectiva do produto, funções, classes de usuários)</li>
+                    <li>Requisitos específicos (funcionais, interfaces, performance, etc.)</li>
+                    <li>Restrições e dependências</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2><i class="fas fa-sitemap"></i> Modelagem de Sistemas</h2>
+            
+            <div class="content-block">
+                <h3>Diagramas UML</h3>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-user-circle"></i></div>
+                        <h4>Casos de Uso</h4>
+                        <p>Interações entre atores e sistema</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h4>Classes</h4>
+                        <p>Estrutura estática do sistema</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-exchange-alt"></i></div>
+                        <h4>Sequência</h4>
+                        <p>Interações temporais entre objetos</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-tasks"></i></div>
+                        <h4>Atividades</h4>
+                        <p>Fluxos de trabalho e processos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-block">
+                <h3>Arquitetura 4+1 Visões</h3>
+                <ul>
+                    <li><strong>Lógica:</strong> Componentes e relacionamentos (diagramas de classes)</li>
+                    <li><strong>Processo:</strong> Fluxo de execução e concorrência</li>
+                    <li><strong>Desenvolvimento:</strong> Organização de módulos no ambiente de desenvolvimento</li>
+                    <li><strong>Física:</strong> Mapeamento para hardware e infraestrutura</li>
+                    <li><strong>Cenários:</strong> Casos de uso que ilustram as outras visões</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2><i class="fas fa-layer-group"></i> Projeto de Arquitetura</h2>
+            
+            <div class="content-block">
+                <h3>Padrões Arquiteturais</h3>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-object-group"></i></div>
+                        <h4>MVC (Model-View-Controller)</h4>
+                        <p>Separação entre dados, interface e lógica</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                        <h4>Camadas</h4>
+                        <p>Hierarquia de responsabilidades (apresentação, negócio, dados)</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+                        <h4>Cliente-Servidor</h4>
+                        <p>Separação entre provedor e consumidor de serviços</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                        <h4>Microsserviços</h4>
+                        <p>Sistema como serviços independentes e especializados</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-block">
+                <h3>Decisões Arquiteturais</h3>
+                <p>Baseadas em requisitos não-funcionais:</p>
+                <ul>
+                    <li><strong>Desempenho:</strong> Cache, balanceamento de carga</li>
+                    <li><strong>Segurança:</strong> Camadas de autenticação, criptografia</li>
+                    <li><strong>Disponibilidade:</strong> Redundância, failover</li>
+                    <li><strong>Manutenibilidade:</strong> Baixo acoplamento, alta coesão</li>
+                    <li><strong>Escalabilidade:</strong> Horizontal vs vertical</li>
+                </ul>
+            </div>
+            
+            <div class="content-block">
+                <h3>Tendências Modernas</h3>
+                <ul>
+                    <li><strong>Arquitetura Limpa:</strong> Separação clara de responsabilidades</li>
+                    <li><strong>Domain-Driven Design:</strong> Foco no domínio do negócio</li>
+                    <li><strong>Event Sourcing:</strong> Armazenamento de eventos como fonte da verdade</li>
+                    <li><strong>CQRS:</strong> Separação de comandos e consultas</li>
+                    <li><strong>Serverless:</strong> Foco em funções sem gerenciamento de infraestrutura</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2><i class="fas fa-chart-line"></i> Métricas e Qualidade</h2>
+            
+            <div class="content-block">
+                <h3>Métricas de Software</h3>
+                <ul>
+                    <li><strong>Tamanho:</strong> Linhas de código, pontos de função</li>
+                    <li><strong>Complexidade:</strong> Ciclomática, acoplamento/coesão</li>
+                    <li><strong>Qualidade:</strong> Defeitos por KLOC, cobertura de testes</li>
+                    <li><strong>Produtividade:</strong> Linhas/ponto de função por hora</li>
+                </ul>
+            </div>
+            
+            <div class="content-block">
+                <h3>Garantia de Qualidade</h3>
+                <ul>
+                    <li><strong>Revisões:</strong> Inspeções, walkthroughs</li>
+                    <li><strong>Testes:</strong> Unitários, integração, sistema, aceitação</li>
+                    <li><strong>Padrões:</strong> ISO 9001, CMMI, MPS.BR</li>
+                    <li><strong>Automação:</strong> CI/CD, análise estática</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script>
+        // Tema toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            
+            // Atualizar ícone
+            const icon = themeToggle.querySelector('i');
+            icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+            
+            // Animação
+            themeToggle.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                themeToggle.style.transform = '';
+            }, 500);
+        });
+    </script>
+</body>
+</html>

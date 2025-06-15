@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matemática Discreta e Aplicada</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0f;
+      color: #e0e0e0;
+      padding: 20px;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #ffffff;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 25px;
+    }
+    .section {
+      background-color: rgba(20, 20, 30, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #16161d;
+    }
+    th, td {
+      border: 1px solid #2e2e3a;
+      padding: 10px;
+    }
+    th {
+      background-color: #6c63ff;
+      color: white;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1><i class="fas fa-square-root-alt"></i> Matemática Discreta e Aplicada</h1>
+
+  <div class="section">
+    <h2>1. Lógica Formal e Tabelas-Verdade</h2>
+    <h3>Condicionais e Equivalência</h3>
+    <table>
+      <thead>
+        <tr><th>p</th><th>q</th><th>p → q</th><th>p ↔ q</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>V</td><td>V</td><td>V</td><td>V</td></tr>
+        <tr><td>V</td><td>F</td><td>F</td><td>F</td></tr>
+        <tr><td>F</td><td>V</td><td>V</td><td>F</td></tr>
+        <tr><td>F</td><td>F</td><td>V</td><td>V</td></tr>
+      </tbody>
+    </table>
+    <h3>Regras de negação</h3>
+    <ul>
+      <li>~(p ∧ q) ⇔ (~p ∨ ~q)</li>
+      <li>~(p ∨ q) ⇔ (~p ∧ ~q)</li>
+      <li>~(p → q) ⇔ (p ∧ ~q)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>2. Teoria dos Conjuntos</h2>
+    <h3>Conjuntos Numéricos</h3>
+    <ul>
+      <li>ℕ (Naturais): {0, 1, 2, ...}</li>
+      <li>ℤ (Inteiros): {..., -2, -1, 0, 1, 2, ...}</li>
+      <li>ℚ (Racionais): frações p/q, q ≠ 0</li>
+      <li>ℝ (Reais): todos os números da reta real</li>
+    </ul>
+    <h3>Intervalos</h3>
+    <ul>
+      <li>Fechado: [a, b]</li>
+      <li>Aberto: (a, b)</li>
+      <li>Semiaberto: [a, b) ou (a, b]</li>
+      <li>Infinitos: (-∞, b] ou [a, ∞)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>3. Teoria dos Grafos</h2>
+    <h3>Conceitos Básicos</h3>
+    <ul>
+      <li>Grafo: conjunto de vértices e arestas</li>
+      <li>Grafo Simples: sem laços ou múltiplas arestas</li>
+      <li>Grafo Completo: todos os vértices conectados</li>
+      <li>Árvore: grafo conexo e acíclico</li>
+      <li>Grafo Bipartido: dois conjuntos de vértices</li>
+    </ul>
+    <h3>Representações</h3>
+    <ul>
+      <li>Matriz de Adjacência: n × n com 0 e 1</li>
+      <li>Lista de Adjacência: lista de vizinhos</li>
+    </ul>
+    <h3>Aplicações</h3>
+    <ul>
+      <li>Busca binária (O(log n))</li>
+      <li>Árvores de decisão (IA e jogos)</li>
+      <li>Redes de transporte, redes sociais</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>4. Tópicos Adicionais</h2>
+    <h3>Princípios de Contagem</h3>
+    <ul>
+      <li>Princípio da adição: se A ou B pode ocorrer</li>
+      <li>Princípio da multiplicação: se A e B ocorrem juntos</li>
+    </ul>
+    <h3>Permutações e Combinações</h3>
+    <ul>
+      <li>Permutação simples: P(n) = n!</li>
+      <li>Combinação: C(n, k) = n! / (k!(n - k)!)</li>
+    </ul>
+    <h3>Indução Matemática</h3>
+    <ul>
+      <li>Base: verificar o caso inicial</li>
+      <li>Hipótese: assumir verdadeiro para n = k</li>
+      <li>Passo: provar para n = k+1</li>
+    </ul>
+    <h3>Recorrência</h3>
+    <ul>
+      <li>Sequência de Fibonacci: F(n) = F(n−1) + F(n−2)</li>
+      <li>Outras formas: T(n) = 2T(n/2) + n</li>
+    </ul>
+  </div>
+
+</body>
+</html>

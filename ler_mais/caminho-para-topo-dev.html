@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Júnior a Lenda: Minha Jornada no Desenvolvimento | [Seu Nome/Nome do Blog]</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="./caminho.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>De Júnior a Lenda: Minha Jornada no Desenvolvimento | João Neves</title>
     <meta name="description" content="Descubra minha jornada pessoal de desenvolvedor júnior a referência em desenvolvimento digital, com lições valiosas para sua carreira tech.">
     
     <meta property="og:title" content="De Júnior a Lenda: Minha Jornada no Desenvolvimento">
@@ -15,27 +13,54 @@
     <meta property="og:url" content="https://seusite.com/caminho-para-topo-dev.html">
     <meta name="twitter:card" content="summary_large_image">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./caminho.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="../index.html" class="logo">Portfólio<span></span></a>
-                <ul class="nav-links">
-                    <li><a href="../index.html#home">Home</a></li>
-                    <li><a href="../index.html#about">Sobre</a></li>
-                    <li><a href="../index.html#services">Serviços</a></li>
-                    <li><a href="../index.html#portfolio">Portfólio</a></li>
-                    <li><a href="../index.html#blog" class="active">Blog</a></li>
-                    <li><a href="../index.html#contact">Contato</a></li>
-                </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
+    <header>
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#hero">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../index.html#testimonials">Matérias</a>
+                <a href="../index.html#blog" class="active">Blog</a>
+                <a href="../index.html#contact">Contato</a>
             </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
+
+    <div class="nav-overlay">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile">
+            <a href="../index.html#hero">Início</a>
+            <a href="../index.html#about">Sobre</a>
+            <a href="../index.html#services">Serviços</a>
+            <a href="../index.html#projects">Projetos</a>
+            <a href="../index.html#testimonials">Matérias</a>
+            <a href="../index.html#blog">Blog</a>
+            <a href="../index.html#contact">Contato</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
 
     <article class="blog-post-full">
         <header class="post-header">
@@ -54,14 +79,14 @@
         </header>
 
         <div class="post-content container">
-            <p class="intro">Há 10 anos, eu escrevia meu primeiro "Hello World" cheio de dúvidas. Hoje, lidero equipes e projetos que impactam milhões de usuários. Esta é a história dos acertos, erros e lições que me transformaram em um desenvolvedor de referência. Continue lendo para desvendar os segredos do meu sucesso e evitar os erros comuns.</p>
+            <p class="intro">Há 4 anos, eu escrevia meu primeiro "Hello World" cheio de dúvidas. Hoje, já não tenho mais essa duvida. Esta é a história dos acertos, erros e lições que me transformaram em um desenvolvedor. Continue lendo para desvendar os segredos do sucesso e evitar os erros comuns.</p>
             
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-year">2015</div>
+                    <div class="timeline-year">2022</div>
                     <div class="timeline-content">
                         <h3>O Primeiro Código</h3>
-                        <p>Curso técnico em informática onde descobri minha paixão por desenvolvimento. Meu primeiro projeto foi um site estático sobre meu time de futebol.</p>
+                        <p>Curso técnico em desenvolvimento de sistemas onde descobri minha paixão por desenvolvimento. Meu primeiro projeto foi um site .</p>
                         <div class="lesson">
                             <i class="fas fa-lightbulb"></i>
                             <strong>Lição aprendida:</strong> A base sólida em lógica de programação foi fundamental para tudo que viria depois.
@@ -70,23 +95,23 @@
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-year">2017</div>
+                    <div class="timeline-year">2023</div>
                     <div class="timeline-content">
-                        <h3>Estágio Turbulento</h3>
-                        <p>Primeira experiência profissional em uma startup caótica. Código sem padrões, prazos impossíveis, mas aprendizado acelerado.</p>
+                        <h3>Estágio </h3>
+                        <p>Primeira experiência estagiando em uma empresa.</p>
                         <ul class="skills-learned">
-                            <li><i class="fas fa-check"></i> Versionamento com Git</li>
-                            <li><i class="fas fa-check"></i> Trabalho sob pressão</li>
-                            <li><i class="fas fa-check"></i> Comunicação técnica</li>
+                            <li><i class="fas fa-check"></i> Observação do sistema</li>
+                            <li><i class="fas fa-check"></i> Trabalho com prazo</li>
+                            <li><i class="fas fa-check"></i> Comunicação da equipe</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="timeline-item highlight">
-                    <div class="timeline-year">2019</div>
+                    <div class="timeline-year">2024</div>
                     <div class="timeline-content">
-                        <h3>O Ponto de Virada</h3>
-                        <p>Entrei como júnior em uma empresa de produto digital séria. Mentores incríveis me ensinaram:</p>
+                        <h3>Conclusão Do curso</h3>
+                        <p>Ultimo ano com o ensino técnico, desafio grande em deselvolver um app, essa experiência incrível me ensinou:</p>
                         <div class="two-columns">
                             <div class="column">
                                 <h4><i class="fas fa-code"></i> Técnico</h4>
@@ -96,21 +121,12 @@
                                     <li>Padrões de projeto</li>
                                 </ul>
                             </div>
-                            <div class="column">
-                                <h4><i class="fas fa-users"></i> Comportamental</h4>
-                                <ul>
-                                    <li>Feedback eficaz</li>
-                                    <li>Gestão de tempo</li>
-                                    <li>Autoaprendizado</li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <h2>Meus Maiores Erros e Como Evitá-los: Lições Essenciais para Não Repetir</h2>
-            
             <div class="mistakes-grid">
                 <div class="mistake-card">
                     <div class="mistake-header">
@@ -124,147 +140,214 @@
                         <li>Entender que todos começam em algum lugar</li>
                     </ul>
                 </div>
-                
                 <div class="mistake-card">
                     <div class="mistake-header">
                         <i class="fas fa-heartbeat"></i>
-                        <h3>Burnout</h3>
+                        <h3>Focar Apenas no Código</h3>
                     </div>
-                    <p>Trabalhar 14h/dia por 6 meses me deixou esgotado. Lições:</p>
+                    <p>Passei muito tempo focado só em "codar" e negligenciei habilidades sociais, comunicação e gestão de projetos. O equilíbrio é chave:</p>
                     <ul>
-                        <li>Limites saudáveis são essenciais</li>
-                        <li>Produtividade ≠ horas trabalhadas</li>
-                        <li>Descanso é parte do processo</li>
+                        <li>Comunicação clara e objetiva</li>
+                        <li>Entendimento do negócio</li>
+                        <li>Habilidades de liderança</li>
+                    </ul>
+                </div>
+                <div class="mistake-card">
+                    <div class="mistake-header">
+                        <i class="fas fa-hourglass-start"></i>
+                        <h3>Procrastinação de Aprendizado Contínuo</h3>
+                    </div>
+                    <p>Achei que depois de um tempo não precisaria mais estudar tanto. Grande erro! A tecnologia avança rápido. Solução:</p>
+                    <ul>
+                        <li>Ler blogs e artigos técnicos</li>
+                        <li>Participar de conferências</li>
+                        <li>Experimentar novas tecnologias</li>
+                    </ul>
+                </div>
+                <div class="mistake-card">
+                    <div class="mistake-header">
+                        <i class="fas fa-fire-extinguisher"></i>
+                        <h3>Ignorar Testes e Qualidade</h3>
+                    </div>
+                    <p>No início, testar era "perda de tempo". Hoje, sei que é a base de um software robusto. Invista em:</p>
+                    <ul>
+                        <li>Testes unitários e de integração</li>
+                        <li>Revisão de código (Code Review)</li>
+                        <li>CI/CD (Integração e Entrega Contínua)</li>
                     </ul>
                 </div>
             </div>
-            
-            <h2>O Que Realmente Importa na Carreira: Pilares para uma Jornada Duradoura</h2>
-            
-            <div class="career-advice">
+
+            <h2>Conselhos que Eu Daria ao Meu "Eu" Júnior: Desbloqueando Seu Potencial</h2>
+            <div class="advice-grid">
                 <div class="advice-card">
-                    <div class="advice-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Rede de Contatos</h3>
-                    <p>70% das minhas melhores oportunidades vieram de conexões pessoais. Invista em:</p>
-                    <ul>
-                        <li>Eventos da comunidade</li>
-                        <li>Projetos open-source</li>
-                        <li>Mentorias</li>
-                    </ul>
+                    <div class="advice-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Seja Curioso e Não Tenha Medo de Perguntar</h3>
+                    <p>Sua curiosidade é seu maior ativo. Pergunte, explore, e não se envergonhe de não saber. A melhor forma de aprender é admitir a ignorância e buscar conhecimento.</p>
                 </div>
-                
                 <div class="advice-card">
-                    <div class="advice-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3>Aprendizado Contínuo</h3>
-                    <p>Minha rotina atual de estudos:</p>
-                    <ul>
-                        <li>1h/dia de leitura técnica</li>
-                        <li>Projeto experimental por mês</li>
-                        <li>Revisão de fundamentos a cada 6 meses</li>
-                    </ul>
+                    <div class="advice-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Desenvolva Soft Skills</h3>
+                    <p>A codificação é importante, mas a capacidade de se comunicar, colaborar e resolver problemas interpessoais é o que realmente te diferencia e acelera sua carreira.</p>
+                </div>
+                <div class="advice-card">
+                    <div class="advice-icon"><i class="fas fa-cloud-sun"></i></div>
+                    <h3>Mantenha-se Atualizado, Mas Não Obcecado</h3>
+                    <p>O ecossistema tech muda constantemente. Acompanhe as tendências, mas evite o "fear of missing out" (FOMO). Foque em fundamentos sólidos e aprenda novas ferramentas conforme a necessidade.</p>
+                </div>
+                <div class="advice-card">
+                    <div class="advice-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Cuide da Sua Saúde Mental e Bem-Estar</h3>
+                    <p>A jornada é longa. Evite o burnout. Estabeleça limites, pratique hobbies, e lembre-se que você é mais do que seu trabalho. Um desenvolvedor saudável é um desenvolvedor produtivo.</p>
                 </div>
             </div>
             
-            <div class="share-buttons">
-                <h3>Gostou do artigo? Compartilhe!</h3>
-                <div class="social-share">
-                    <a href="https://twitter.com/intent/tweet?text=De%20J%C3%BAnior%20a%20Lenda:%20Meu%20Caminho%20para%20o%20Topo%20do%20Dev%20por%20%40seuuser&url=https://seusite.com/caminho-para-topo-dev.html" class="twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter</a>
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://seusite.com/caminho-para-topo-dev.html&title=De%20J%C3%BAnior%20a%20Lenda:%20Meu%20Caminho%20para%20o%20Topo%20do%20Dev&summary=Descubra%20minha%20jornada%20pessoal%20de%20desenvolvedor%20j%C3%BAnior%20a%20refer%C3%AAncia%20em%20desenvolvimento%20digital,%20com%20li%C3%A7%C3%B5es%20valiosas%20para%20sua%20carreira%20tech.&source=seusite.com" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://seusite.com/caminho-para-topo-dev.html" class="facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a>
+            <div class="author-bio">
+                <img src="../img/logo.png" alt="Foto do Autor">
+                <div>
+                    <h3>Sobre o Autor</h3>
+                    <p>João Antônio Neves é um desenvolvedor com 4 anos de  experiências técnica, apaixonado por inovação. À procura de várias experiência em trabalhos de variadas empresas, visando o crescimento da empresa.</p>
+                    <div class="author-social">
+                        <a href="https://linkedin.com/in/joaoneves" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Nevez06" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/joaoneves" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
             </div>
             
-            <div class="comments-section">
-                <h2>Deixe seu comentário</h2>
-                <form class="comment-form">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email (não será publicado)</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="comment">Comentário</label>
-                        <textarea id="comment" rows="5" required></textarea>
-                    </div>
-                    <button type="submit">Enviar Comentário</button>
-                </form>
+            <div class="post-navigation">
+                <a href="./psicologia-no-ux.html" class="prev-post"><i class="fas fa-arrow-left"></i> O Poder da Psicologia no UX</a>
+                <a href="./tendencias-frontend-2025.html" class="next-post">As 5 Tendências de Frontend <i class="fas fa-arrow-right"></i></a>
             </div>
             
-            <div class="post-footer">
-                <div class="author-bio">
-                    <img src="../assets/author.jpg" alt="Foto do Autor">
-                    <div>
-                        <h3>Sobre o Autor</h3>
-                        <p>Líder Técnico com 10 anos de experiência, já treinou mais de 50 desenvolvedores e palestrou em eventos como Google I/O e WWDC.</p>
-                        <div class="author-social">
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-dev"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-navigation">
-                    <a href="psicologia-no-ux-2025.html" class="prev-post"><i class="fas fa-arrow-left"></i> O Poder da Psicologia no UX</a>
-                    <a href="../index.html#blog" class="next-post">Ver Todos os Posts <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="newsletter">
-                    <h3>Não perca nenhum insight!</h3>
-                    <p>Assine minha newsletter gratuita e receba dicas semanais exclusivas para acelerar sua carreira em desenvolvimento.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Seu melhor e-mail" required>
-                        <button type="submit">Assinar <i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
+            <div class="social-share">
+                <p>Compartilhe este artigo:</p>
+                <a href="https://twitter.com/intent/tweet?text=De%20J%C3%BAnior%20a%20Lenda%3A%20Meu%20Caminho%20para%20o%20Topo%20do%20Dev%20by%20%40joaoneves&url=https%3A%2F%2Fseusite.com%2Fcaminho-para-topo-dev.html" target="_blank" class="twitter-share"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fseusite.com%2Fcaminho-para-topo-dev.html&title=De%20J%C3%BAnior%20a%20Lenda%3A%20Meu%20Caminho%20para%20o%20Topo%20do%20Dev&summary=Descubra%20minha%20jornada%20pessoal%20de%20desenvolvedor%20j%C3%BAnior%20a%20refer%C3%AAncia%20em%20desenvolvimento%20digital%2C%20com%20li%C3%A7%C3%B5es%20valiosas%20para%20sua%20carreira%20tech." target="_blank" class="linkedin-share"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fseusite.com%2Fcaminho-para-topo-dev.html" target="_blank" class="facebook-share"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
     </article>
 
+    <footer>
+        <div class="container footer-container">
+            <a href="../index.html" class="footer-logo">
+                <span class="footer-logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#projects">Projetos</a></li>
+                    <li><a href="../index.html#testimonials">Matérias</a></li>
+                    <li><a href="../index.html#blog">Blog</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social social-links">
+                <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn de João Neves"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Nevez06" target="_blank" aria-label="GitHub de João Neves"><i class="fab fa-github"></i></a>
+                <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance de João Neves"><i class="fab fa-behance"></i></a>
+            </div>
+            <p class="footer-bottom-text">&copy; 2025 João Neves. Todos os direitos reservados. Feito com paixão e tecnologia em Jales, SP.</p>
+        </div>
+    </footer>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script>
-        // Efeito de revelação suave ao rolar
-        document.addEventListener('DOMContentLoaded', function() {
-            const timelineItems = document.querySelectorAll('.timeline-item');
-            const mistakeCards = document.querySelectorAll('.mistake-card');
-            const adviceCards = document.querySelectorAll('.advice-card');
-            
-            const observer = new IntersectionObserver((entries) => {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle
+            const themeToggle = document.querySelectorAll('.theme-toggle');
+            const html = document.documentElement;
+
+            themeToggle.forEach(button => {
+                button.addEventListener('click', () => {
+                    const currentTheme = html.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    html.setAttribute('data-theme', newTheme);
+
+                    // Update icons on all theme toggle buttons
+                    themeToggle.forEach(btn => {
+                        const icon = btn.querySelector('i');
+                        icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+                    });
+
+                    // Animation
+                    button.style.transform = 'rotate(360deg)';
+                    setTimeout(() => {
+                        button.style.transform = '';
+                    }, 500);
+                });
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navOverlay = document.querySelector('.nav-overlay');
+            const closeBtn = document.querySelector('.close-btn');
+            const navLinksMobile = document.querySelectorAll('.nav-links-mobile a');
+
+            if (mobileMenuBtn && navOverlay && closeBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navOverlay.classList.add('active');
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    navOverlay.classList.remove('active');
+                });
+
+                navLinksMobile.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navOverlay.classList.remove('active');
+                    });
+                });
+            }
+
+            // Intersection Observer for animations (from original caminho-para-topo-dev.html)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.style.opacity = 1;
                         entry.target.style.transform = 'translateY(0)';
-                        observer.unobserve(entry.target); // Opcional: Para animar apenas uma vez
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.1 });
+            }, observerOptions);
+
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const mistakeCards = document.querySelectorAll('.mistake-card');
+            const adviceCards = document.querySelectorAll('.advice-card');
             
-            // Configura animações iniciais
-            timelineItems.forEach(item => {
+            timelineItems.forEach((item, index) => {
                 item.style.opacity = 0;
                 item.style.transform = 'translateY(20px)';
-                item.style.transition = 'all 0.6s ease';
+                item.style.transition = `all 0.4s ease ${index * 0.1}s`;
                 observer.observe(item);
             });
             
-            mistakeCards.forEach(card => {
+            mistakeCards.forEach((card, index) => {
                 card.style.opacity = 0;
                 card.style.transform = 'translateY(20px)';
-                card.style.transition = 'all 0.4s ease';
+                card.style.transition = `all 0.4s ease ${index * 0.1}s`;
                 observer.observe(card);
             });
             
-            // Melhoria: Adicionado um delay para os adviceCards para um efeito mais dinâmico
             adviceCards.forEach((card, index) => {
                 card.style.opacity = 0;
                 card.style.transform = 'translateY(20px)';
-                card.style.transition = `all 0.4s ease ${index * 0.1}s`; // Staggered animation
+                card.style.transition = `all 0.4s ease ${index * 0.1}s`; 
                 observer.observe(card);
             });
             
@@ -287,16 +370,6 @@
                     backToTop.style.visibility = 'hidden';
                 }
             });
-
-            // Mobile Menu Toggle (Se você tiver um JS para isso no styles.js ou onde for)
-            const mobileMenuToggle = document.querySelector('.mobile-menu');
-            const navLinks = document.querySelector('.nav-links');
-
-            if (mobileMenuToggle && navLinks) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
-                });
-            }
         });
     </script>
 </body>

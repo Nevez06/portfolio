@@ -20,27 +20,38 @@
             }
         });
 
-        // JS para o Mobile Menu
+        // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navOverlay = document.querySelector('.nav-overlay');
-        const closeMenuBtn = document.querySelector('.close-btn');
-        const navLinksMobile = document.querySelectorAll('.nav-links-mobile a');
+        const closeBtn = document.querySelector('.nav-overlay-mobile .close-btn');
+        const navOverlay = document.querySelector('.nav-overlay-mobile');
+        const navLinksMobile = document.querySelectorAll('.nav-links-mobile-list a');
 
         mobileMenuBtn.addEventListener('click', () => {
-            navOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Evita scroll no body
+            navOverlay.classList.add('open');
         });
 
-        closeMenuBtn.addEventListener('click', () => {
-            navOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Habilita scroll no body
+        closeBtn.addEventListener('click', () => {
+            navOverlay.classList.remove('open');
         });
 
         navLinksMobile.forEach(link => {
-            link.addEventListener('click', () => {
-                navOverlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
+            link.addEventListener('click', (e) => {
+                // Previne o comportamento padrão para rolar suavemente para as seções
+                e.preventDefault(); 
+                const targetId = e.target.getAttribute('href');
+                if (targetId && targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+                navOverlay.classList.remove('open');
             });
+        });
+
+          closeMenuBtn.addEventListener('click', () => {
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Habilita scroll no body
         });
 
         // GSAP Scroll Animations
