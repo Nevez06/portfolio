@@ -4,59 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matemática Discreta e Aplicada</title>
+   <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./projeto.css">
+    <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0a0a0f;
-      color: #e0e0e0;
-      padding: 20px;
-      line-height: 1.7;
-    }
-    h1, h2, h3 {
-      color: #ffffff;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 40px;
-      margin-bottom: 15px;
-    }
-    h3 {
-      font-size: 1.3rem;
-      margin-top: 25px;
-    }
-    .section {
-      background-color: rgba(20, 20, 30, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 30px;
-      margin-bottom: 30px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background-color: #16161d;
-    }
-    th, td {
-      border: 1px solid #2e2e3a;
-      padding: 10px;
-    }
-    th {
-      background-color: #6c63ff;
-      color: white;
-    }
-    ul {
-      padding-left: 20px;
-    }
-  </style>
+  
 </head>
 <body>
-  <h1><i class="fas fa-square-root-alt"></i> Matemática Discreta e Aplicada</h1>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-square-root-alt"></i></span>
+                Matemática Discreta
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+             <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+            <i class="fas fa-bars"></i>
+        </button>
+        </div>
+    </header>
+
+   <div class="nav-overlay-mobile">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile-list">
+             <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+        </nav>
+    
+        </button>
+    </div>
+   <section class="section">
+        <div class="container">
+  <h2><i class="fas fa-square-root-alt"></i> Matemática Discreta e Aplicada</h2>
 
   <div class="section">
     <h2>1. Lógica Formal e Tabelas-Verdade</h2>
@@ -145,6 +142,37 @@
       <li>Outras formas: T(n) = 2T(n/2) + n</li>
     </ul>
   </div>
+ </section>
 
+  <footer class="footer">
+        <div class="container footer-container">
+            <a href="../index.html" class="footer-logo">
+                <span class="footer-logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#projects">Projetos</a></li>
+                    <li><a href="../index.html#testimonials">Matérias</a></li>
+                    <li><a href="../index.html#blog">Blog</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social social-links">
+                <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Nevez06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/joaoneves" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            </div>
+            <p class="footer-bottom-text">&copy; 2025 João Neves. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./materia.js"></script>
+    <script src="../script.js"></script>
+    
 </body>
 </html>

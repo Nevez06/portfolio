@@ -4,17 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engenharia de Software - Conteúdo Completo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="João Neves é o desenvolvedor Frontend e Designer UX/UI mais premiado do mundo, criando experiências digitais que transcendem o comum.">
+
+    <meta property="og:title" content="João Neves | Portfólio de Classe Mundial – Onde a Inovação Ganha Vida">
+    <meta property="og:description"
+        content="Explore o universo de João Neves: Projetos inovadores, design de vanguarda e a mente por trás das experiências digitais mais impactantes do mercado.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
+    <meta property="og:url" content="https://joaoneves.dev">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./estrutura.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+
 </head>
+
 <body>
-    <div class="container">
-        <h1><i class="fas fa-laptop-code"></i> Engenharia de Software</h1>
-        
-        <section class="section">
-            <h2><i class="fas fa-history"></i> Introdução Histórica</h2>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-laptop-code"></i></span>
+                Engenharia de Software
+         
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+             <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+            <i class="fas fa-bars"></i>
+        </button>
+        </div>
+    </header>
+
+   <div class="nav-overlay-mobile">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile-list">
+             <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+        </nav>
+    
+        </button>
+    </div>
+   <section class="section">
+        <div class="container">
+        <h2><i class="fas fa-laptop-code"></i> Engenharia de Software</h2>
+
             <div class="content-block">
+                <h2><i class="fas fa-history"></i> Introdução Histórica</h2>
                 <p>A Engenharia de Software surgiu como resposta à chamada "Crise do Software" em 1968, quando a NATO organizou a primeira conferência sobre o tema. A incapacidade de gerenciar a crescente complexidade dos sistemas levou à necessidade de abordagens mais sistemáticas.</p>
                 
                 <h3>Evolução da Disciplina</h3>
@@ -59,9 +125,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+       
         
-        <section class="section">
+        
             <h2><i class="fas fa-project-diagram"></i> Processos de Software</h2>
             
             <div class="content-block">
@@ -125,9 +191,7 @@
                     </div>
                 </div>
             </div>
-        </section>
         
-        <section class="section">
             <h2><i class="fas fa-clipboard-list"></i> Engenharia de Requisitos</h2>
             
             <div class="content-block">
@@ -169,9 +233,9 @@
                     <li>Restrições e dependências</li>
                 </ul>
             </div>
-        </section>
+       
         
-        <section class="section">
+       
             <h2><i class="fas fa-sitemap"></i> Modelagem de Sistemas</h2>
             
             <div class="content-block">
@@ -211,9 +275,7 @@
                     <li><strong>Cenários:</strong> Casos de uso que ilustram as outras visões</li>
                 </ul>
             </div>
-        </section>
         
-        <section class="section">
             <h2><i class="fas fa-layer-group"></i> Projeto de Arquitetura</h2>
             
             <div class="content-block">
@@ -265,9 +327,7 @@
                     <li><strong>Serverless:</strong> Foco em funções sem gerenciamento de infraestrutura</li>
                 </ul>
             </div>
-        </section>
-        
-        <section class="section">
+       
             <h2><i class="fas fa-chart-line"></i> Métricas e Qualidade</h2>
             
             <div class="content-block">
@@ -289,33 +349,39 @@
                     <li><strong>Automação:</strong> CI/CD, análise estática</li>
                 </ul>
             </div>
-        </section>
-    </div>
-
-    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-        <i class="fas fa-moon"></i>
-    </button>
-
-    <script>
-        // Tema toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const html = document.documentElement;
         
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', newTheme);
-            
-            // Atualizar ícone
-            const icon = themeToggle.querySelector('i');
-            icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-            
-            // Animação
-            themeToggle.style.transform = 'rotate(360deg)';
-            setTimeout(() => {
-                themeToggle.style.transform = '';
-            }, 500);
-        });
-    </script>
+    </div>
+   </section>
+
+  <footer class="footer">
+        <div class="container footer-container">
+            <a href="../index.html" class="footer-logo">
+                <span class="footer-logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#projects">Projetos</a></li>
+                    <li><a href="../index.html#testimonials">Matérias</a></li>
+                    <li><a href="../index.html#blog">Blog</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social social-links">
+                <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Nevez06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/joaoneves" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            </div>
+            <p class="footer-bottom-text">&copy; 2025 João Neves. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./materia.js"></script>
+    <script src="../script.js"></script>
+    
 </body>
 </html>

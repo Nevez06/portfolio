@@ -1,3 +1,27 @@
+  document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle
+            const themeToggle = document.querySelectorAll('.theme-toggle');
+            const html = document.documentElement;
+
+            themeToggle.forEach(button => {
+                button.addEventListener('click', () => {
+                    const currentTheme = html.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    html.setAttribute('data-theme', newTheme);
+
+                    // Update icons on all theme toggle buttons
+                    themeToggle.forEach(btn => {
+                        const icon = btn.querySelector('i');
+                        icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+                    });
+
+                    // Animation
+                    button.style.transform = 'rotate(360deg)';
+                    setTimeout(() => {
+                        button.style.transform = '';
+                    }, 500);
+                });
+            });
 // JS para o Header com Scroll
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
@@ -8,17 +32,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// JS para o Alternador de Tema
-document.querySelector('.theme-toggle').addEventListener('click', function () {
-    const html = document.documentElement;
-    if (html.getAttribute('data-theme') === 'dark') {
-        html.setAttribute('data-theme', 'light');
-        this.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-        html.setAttribute('data-theme', 'dark');
-        this.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-});
+
 
 // Mobile menu toggle
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -224,3 +238,4 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+ });

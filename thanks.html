@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pelo Contato! | João Neves</title>
+    <meta name="description" content="Agradecemos seu contato! Sua mensagem foi recebida e responderemos em breve. Explore mais sobre João Neves.">
+    
+    <meta property="og:title" content="Obrigado pelo Contato! | João Neves">
+    <meta property="og:description" content="Agradecemos seu contato! Sua mensagem foi recebida e responderemos em breve.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?random=17"> <meta property="og:url" content="https://seusite.com/agradecimento.html">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos específicos para a página de agradecimento */
+        .thank-you-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - var(--header-height) - var(--footer-height-approx)); /* Ajustar para ocupar a tela */
+            text-align: center;
+            padding: 80px 20px; /* Adicionado padding para garantir espaço */
+            background-color: var(--darker); /* Fundo consistente */
+            color: var(--white); /* Cor do texto */
+        }
+
+        .thank-you-section .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .thank-you-section h1 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(108, 99, 255, 0.4);
+            animation: fadeInScale 1s ease-out;
+        }
+
+        .thank-you-section p {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--light-gray);
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .thank-you-section .icon-check {
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: var(--secondary);
+            margin-bottom: 30px;
+            animation: bounceIn 0.8s ease-out;
+        }
+
+        .thank-you-cta-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .thank-you-cta-grid .btn {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .thank-you-cta-grid .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .thank-you-cta-grid .btn-secondary {
+            background-color: var(--medium-gray);
+        }
+
+        .thank-you-cta-grid .btn-secondary:hover {
+            background-color: var(--dark-gray);
+        }
+
+        /* Animações */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Ajustes para mobile */
+        @media (max-width: 768px) {
+            .thank-you-section {
+                padding: 60px 15px;
+            }
+            .thank-you-cta-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .thank-you-cta-grid .btn {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="./index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="nav-links">
+                <a href="./index.html#hero">Início</a>
+                <a href="./index.html#about">Sobre</a>
+                <a href="./index.html#services">Serviços</a>
+                <a href="./index.html#projects">Projetos</a>
+                <a href="./index.html#testimonials">Matérias</a>
+                <a href="./index.html#blog">Blog</a>
+                <a href="./index.html#contact">Contato</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="nav-overlay">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile">
+            <a href="./index.html#hero">Início</a>
+            <a href="./index.html#about">Sobre</a>
+            <a href="./index.html#services">Serviços</a>
+            <a href="./index.html#projects">Projetos</a>
+            <a href="./index.html#testimonials">Matérias</a>
+            <a href="./index.html#blog">Blog</a>
+            <a href="./index.html#contact">Contato</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+   
+        <section class="thank-you-section">
+            <div class="container">
+                <i class="fas fa-check-circle icon-check"></i>
+                <h1>Obrigado por Entrar em Contato!</h1>
+                <p>Sua mensagem foi recebida com sucesso e agradeço muito pelo seu interesse.</p>
+                <p>Revisarei seu pedido e entrarei em contato o mais breve possível, geralmente dentro de 24 a 48 horas úteis.</p>
+                <p>Enquanto isso, sinta-se à vontade para explorar mais sobre meu trabalho:</p>
+                
+                <div class="thank-you-cta-grid">
+                    <a href="./index.html#projects" class="btn">Ver Meus Projetos</a>
+                    <a href="./index.html#blog" class="btn btn-secondary">Explorar o Blog</a>
+                    <a href="https://linkedin.com/in/joaoneves" target="_blank" class="btn btn-secondary">Conectar no LinkedIn <i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </section>
+    
+    <footer>
+        <div class="container footer-container">
+            <a href="./index.html" class="footer-logo">
+                <span class="footer-logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="./index.html#hero">Início</a></li>
+                    <li><a href="./index.html#about">Sobre</a></li>
+                    <li><a href="./index.html#services">Serviços</a></li>
+                    <li><a href="./index.html#projects">Projetos</a></li>
+                    <li><a href="./index.html#testimonials">Matérias</a></li>
+                    <li><a href="./index.html#blog">Blog</a></li>
+                    <li><a href="./index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social social-links">
+                <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn de João Neves"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Nevez06" target="_blank" aria-label="GitHub de João Neves"><i class="fab fa-github"></i></a>
+                <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance de João Neves"><i class="fab fa-behance"></i></a>
+            </div>
+            <p class="footer-bottom-text">&copy; 2025 João Neves. Todos os direitos reservados. Feito com paixão e tecnologia em Jales, SP.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle
+            const themeToggle = document.querySelectorAll('.theme-toggle');
+            const html = document.documentElement;
+
+            themeToggle.forEach(button => {
+                button.addEventListener('click', () => {
+                    const currentTheme = html.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    html.setAttribute('data-theme', newTheme);
+
+                    // Update icons on all theme toggle buttons
+                    themeToggle.forEach(btn => {
+                        const icon = btn.querySelector('i');
+                        icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+                    });
+
+                    // Animation
+                    button.style.transform = 'rotate(360deg)';
+                    setTimeout(() => {
+                        button.style.transform = '';
+                    }, 500);
+                });
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navOverlay = document.querySelector('.nav-overlay');
+            const closeBtn = document.querySelector('.close-btn');
+            const navLinksMobile = document.querySelectorAll('.nav-links-mobile a');
+
+            if (mobileMenuBtn && navOverlay && closeBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navOverlay.classList.add('active');
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    navOverlay.classList.remove('active');
+                });
+
+                navLinksMobile.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navOverlay.classList.remove('active');
+                    });
+                });
+            }
+
+            // Botão de voltar ao topo
+            const backToTop = document.createElement('div');
+            backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            backToTop.className = 'back-to-top';
+            document.body.appendChild(backToTop);
+            
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.style.opacity = '1';
+                    backToTop.style.visibility = 'visible';
+                } else {
+                    backToTop.style.opacity = '0';
+                    backToTop.style.visibility = 'hidden';
+                }
+            });
+
+            // Animação dos elementos principais da seção de agradecimento
+            gsap.from(".thank-you-section h1", { duration: 1, y: 50, opacity: 0, ease: "power3.out" });
+            gsap.from(".thank-you-section .icon-check", { duration: 0.8, scale: 0.5, opacity: 0, ease: "back.out(1.7)", delay: 0.2 });
+            gsap.from(".thank-you-section p", { duration: 1, y: 30, opacity: 0, ease: "power2.out", stagger: 0.2, delay: 0.4 });
+            gsap.from(".thank-you-cta-grid .btn", { duration: 0.8, y: 20, opacity: 0, ease: "power2.out", stagger: 0.1, delay: 0.8 });
+        });
+    </script>
+</body>
+</html>

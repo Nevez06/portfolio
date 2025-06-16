@@ -4,98 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Guide</title>
+     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./projeto.css">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #6C63FF;
-            --primary-dark: #564FC9;
-            --primary-light: #8A85FF;
-            --secondary: #FF6584;
-            --secondary-light: #FF8FA3;
-            --dark: #0A0A0F;
-            --darker: #07070B;
-            --dark-gray: #16161D;
-            --medium-gray: #2E2E3A;
-            --light-gray: #E0E0E0;
-            --white: #FFFFFF;
-            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            --glass-effect: rgba(15, 15, 20, 0.7);
-            --glass-border: rgba(255, 255, 255, 0.08);
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark);
-            color: var(--light-gray);
-            padding: 20px;
-            line-height: 1.8;
-        }
-        .container {
-            max-width: 1100px;
-            margin: auto;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Clash Display', sans-serif;
-            color: var(--white);
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        h2 {
-            font-size: 2rem;
-            margin: 40px 0 20px;
-        }
-        .section {
-            background: var(--glass-effect);
-            padding: 40px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            border: 1px solid var(--glass-border);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-        }
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: var(--dark-gray);
-            border-radius: 16px;
-            padding: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: var(--transition);
-        }
-        .card-icon {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        ul, ol {
-            padding-left: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: var(--dark-gray);
-        }
-        th, td {
-            padding: 12px;
-            border-bottom: 1px solid var(--medium-gray);
-            color: var(--light-gray);
-        }
-        th {
-            background: var(--primary);
-            color: var(--white);
-        }
-    </style>
+   
 </head>
 <body>
-    <div class="container">
-        <h1><i class="fas fa-language"></i> English Language Guide</h1>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-language"></i></span>
+               Inglês
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+             <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
+            <i class="fas fa-bars"></i>
+        </button>
+        </div>
+    </header>
 
-        <section class="section">
+   <div class="nav-overlay-mobile">
+        <button class="close-btn" aria-label="Fechar menu mobile">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="nav-links-mobile-list">
+             <a href="../index.html#hero" class="active">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../materias/principal.html">Matérias</a>
+                <a href="../index.html#blog">Blog</a>
+                <a href="../index.html#contact">Contato</a>
+        </nav>
+    
+        </button>
+    </div>
+   <section class="section">
+        <div class="container">
+        <h2><i class="fas fa-language"></i> English Language Guide</h2>
+
+       
             <h2><i class="fas fa-comments"></i> Basic Conversations</h2>
             <div class="card-grid">
                 <div class="card">
@@ -115,9 +76,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
-
-        <section class="section">
+      
             <h2><i class="fas fa-book"></i> Basic Grammar</h2>
             <h3>Possessive Pronouns</h3>
             <table>
@@ -148,9 +107,7 @@
                 <li><strong>He/She/It:</strong> works, plays, studies</li>
                 <li><strong>Examples:</strong> He works at a company. I study every day.</li>
             </ul>
-        </section>
-
-        <section class="section">
+       
             <h2><i class="fas fa-volume-up"></i> Vocabulary & Pronunciation</h2>
             <h3>Alphabet</h3>
             <p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
@@ -174,9 +131,7 @@
                 <li>Restaurant</li>
                 <li>Bank</li>
             </ul>
-        </section>
-
-        <section class="section">
+       
             <h2><i class="fas fa-pencil-alt"></i> Exercises</h2>
             <ul>
                 <li><strong>Complete the Dialogue:</strong><br>Ben: Hello, Christy. How are you?<br>Christy: I'm fine, thanks.</li>
@@ -185,7 +140,39 @@
                 <li><strong>Write sentences using Present Continuous:</strong><br>(Example: They are watching a movie.)</li>
                 <li><strong>Match the words:</strong><br>1. Hello → ( ) Olá<br>2. Good night → ( ) Boa noite<br>3. Teacher → ( ) Professor(a)</li>
             </ul>
-        </section>
+        
     </div>
+ </section>
+
+  <footer class="footer">
+        <div class="container footer-container">
+            <a href="../index.html" class="footer-logo">
+                <span class="footer-logo-icon"><i class="fas fa-j"></i></span>
+                João Neves
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#hero">Início</a></li>
+                    <li><a href="../index.html#about">Sobre</a></li>
+                    <li><a href="../index.html#services">Serviços</a></li>
+                    <li><a href="../index.html#projects">Projetos</a></li>
+                    <li><a href="../index.html#testimonials">Matérias</a></li>
+                    <li><a href="../index.html#blog">Blog</a></li>
+                    <li><a href="../index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social social-links">
+                <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Nevez06" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/joaoneves" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            </div>
+            <p class="footer-bottom-text">&copy; 2025 João Neves. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./materia.js"></script>
+    <script src="../script.js"></script>
+    
 </body>
 </html>
