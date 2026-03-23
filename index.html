@@ -4,494 +4,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Neves</title>
+    <title>João Antônio Neves | Portfólio Frontend & UX</title>
     <meta name="description"
-        content="João Neves é o desenvolvedor Frontend e Designer UX/UI , criando experiências digitais que transcendem o comum.">
-
-    <meta property="og:title" content="João Neves | Meu portfólio  – Onde a Inovação Ganha Vida">
+        content="Portfólio de João Antônio Neves, desenvolvedor frontend e designer UX/UI focado em interfaces rápidas, acessíveis e orientadas a resultados.">
+    <meta property="og:title" content="João Antônio Neves | Frontend & UX/UI">
     <meta property="og:description"
-        content="Explore o universo de João Neves: Projetos inovadores, design de vanguarda e a mente por trás das experiências digitais mais impactantes do mercado.">
-    <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
-    <meta property="og:url" content="https://joaoneves.dev">
+        content="Projetos, habilidades e experiências de João Antônio Neves na criação de produtos digitais modernos, performáticos e intuitivos.">
+    <meta property="og:image" content="./img/formatura.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nevez06.github.io/portfolio/">
     <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-
-
 </head>
 
 <body>
-    <header>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
+
+    <header class="site-header">
         <div class="container header-container">
-            <a href="./img/logo.png" class="logo">
-                <span class="logo-icon"><i class="fas fa-j"></i></span>
-                João Neves
+            <a href="#hero" class="logo" aria-label="Ir para o topo do portfólio">
+                <span class="logo-icon">JN</span>
+                <span>João Neves</span>
             </a>
-           <nav class="nav-links">
-                <a href="#hero" class="active">Início</a>
+
+            <nav class="nav-links" aria-label="Navegação principal">
+                <a href="#hero">Início</a>
                 <a href="#about">Sobre</a>
-                <a href="#services">Serviços</a>
                 <a href="#projects">Projetos</a>
-                <a href="#testimonials">Matérias</a>
-                <a href="#blog">Blog</a>
+                <a href="#process">Processo</a>
+                <a href="#skills">Skills</a>
                 <a href="#contact">Contato</a>
             </nav>
-            <button class="theme-toggle" aria-label="Alternar tema">
-                <i class="fas fa-moon"></i>
-            </button>
-             <button class="mobile-menu-btn" aria-label="Abrir menu mobile">
-            <i class="fas fa-bars"></i>
-        </button>
+
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-   <div class="nav-overlay-mobile">
-        <button class="close-btn" aria-label="Fechar menu mobile">
-            <i class="fas fa-times"></i>
-        </button>
-        <nav class="nav-links-mobile-list">
-             <a href="#hero" class="active">Início</a>
-                <a href="#about">Sobre</a>
-                <a href="#services">Serviços</a>
-                <a href="#projects">Projetos</a>
-                <a href="#testimonials">Matérias</a>
-                <a href="#blog">Blog</a>
-                <a href="#contact">Contato</a>
+    <div class="nav-overlay-mobile" aria-hidden="true">
+        <div class="mobile-panel">
+            <div class="mobile-panel-top">
+                <span class="mobile-title">Menu</span>
+                <button class="close-btn" aria-label="Fechar menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="nav-links-mobile-list" aria-label="Navegação mobile">
+            <a href="#hero">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#projects">Projetos</a>
+            <a href="#process">Processo</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contato</a>
         </nav>
-    
-        </button>
+        </div>
     </div>
 
-    <section id="hero" class="section">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Olá, eu sou <span>João Antônio Neves.</span><br></h1>
-                <p class="hero-subtitle">Com uma inovação, transformo ideias complexas em interfaces intuitivas e
-                    soluções de frontend robustas, definindo o futuro da interação digital.</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-primary">Ver Portfólio <i class="fas fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn btn-outline">Entre em Contato <i class="fas fa-envelope"></i></a>
+    <main>
+        <section id="hero" class="section hero-section">
+            <div class="container hero-content">
+                <div class="hero-text reveal-up">
+                    <span class="eyebrow">Frontend Developer • UX/UI • Performance</span>
+                    <h1 class="hero-title">Eu transformo ideias em experiências digitais <span>bonitas, rápidas e memoráveis</span>.</h1>
+                    <p class="hero-subtitle">
+                        Sou João Antônio Neves, desenvolvedor frontend e designer UX/UI. Crio interfaces que unem
+                        estratégia, clareza visual e performance para entregar produtos com impacto real.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">Ver projetos <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-outline">Falar comigo <i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="social-links" aria-label="Redes sociais">
+                        <a href="https://linkedin.com/in/joaoneves" target="_blank" rel="noreferrer"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Nevez06" target="_blank" rel="noreferrer" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="mailto:joaoantonioneves487@email.com" aria-label="Enviar email"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn de João Neves"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/Nevez06" target="_blank" aria-label="GitHub de João Neves"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance de João Neves"><i
-                            class="fab fa-behance"></i></a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-image-wrapper">
-                    <img src="./img/formatura.jpg"
-                        alt="">
-                </div>
-                <div class="hero-image-decor"></div>
-            </div>
-        </div>
-        <div class="hero-shape shape-1"></div>
-        <div class="hero-shape shape-2"></div>
-        <div class="hero-shape shape-3"></div>
-    </section>
 
-    <section id="about" class="section">
-        <div class="container about-content">
-            <div class="about-image">
-                <div class="about-image-wrapper">
-                    <img src="./img/foto.jpg"
-                        alt="João Neves trabalhando em um projeto de design, em um ambiente de alta tecnologia.">
-                </div>
-                <div class="about-image-decor"></div>
-            </div>
-            <div class="about-text">
-                <h2 class="section-title">Sobre Mim:</h2>
-                <p>Sou <strong>João Antônio Neves</strong>, e minha paixão é esculpir o futuro digital. Sempre com o
-                    foco em entregar não apenas código, mas sim <strong>experiências que encantam e convertem</strong>.
-                </p>
-                <p>Acredito que a tecnologia deve ser uma ponte para a simplicidade e a beleza. Cada pixel, cada linha
-                    de código, é pensada para otimizar a usabilidade e a estética, resultando em produtos digitais que
-                    não só funcionam perfeitamente, mas também <strong>inspiram e deixam uma marca</strong>.</p>
-                <div class="skills">
-                    <h4>Minhas Habilidades:</h4>
-                    <ul class="skills-list">
-                        <li class="skill-item"><i class="fab fa-react"></i> React.js </li>
-
-                        <li class="skill-item"><i class="fab fa-js"></i> JavaScript (TypeScript, ESNext)</li>
-                        <li class="skill-item"><i class="fab fa-node-js"></i> Node.js </li>
-
-                        <li class="skill-item"><i class="fab fa-figma"></i> Figma / Adobe XD</li>
-                        <li class="skill-item"><i class="fas fa-palette"></i> UI/UX Design</li>
-
-                        <li class="skill-item"><i class="fas fa-mobile-alt"></i> Design Responsivo</li>
-                        <li class="skill-item"><i class="fas fa-server"></i> Otimização de Performance</li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="about-shape about-shape-1"></div>
-        <div class="about-shape about-shape-2"></div>
-    </section>
-
-    <section id="services" class="section">
-        <div class="container services-container">
-            <h2 class="section-title">Serviços: </h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-code"></i></div>
-                    <h3>Desenvolvimento Frontend de Elite</h3>
-                    <p>Construo interfaces de usuário pixel-perfect com as mais recentes tecnologias (React, Vue,
-                        Angular), garantindo performance e escalabilidade inigualáveis.</p>
-                    <a href="#" class="service-link">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-                    <h3>UX/UI Design Revolucionário</h3>
-                    <p>Crio experiências digitais que não são apenas bonitas, mas profundamente intuitivas e eficientes,
-                        focadas nas necessidades do usuário e nos objetivos de negócio.</p>
-                    <a href="#" class="service-link">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>Otimização de Performance Web</h3>
-                    <p>Transformo sites e aplicações em foguetes de velocidade, otimizando cada aspecto para
-                        carregamento instantâneo e uma experiência fluida em qualquer dispositivo.</p>
-                    <a href="#" class="service-link">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>Desenvolvimento Mobile Responsivo</h3>
-                    <p>Desenvolvo soluções que se adaptam perfeitamente a qualquer tela, do desktop ao mobile,
-                        garantindo uma experiência consistente e agradável em todas as plataformas.</p>
-                    <a href="#" class="service-link">Saiba Mais <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-               
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <div class="container projects-container">
-            <h2 class="section-title">Meus Projetos:</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="./img/tcc.PNG" alt="Interface de usuário elegante para uma plataforma de e-commerce.">
-                    <div class="project-overlay">
-                        <span class="project-category">GranjaEggMaster</span>
-                        <h3 class="project-title">Controle simples e eficiente da produção de ovos</h3>
-                        <p class="project-description">Sistema digital para registrar e acompanhar a produção de ovos em
-                            granjas,<strong>com foco em praticidade, organização e armazenamento seguro dos dados.
-
-                            </strong>.</p>
-                        <div class="project-links">
-                            <a href="https://nevez06.github.io/Granja/" target="_blank" class="project-link" aria-label="Ver Projeto"><i
-                                    class="fas fa-external-link-alt"></i></a>
-                            <a href="https://github.com/Nevez06/Granja.git" target="_blank" class="project-link"
-                                aria-label="Ver Código"><i class="fab fa-github"></i></a>
+                <div class="hero-visual reveal-up delay-1">
+                    <div class="hero-card profile-card">
+                        <div class="profile-top">
+                            <img src="./img/formatura.jpg" alt="Foto de João Antônio Neves." class="profile-photo">
+                            <div>
+                                <p class="label">Disponível para freelas</p>
+                                <h2>João Antônio Neves</h2>
+                                <p>Jales, SP · Brasil</p>
+                            </div>
+                        </div>
+                        <div class="hero-mini-grid">
+                            <div>
+                                <strong>2+</strong>
+                                <span>projetos publicados</span>
+                            </div>
+                            <div>
+                                <strong>100%</strong>
+                                <span>foco em experiência</span>
+                            </div>
+                            <div>
+                                <strong>Front</strong>
+                                <span>React, JS e UI moderna</span>
+                            </div>
+                            <div>
+                                <strong>UX</strong>
+                                <span>fluxos simples e claros</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <img src="./img/info.PNG"
-                        alt="Dashboard analítico com gráficos e dados financeiros.">
-                    <div class="project-overlay">
-                        <span class="project-category">Info Cursos</span>
-                        <h3 class="project-title">Plataforma de Cursos em Tecnologia</h3>
-                        <p class="project-description">O InfoCursos é um sistema educacional focado em cursos de tecnologia da informação.</p>
-                        <div class="project-links">
-                            <a href="https://nevez06.github.io/infocursos/" class="project-link" aria-label="Ver Projeto"><i
-                                    class="fas fa-external-link-alt"></i></a>
-                            <a href="https://github.com/Nevez06/infocursos.git" class="project-link" aria-label="Ver Código"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="https://picsum.photos/700/500?random=7"
-                        alt="Aplicativo móvel de fitness com interface gamificada.">
-                    <div class="project-overlay">
-                        <span class="project-category">Aplicativo Mobile</span>
-                        <h3 class="project-title">App FitLife: Gamificação da Saúde</h3>
-                        <p class="project-description">Criei a experiência de usuário imersiva do FitLife, um aplicativo
-                            que transformou a rotina de exercícios em um jogo viciante e motivador.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link" aria-label="Ver Projeto"><i
-                                    class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link" aria-label="Ver Código"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="https://picsum.photos/700/500?random=8"
-                        alt="Plataforma de educação online com cursos interativos.">
-                    <div class="project-overlay">
-                        <span class="project-category">EdTech</span>
-                        <h3 class="project-title">E-learning XPTO: Conhecimento na Ponta dos Dedos</h3>
-                        <p class="project-description">Colaborei no desenvolvimento da plataforma E-learning XPTO,
-                            tornando o aprendizado online mais acessível e engajador para estudantes globalmente.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link" aria-label="Ver Projeto"><i
-                                    class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link" aria-label="Ver Código"><i class="fab fa-github"></i></a>
-                        </div>
+
+                    <div class="hero-card spotlight-card">
+                        <span class="spotlight-tag">Destaque</span>
+                        <h3>O que eu entrego</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Landing pages com conversão e identidade forte</li>
+                            <li><i class="fas fa-check"></i> Sistemas web com organização, responsividade e clareza</li>
+                            <li><i class="fas fa-check"></i> Melhoria visual de produtos que precisam parecer premium</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="projects-btn">
-                <a href="./projetos/todos_projetos.html" class="btn btn-primary">Ver Todos os Projetos <i
-                        class="fas fa-plus-circle"></i></a>
-            </div>
-        </div>
-        <div class="projects-shape projects-shape-1"></div>
-        <div class="projects-shape projects-shape-2"></div>
-    </section>
+        </section>
 
-    <section id="testimonials" class="section">
-        <div class="container">
-            <h2 class="section-title">Matérias que Constroem Meu Conhecimento</h2>
-            <p class="section-subtitle">Disciplinas acadêmicas e habilidades técnicas que me permitem criar soluções
-                completas e inovadoras.</p>
-
-            <div class="materias-grid">
-                <!-- Grupo 1: Núcleo Duro (Frontend/UX) -->
-                <div class="materia-card">
-                    <div class="materia-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Técnicas Avançadas de Programação Web/Mobile</h3>
-                    <ul>
-                        <li>Frameworks modernos (React, Vue, Angular)</li>
-                        <li>PWA e Responsividade</li>
-                        <li>Integração com Backend</li>
-                    </ul>
+        <section id="about" class="section">
+            <div class="container two-column about-layout">
+                <div class="section-copy reveal-up">
+                    <span class="eyebrow">Sobre mim</span>
+                    <h2 class="section-title">Design e código trabalhando juntos para gerar valor.</h2>
+                    <p>
+                        Minha forma de construir produtos digitais mistura visão estética, raciocínio técnico e atenção
+                        total à experiência de quem usa. Não gosto de sites "só bonitos": prefiro páginas que guiam,
+                        explicam, convertem e deixam uma impressão profissional.
+                    </p>
+                    <p>
+                        Tenho interesse especial por interfaces modernas, animações sutis, arquitetura visual limpa e
+                        soluções que funcionam bem em qualquer tela. Meu objetivo é transformar cada projeto em uma
+                        vitrine forte da marca ou do negócio.
+                    </p>
                 </div>
 
-                <!-- Grupo 2: Banco de Dados -->
-                <div class="materia-card">
-                    <div class="materia-icon"><i class="fas fa-database"></i></div>
-                    <h3>Bancos de Dados Relacionais & Não-Relacionais</h3>
-                    <ul>
-                        <li>SQL (PostgreSQL, MySQL)</li>
-                        <li>NoSQL (MongoDB, Firebase)</li>
-                        <li>Otimização de queries</li>
-                    </ul>
-                </div>
-
-                <!-- Grupo 3: UX/Interação -->
-                <div class="materia-card">
-                    <div class="materia-icon"><i class="fas fa-user-circle"></i></div>
-                    <h3>Interação Humano-Computador</h3>
-                    <ul>
-                        <li>Design Centrado no Usuário</li>
-                        <li>Testes de Usabilidade</li>
-                        <li>Prototipação (Figma, Adobe XD)</li>
-                    </ul>
-                </div>
-
-                <!-- Grupo 4: Engenharia de Software -->
-                <div class="materia-card">
-                    <div class="materia-icon"><i class="fas fa-cogs"></i></div>
-                    <h3>Engenharia de Software & Gestão Ágil</h3>
-                    <ul>
-                        <li>Metodologias Scrum/Kanban</li>
-                        <li>CI/CD e DevOps</li>
-                        <li>Arquitetura Limpa (Clean Code)</li>
-                    </ul>
-                </div>
-
-                <!-- Grupo 5: Fundamentos -->
-                <div class="materia-card">
-                    <div class="materia-icon"><i class="fas fa-project-diagram"></i></div>
-                    <h3>Estrutura de Dados & Matemática Discreta</h3>
-                    <ul>
-                        <li>Algoritmos de otimização</li>
-                        <li>Grafos e Árvores</li>
-                        <li>Lógica para Frontend</li>
-                    </ul>
-                </div>
-
-                <!-- Grupo 6: Negócios -->
-                <div class="materia-card">
-                    <div class="materia-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Inteligência Corporativa & Modelos de Negócios</h3>
-                    <ul>
-                        <li>Análise de Dados para UX</li>
-                        <li>MVP e Validação de Produtos</li>
-                        <li>Estratégias Digitais</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="projects-btn">
-                <a href="./materias/principal.html" class="btn btn-outline">
-                    <i class="fas fa-book-open"></i> Ver Detalhes das Matérias
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog" class="section">
-        <div class="container blog-container">
-            <h2 class="section-title">Meu Blog: Insights e Inovação</h2>
-            <div class="blog-grid">
-                <div class="blog-post-card">
-                    <img src="https://picsum.photos/700/400?random=13"
-                        alt="Pessoa codificando em um laptop com gráficos abstratos ao fundo.">
-                    <div class="blog-post-content">
-                        <div class="blog-post-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 15 Maio, 2025</span>
-                            <span><i class="fas fa-tag"></i> Frontend</span>
-                        </div>
-                        <h3>As 5 Tendências de Frontend que Dominarão 2025</h3>
-                        <p>Descubra as tecnologias e abordagens que estão moldando o futuro do desenvolvimento frontend
-                            e como você pode se manter à frente.</p>
-                        <a href="./ler_mais/tendencias-frontend-2025.html" class="blog-read-more">Ler Mais <i
-                                class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="blog-post-card">
-                    <img src="https://picsum.photos/700/400?random=14"
-                        alt="Mãos digitando em um teclado com um design de interface de usuário em segundo plano.">
-                    <div class="blog-post-content">
-                        <div class="blog-post-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 01 Abril, 2025</span>
-                            <span><i class="fas fa-tag"></i> UX/UI Design</span>
-                        </div>
-                        <h3>O Poder da Psicologia no UX: Criando Interfaces Intuitivas</h3>
-                        <p>Explore como os princípios da psicologia podem ser aplicados para criar designs que não só
-                            agradam, mas também guiam e retêm usuários.</p>
-                        <a href="./ler_mais/psicologia-no-ux.html" class="blog-read-more">Ler Mais <i
-                                class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="blog-post-card">
-                    <img src="https://picsum.photos/700/400?random=15"
-                        alt="Team de desenvolvedores colaborando em uma tela grande.">
-                    <div class="blog-post-content">
-                        <div class="blog-post-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 10 Março, 2025</span>
-                            <span><i class="fas fa-tag"></i> Carreira</span>
-                        </div>
-                        <h3>De Júnior a Lenda: Meu Caminho para o Topo do Dev</h3>
-                        <p>Uma retrospectiva da minha jornada, os desafios superados e as lições aprendidas para me
-                            tornar o principal especialista em experiências digitais.</p>
-                        <a href="./ler_mais/caminho-para-topo-dev.html" class="blog-read-more">Ler Mais <i
-                                class="fas fa-arrow-right"></i></a>
+                <div class="about-panel reveal-up delay-1">
+                    <img src="./img/foto.jpg" alt="João Antônio Neves em ambiente profissional." class="about-photo">
+                    <div class="about-highlights">
+                        <article>
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <h3>Performance</h3>
+                                <p>Experiências leves, responsivas e com navegação fluida.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fas fa-object-group"></i>
+                            <div>
+                                <h3>UX/UI</h3>
+                                <p>Layouts claros, hierarquia visual forte e foco no usuário final.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h3>Implementação</h3>
+                                <p>Do conceito à entrega, com atenção aos detalhes do produto.</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="blog-shape blog-shape-1"></div>
-        <div class="blog-shape blog-shape-2"></div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="container contact-container">
-            <div class="contact-info">
-                <h2 class="section-title">Vamos Construir Algo Grandioso Juntos!</h2>
-                <p>Estou sempre aberto a novos desafios e parcerias estratégicas. Se você tem um projeto ambicioso ou
-                    quer elevar sua presença digital ao próximo nível, entre em contato.</p>
-                <div class="contact-detalhes">
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-texto">
-                            <h4>Localização:</h4>
-                            <p>Jales, São Paulo, Brasil</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-texto">
-                            <h4>Email:</h4>
-                            <p><a href="mailto:joaoneves@email.com">joaoantonioneves487@email.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div class="contact-texto">
-                            <h4>Telefone:</h4>
-                            <p><a href="tel:+5517998765432">+55 (17) 99779-3833</a></p>
-                        </div>
-                    </div>
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading reveal-up">
+                    <span class="eyebrow">Projetos em destaque</span>
+                    <h2 class="section-title">Trabalhos que mostram meu nível de execução.</h2>
+                    <p class="section-subtitle">Selecionei projetos que demonstram organização visual, solução de problema e experiência digital consistente.</p>
                 </div>
-                <div class="contact-redes social-links">
-                    <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn de João Neves"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/joaoneves" target="_blank" aria-label="GitHub de João Neves"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://twitter.com/joaoneves" target="_blank" aria-label="Twitter de João Neves"><i
-                            class="fab fa-twitter"></i></a>
-                    <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance de João Neves"><i
-                            class="fab fa-behance"></i></a>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal-up">
+                        <img src="./img/tcc.PNG" alt="Tela do projeto GranjaEggMaster." class="project-image">
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="chip">Sistema web</span>
+                                <span class="chip">Frontend + organização de dados</span>
+                            </div>
+                            <h3>GranjaEggMaster</h3>
+                            <p>Plataforma para controle de produção de ovos com foco em praticidade, registro confiável e leitura rápida das informações.</p>
+                            <ul class="project-points">
+                                <li>Fluxo pensado para uso simples no dia a dia.</li>
+                                <li>Interface voltada à clareza operacional.</li>
+                                <li>Organização para facilitar acompanhamento da produção.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://nevez06.github.io/Granja/" target="_blank" rel="noreferrer" class="btn btn-small btn-primary">Abrir projeto</a>
+                                <a href="https://github.com/Nevez06/Granja.git" target="_blank" rel="noreferrer" class="btn btn-small btn-ghost">Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal-up delay-1">
+                        <img src="./img/info.PNG" alt="Tela do projeto Info Cursos." class="project-image">
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="chip">EdTech</span>
+                                <span class="chip">Produto educacional</span>
+                            </div>
+                            <h3>Info Cursos</h3>
+                            <p>Projeto voltado ao universo de tecnologia da informação, com estrutura visual pensada para facilitar descoberta de conteúdos e cursos.</p>
+                            <ul class="project-points">
+                                <li>Navegação simples e intuitiva.</li>
+                                <li>Identidade visual alinhada ao contexto tech.</li>
+                                <li>Experiência orientada à exploração de conteúdo.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://nevez06.github.io/infocursos/" target="_blank" rel="noreferrer" class="btn btn-small btn-primary">Abrir projeto</a>
+                                <a href="https://github.com/Nevez06/infocursos.git" target="_blank" rel="noreferrer" class="btn btn-small btn-ghost">Código</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="centered-action reveal-up">
+                    <a href="./projetos/todos_projetos.html" class="btn btn-outline">Ver todos os projetos <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="contact-formulario">
-                <form action="https://formsubmit.co/joaoantonioneves487@gmail.com" method="POST">
-                    <div class="form-group">
-                        <label for="nome">Seu Nome Completo:</label>
-                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Ex: Maria Oliveira"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Seu Email:</label>
-                        <input type="email" id="email" name="email" class="form-control"
-                            placeholder="Ex: seuemail@dominio.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="assunto">Assunto da Mensagem:</label>
-                        <input type="text" id="assunto" name="assunto" class="form-control"
-                            placeholder="Ex: Proposta de Projeto" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensagem">Sua Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" class="form-control" rows="6"
-                            placeholder="Descreva sua ideia ou necessidade..." required></textarea>
-                    </div>
-                    <input type="hidden" name="_next"  value=" https://nevez06.github.io/portfolio/thanks.html">
-                    <button  type="submit"  class="btn btn-primary">Enviar Mensagem <i
-                            class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="contact-shape contact-shape-1"></div>
-        <div class="contact-shape contact-shape-2"></div>
-    </section>
+        </section>
 
-    <footer>
+        <section id="process" class="section">
+            <div class="container">
+                <div class="section-heading reveal-up">
+                    <span class="eyebrow">Meu processo</span>
+                    <h2 class="section-title">Como eu construo experiências digitais melhores.</h2>
+                </div>
+                <div class="process-grid">
+                    <article class="info-card reveal-up">
+                        <span class="step-number">01</span>
+                        <h3>Entender o objetivo</h3>
+                        <p>Mapeio problema, público, contexto e resultado esperado antes de pensar na interface.</p>
+                    </article>
+                    <article class="info-card reveal-up delay-1">
+                        <span class="step-number">02</span>
+                        <h3>Desenhar a experiência</h3>
+                        <p>Organizo conteúdo, navegação e hierarquia visual para que tudo faça sentido rapidamente.</p>
+                    </article>
+                    <article class="info-card reveal-up delay-2">
+                        <span class="step-number">03</span>
+                        <h3>Construir com qualidade</h3>
+                        <p>Transformo o conceito em uma interface elegante, responsiva e pronta para impressionar.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container skills-layout">
+                <div class="section-copy reveal-up">
+                    <span class="eyebrow">Stack e repertório</span>
+                    <h2 class="section-title">Habilidades que sustentam minhas entregas.</h2>
+                    <p class="section-subtitle">Combino base técnica com visão de produto para criar interfaces modernas e funcionais.</p>
+                </div>
+                <div class="skills-grid reveal-up delay-1">
+                    <div class="skill-badge"><i class="fab fa-html5"></i> HTML5 Semântico</div>
+                    <div class="skill-badge"><i class="fab fa-css3-alt"></i> CSS moderno</div>
+                    <div class="skill-badge"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="skill-badge"><i class="fab fa-react"></i> React</div>
+                    <div class="skill-badge"><i class="fab fa-node-js"></i> Node.js</div>
+                    <div class="skill-badge"><i class="fab fa-figma"></i> Figma</div>
+                    <div class="skill-badge"><i class="fas fa-mobile-screen-button"></i> Responsividade</div>
+                    <div class="skill-badge"><i class="fas fa-gauge-high"></i> Performance</div>
+                    <div class="skill-badge"><i class="fas fa-universal-access"></i> Acessibilidade</div>
+                    <div class="skill-badge"><i class="fas fa-layer-group"></i> Design Systems</div>
+                    <div class="skill-badge"><i class="fas fa-diagram-project"></i> Organização de fluxos</div>
+                    <div class="skill-badge"><i class="fas fa-lightbulb"></i> Resolução de problemas</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container contact-wrapper">
+                <div class="contact-copy reveal-up">
+                    <span class="eyebrow">Contato</span>
+                    <h2 class="section-title">Se você quer um portfólio, site ou sistema com cara premium, vamos conversar.</h2>
+                    <p>
+                        Posso ajudar com páginas institucionais, landing pages, interfaces de sistemas, redesign visual
+                        e melhorias de experiência em projetos que já existem.
+                    </p>
+                    <div class="contact-list">
+                        <a href="mailto:joaoantonioneves487@email.com"><i class="fas fa-envelope"></i> joaoantonioneves487@email.com</a>
+                        <a href="tel:+5517997793833"><i class="fas fa-phone"></i> +55 (17) 99779-3833</a>
+                        <span><i class="fas fa-location-dot"></i> Jales, São Paulo · Brasil</span>
+                    </div>
+                </div>
+
+                <div class="contact-card reveal-up delay-1">
+                    <form action="https://formsubmit.co/joaoantonioneves487@gmail.com" method="POST" class="contact-formulario">
+                        <input type="hidden" name="_next" value="https://nevez06.github.io/portfolio/thanks.html">
+                        <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="voce@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" name="assunto" class="form-control" placeholder="Quero conversar sobre um projeto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control" rows="6" placeholder="Me conte o que você precisa." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">Enviar mensagem <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <div class="container footer-container">
-            <a href="#" class="footer-logo">
-                <span class="footer-logo-icon"><i class="fas fa-j"></i></span>
-                João Neves
-            </a>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#testimonials">Matérias</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="footer-social social-links">
-                <a href="https://linkedin.com/in/joaoneves" target="_blank" aria-label="LinkedIn de João Neves"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/Nevez06" target="_blank" aria-label="GitHub de João Neves"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://behance.net/joaoneves" target="_blank" aria-label="Behance de João Neves"><i
-                        class="fab fa-behance"></i></a>
+            <div>
+                <a href="#hero" class="logo footer-logo">
+                    <span class="logo-icon">JN</span>
+                    <span>João Neves</span>
+                </a>
+                <p class="footer-text">Portfólio focado em frontend, UX/UI e experiências digitais com acabamento profissional.</p>
             </div>
-            <p class="footer-bottom-text">&copy; 2025 João Neves. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#about">Sobre</a>
+                <a href="#projects">Projetos</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contato</a>
+            </div>
         </div>
     </footer>
 
