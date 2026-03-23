@@ -28,10 +28,9 @@
             <nav class="nav-links">
                 <a href="../index.html#hero">Início</a>
                 <a href="../index.html#about">Sobre</a>
-                <a href="../index.html#services">Serviços</a>
                 <a href="../index.html#projects">Projetos</a>
-                <a href="../index.html#testimonials">Matérias</a>
-                <a href="../index.html#blog" class="active">Blog</a>
+                <a href="../index.html#process">Processo</a>
+                <a href="../index.html#skills">Skills</a>
                 <a href="../index.html#contact">Contato</a>
             </nav>
             <button class="theme-toggle" aria-label="Alternar tema">
@@ -50,10 +49,9 @@
         <nav class="nav-links-mobile">
             <a href="../index.html#hero">Início</a>
             <a href="../index.html#about">Sobre</a>
-            <a href="../index.html#services">Serviços</a>
             <a href="../index.html#projects">Projetos</a>
-            <a href="../index.html#testimonials">Matérias</a>
-            <a href="../index.html#blog">Blog</a>
+            <a href="../index.html#process">Processo</a>
+            <a href="../index.html#skills">Skills</a>
             <a href="../index.html#contact">Contato</a>
         </nav>
         <button class="theme-toggle" aria-label="Alternar tema">
@@ -64,7 +62,7 @@
     <article class="blog-post-full">
         <header class="post-header">
             <div class="container">
-                <a href="../index.html#blog" class="back-to-blog"><i class="fas fa-arrow-left"></i> Voltar ao Blog</a>
+                <a href="../index.html#projects" class="back-to-blog"><i class="fas fa-arrow-left"></i> Voltar ao Projetos</a>
                 <div class="post-meta">
                     <span><i class="fas fa-calendar-alt"></i> 28 Janeiro, 2025</span>
                     <span><i class="fas fa-tag"></i> Frontend, Tendências</span>
@@ -166,10 +164,9 @@
                 <ul>
                     <li><a href="../index.html#hero">Início</a></li>
                     <li><a href="../index.html#about">Sobre</a></li>
-                    <li><a href="../index.html#services">Serviços</a></li>
                     <li><a href="../index.html#projects">Projetos</a></li>
-                    <li><a href="../index.html#testimonials">Matérias</a></li>
-                    <li><a href="../index.html#blog">Blog</a></li>
+                    <li><a href="../index.html#process">Processo</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
                     <li><a href="../index.html#contact">Contato</a></li>
                 </ul>
             </nav>
@@ -188,54 +185,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="../script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Theme Toggle
-            const themeToggle = document.querySelectorAll('.theme-toggle');
-            const html = document.documentElement;
-
-            themeToggle.forEach(button => {
-                button.addEventListener('click', () => {
-                    const currentTheme = html.getAttribute('data-theme');
-                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                    html.setAttribute('data-theme', newTheme);
-
-                    // Update icons on all theme toggle buttons
-                    themeToggle.forEach(btn => {
-                        const icon = btn.querySelector('i');
-                        icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-                    });
-
-                    // Animation
-                    button.style.transform = 'rotate(360deg)';
-                    setTimeout(() => {
-                        button.style.transform = '';
-                    }, 500);
-                });
-            });
-
-            // Mobile Menu Toggle
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const navOverlay = document.querySelector('.nav-overlay');
-            const closeBtn = document.querySelector('.close-btn');
-            const navLinksMobile = document.querySelectorAll('.nav-links-mobile a');
-
-            if (mobileMenuBtn && navOverlay && closeBtn) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    navOverlay.classList.add('active');
-                });
-
-                closeBtn.addEventListener('click', () => {
-                    navOverlay.classList.remove('active');
-                });
-
-                navLinksMobile.forEach(link => {
-                    link.addEventListener('click', () => {
-                        navOverlay.classList.remove('active');
-                    });
-                });
-            }
-
             // Intersection Observer for animations (from original caminho-para-topo-dev.html)
             const observerOptions = {
                 root: null,

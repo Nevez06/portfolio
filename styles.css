@@ -602,6 +602,23 @@ button {
     max-width: 46ch;
 }
 
+.footer-nav ul {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav a {
+    color: var(--muted);
+    transition: var(--transition);
+}
+
+.footer-nav a:hover {
+    color: var(--text);
+}
+
 .nav-overlay-mobile {
     position: fixed;
     inset: 0;

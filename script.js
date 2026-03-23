@@ -3,16 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeButtons = document.querySelectorAll('.theme-toggle');
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenuCloseBtn = document.querySelector('.close-btn');
-    const mobileOverlay = document.querySelector('.nav-overlay-mobile');
-    const navLinks = document.querySelectorAll('.nav-links a, .nav-links-mobile-list a');
-    const sections = [...document.querySelectorAll('main section[id]')];
+    const mobileOverlay = document.querySelector('.nav-overlay-mobile, .nav-overlay');
+    const mobileNavSelector = '.nav-links-mobile-list a, .nav-links-mobile a';
+    const navLinks = document.querySelectorAll(`.nav-links a, ${mobileNavSelector}`);
+    const sections = [...document.querySelectorAll('main section[id], section[id]')];
     const revealItems = document.querySelectorAll('.reveal-up');
+    const header = document.querySelector('.site-header, header, .header-mobile');
 
     const applyThemeIcon = () => {
         const isDark = html.getAttribute('data-theme') === 'dark';
         themeButtons.forEach((button) => {
             const icon = button.querySelector('i');
-            icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+            if (icon) {
+                icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+            }
         });
     };
 
@@ -37,13 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const openMobileMenu = () => {
-        mobileOverlay.classList.add('open');
+        if (!mobileOverlay) return;
+        mobileOverlay.classList.add('open', 'active');
         mobileOverlay.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
     };
 
     const closeMobileMenu = () => {
-        mobileOverlay.classList.remove('open');
+        if (!mobileOverlay) return;
+        mobileOverlay.classList.remove('open', 'active');
         mobileOverlay.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
     };
@@ -60,16 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', (event) => {
             const href = link.getAttribute('href');
             if (!href?.startsWith('#')) {
+                closeMobileMenu();
                 return;
             }
 
             event.preventDefault();
             const target = document.querySelector(href);
             if (!target) {
+                closeMobileMenu();
                 return;
             }
 
-            const headerOffset = document.querySelector('.site-header')?.offsetHeight ?? 0;
+            const headerOffset = header?.offsetHeight ?? 0;
             const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset - 16;
 
             window.scrollTo({ top: targetPosition, behavior: 'smooth' });
@@ -78,7 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const updateActiveLink = () => {
-        const scrollPosition = window.scrollY + (document.querySelector('.site-header')?.offsetHeight ?? 0) + 24;
+        if (!sections.length) return;
+        const scrollPosition = window.scrollY + (header?.offsetHeight ?? 0) + 24;
 
         let currentSectionId = sections[0]?.id ?? 'hero';
         sections.forEach((section) => {
@@ -93,15 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.18 });
+    if (revealItems.length && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.18 });
 
-    revealItems.forEach((item) => observer.observe(item));
+        revealItems.forEach((item) => observer.observe(item));
+    }
 
     window.addEventListener('scroll', updateActiveLink, { passive: true });
     updateActiveLink();
