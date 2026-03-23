@@ -1,241 +1,108 @@
-  document.addEventListener('DOMContentLoaded', () => {
-            // Theme Toggle
-            const themeToggle = document.querySelectorAll('.theme-toggle');
-            const html = document.documentElement;
+document.addEventListener('DOMContentLoaded', () => {
+    const html = document.documentElement;
+    const themeButtons = document.querySelectorAll('.theme-toggle');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenuCloseBtn = document.querySelector('.close-btn');
+    const mobileOverlay = document.querySelector('.nav-overlay-mobile');
+    const navLinks = document.querySelectorAll('.nav-links a, .nav-links-mobile-list a');
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const revealItems = document.querySelectorAll('.reveal-up');
 
-            themeToggle.forEach(button => {
-                button.addEventListener('click', () => {
-                    const currentTheme = html.getAttribute('data-theme');
-                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                    html.setAttribute('data-theme', newTheme);
-
-                    // Update icons on all theme toggle buttons
-                    themeToggle.forEach(btn => {
-                        const icon = btn.querySelector('i');
-                        icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-                    });
-
-                    // Animation
-                    button.style.transform = 'rotate(360deg)';
-                    setTimeout(() => {
-                        button.style.transform = '';
-                    }, 500);
-                });
-            });
-// JS para o Header com Scroll
-window.addEventListener('scroll', function () {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
-
-
-// Mobile menu toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const closeBtn = document.querySelector('.nav-overlay-mobile .close-btn');
-const navOverlay = document.querySelector('.nav-overlay-mobile');
-const navLinksMobile = document.querySelectorAll('.nav-links-mobile-list a');
-
-mobileMenuBtn.addEventListener('click', () => {
-    navOverlay.classList.add('open');
-});
-
-closeBtn.addEventListener('click', () => {
-    navOverlay.classList.remove('open');
-});
-
-navLinksMobile.forEach(link => {
-    link.addEventListener('click', (e) => {
-        // Previne o comportamento padrão para rolar suavemente para as seções
-        e.preventDefault();
-        const targetId = e.target.getAttribute('href');
-        if (targetId && targetId.startsWith('#')) {
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-        navOverlay.classList.remove('open');
-    });
-});
-closeMenuBtn.addEventListener('click', () => {
-    navOverlay.classList.remove('active');
-    document.body.style.overflow = 'auto'; // Habilita scroll no body
-});
-// GSAP Scroll Animations
-gsap.registerPlugin(ScrollTrigger);
-
-// Hero Section Animations
-gsap.from(".hero-title", { opacity: 0, y: 50, duration: 1.2, delay: 0.5, ease: "power3.out" });
-gsap.from(".hero-subtitle", { opacity: 0, y: 50, duration: 1.2, delay: 0.7, ease: "power3.out" });
-gsap.from(".hero-btns", { opacity: 0, y: 50, duration: 1.2, delay: 0.9, ease: "power3.out" });
-gsap.from(".social-links", { opacity: 0, y: 50, duration: 1.2, delay: 1.1, ease: "power3.out" });
-gsap.from(".hero-image-wrapper", { opacity: 0, scale: 0.8, duration: 1.5, delay: 0.8, ease: "elastic.out(1, 0.5)" });
-
-// Section Title Animation
-gsap.utils.toArray(".section-title").forEach(title => {
-    gsap.from(title, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        scrollTrigger: {
-            trigger: title,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-        }
-    });
-});
-
-// About Section Animation
-gsap.from(".about-image-wrapper", {
-    opacity: 0,
-    x: -100,
-    duration: 1.2,
-    ease: "power3.out",
-    scrollTrigger: {
-        trigger: "#about",
-        start: "top 75%",
-        toggleActions: "play none none reverse",
-    }
-});
-gsap.from(".about-text p, .skills", {
-    opacity: 0,
-    y: 50,
-    stagger: 0.2,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-        trigger: "#about .about-text",
-        start: "top 75%",
-        toggleActions: "play none none reverse",
-    }
-});
-
-// Services Card Animation
-gsap.utils.toArray(".service-card").forEach(card => {
-    gsap.from(card, {
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-        ease: "back.out(1.7)",
-        scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-        }
-    });
-});
-
-// Project Card Animation
-gsap.utils.toArray(".project-card").forEach(card => {
-    gsap.from(card, {
-        opacity: 0,
-        scale: 0.9,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-        }
-    });
-});
-
-// Testimonial Card Animation
-gsap.utils.toArray(".testimonial-card").forEach(card => {
-    gsap.from(card, {
-        opacity: 0,
-        x: 100,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-        }
-    });
-});
-
-// Blog Post Card Animation
-gsap.utils.toArray(".blog-post-card").forEach(card => {
-    gsap.from(card, {
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-        }
-    });
-});
-
-// Contact Section Animation
-gsap.from(".contact-info, .contact-formulario", {
-    opacity: 0,
-    y: 50,
-    stagger: 0.3,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-        trigger: "#contact",
-        start: "top 75%",
-        toggleActions: "play none none reverse",
-    }
-});
-
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            const headerOffset = document.querySelector('header').offsetHeight;
-            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerOffset - 20; // Adiciona um pequeno padding
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
-        }
-
-        // Remove active class from all nav links
-        document.querySelectorAll('.nav-links a, .nav-links-mobile a').forEach(link => {
-            link.classList.remove('active');
+    const applyThemeIcon = () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        themeButtons.forEach((button) => {
+            const icon = button.querySelector('i');
+            icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
         });
-        // Add active class to the clicked link
-        this.classList.add('active');
+    };
+
+    const setTheme = (theme) => {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('portfolio-theme', theme);
+        applyThemeIcon();
+    };
+
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        applyThemeIcon();
+    }
+
+    themeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const nextTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            setTheme(nextTheme);
+        });
     });
-});
 
-// Update active link on scroll
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-links a, .nav-links-mobile a');
+    const openMobileMenu = () => {
+        mobileOverlay.classList.add('open');
+        mobileOverlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - document.querySelector('header').offsetHeight;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
+    const closeMobileMenu = () => {
+        mobileOverlay.classList.remove('open');
+        mobileOverlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    mobileMenuBtn?.addEventListener('click', openMobileMenu);
+    mobileMenuCloseBtn?.addEventListener('click', closeMobileMenu);
+    mobileOverlay?.addEventListener('click', (event) => {
+        if (event.target === mobileOverlay) {
+            closeMobileMenu();
         }
     });
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active');
-        }
+    navLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            const href = link.getAttribute('href');
+            if (!href?.startsWith('#')) {
+                return;
+            }
+
+            event.preventDefault();
+            const target = document.querySelector(href);
+            if (!target) {
+                return;
+            }
+
+            const headerOffset = document.querySelector('.site-header')?.offsetHeight ?? 0;
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset - 16;
+
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            closeMobileMenu();
+        });
     });
+
+    const updateActiveLink = () => {
+        const scrollPosition = window.scrollY + (document.querySelector('.site-header')?.offsetHeight ?? 0) + 24;
+
+        let currentSectionId = sections[0]?.id ?? 'hero';
+        sections.forEach((section) => {
+            if (scrollPosition >= section.offsetTop) {
+                currentSectionId = section.id;
+            }
+        });
+
+        navLinks.forEach((link) => {
+            const isActive = link.getAttribute('href') === `#${currentSectionId}`;
+            link.classList.toggle('active', isActive);
+        });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.18 });
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+    updateActiveLink();
 });
- });
