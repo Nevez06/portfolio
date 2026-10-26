@@ -2,7 +2,7 @@
 
 [**Acessar o portfólio**](https://nevez06.github.io/portfolio/)
 
-Apresentação dos meus projetos pessoais e acadêmicos, conhecimentos de desenvolvimento de software, formação e cursos complementares. Sou estudante de **Análise e Desenvolvimento de Sistemas na Fatec** e concluí o **técnico em Desenvolvimento de Sistemas na ETEC**. Busco minha primeira oportunidade profissional na área de tecnologia, seja em estágio, posição júnior ou pequenos projetos freelance.
+Apresentação de projetos próprios, protótipos inacabados e trabalhos acadêmicos em equipe, conhecimentos de desenvolvimento de software, formação e cursos complementares. Sou estudante de **Análise e Desenvolvimento de Sistemas na Fatec** e concluí o **técnico em Desenvolvimento de Sistemas na ETEC**. Busco minha primeira oportunidade profissional na área de tecnologia, seja em estágio, posição júnior ou pequenos projetos freelance.
 
 ## Tecnologias que pratico
 
@@ -12,7 +12,8 @@ Apresentação dos meus projetos pessoais e acadêmicos, conhecimentos de desenv
 
 ## Projetos destacados
 
-- [ScanPlant](https://github.com/Nevez06/ScanPlant) — aplicativo React Native + Expo e API ASP.NET Core/.NET 8 com PostgreSQL. A documentação do repositório descreve autenticação, gerenciamento de plantas e integrações.
+- **EventX (projeto iniciado por mim e não concluído):** protótipo de plataforma de eventos. Experimentei interfaces com Next.js/TypeScript/Tailwind CSS e estudos de APIs C#/.NET. Não apresento o projeto como aplicativo lançado ou finalizado. [Exemplo de código público da API](https://github.com/Nevez06/ProjetoEventX2).
+- **ScanPlant (projeto em equipe):** participação em desenvolvimento colaborativo de um aplicativo React Native + Expo e API ASP.NET Core/.NET 8 com PostgreSQL. Não reivindico autoria individual de todas as funcionalidades. [Repositório](https://github.com/Nevez06/ScanPlant).
 - [GranjaEggMaster](https://nevez06.github.io/Granja/) — interface web para acompanhamento de produção. [Código](https://github.com/Nevez06/Granja).
 - [Info Cursos](https://nevez06.github.io/infocursos/) — interface web sobre cursos de tecnologia. [Código](https://github.com/Nevez06/infocursos).
 
