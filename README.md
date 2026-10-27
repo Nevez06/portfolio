@@ -33,3 +33,7 @@ Os documentos consultados incluem **10 certificados/declarações de cursos livr
 **João Antônio Neves** · Jales/SP  
 E-mail: [joaoantonioneves487@gmail.com](mailto:joaoantonioneves487@gmail.com)  
 GitHub: [@Nevez06](https://github.com/Nevez06)
+
+## Padrões de design (GradientDeck)
+
+A skill [GradientDeck](https://github.com/VenoM9078/gradientdeck-skill), de licença MIT, está incluída em [`.agents/skills/gradientdeck/`](.agents/skills/gradientdeck/SKILL.md) para ser usada por agentes de código como o Codex na manutenção do portfólio. Ela orienta decisões de UX, UI, acessibilidade e revisão; **não é uma biblioteca executada no GitHub Pages**. A identidade do site está documentada em [`DESIGN.md`](DESIGN.md), com decisões em [`.gradientdeck/decisions.md`](.gradientdeck/decisions.md).
