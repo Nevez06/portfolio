@@ -41,6 +41,26 @@ html,body{overflow-x:hidden}
 .eventx-preview-title{font-size:clamp(23px,3vw,37px);font-weight:800;line-height:1.12;max-width:350px;margin:42px 0 12px}.eventx-preview-sub{font-size:14px;color:#c3bbdc;max-width:345px;line-height:1.6}.eventx-preview-row{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.eventx-preview-row span{font-size:11px;background:#40345e;padding:8px 11px;border-radius:9px}.eventx-preview-note{font-size:10px;color:#b5a9cc;border-top:1px solid #554866;padding-top:14px}
 .project .scanplant-art{min-height:255px}.project .scanplant-phone{transform:scale(.72) rotate(-8deg);transform-origin:center}.project .project-scanplant{min-height:280px}
 @media(max-width:650px){.project-eventx{padding:22px 16px;min-height:300px}.eventx-mock{padding:22px}.eventx-preview-title{margin-top:28px}.project .scanplant-art{min-height:250px}}
+
+/* A ficha do EventX informa o estágio real do projeto, sem simular uma interface funcional. */
+.hero-record{padding:0;min-width:0;--record-space-sm:12px;--record-space-md:22px;--record-space-lg:32px}
+.project-record{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,3.4vw,42px);box-shadow:var(--shadow);color:var(--text)}
+.record-top{display:flex;align-items:center;justify-content:space-between;gap:var(--record-space-md);margin-bottom:var(--record-space-lg)}
+.record-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,3vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1.1}
+.record-status{color:var(--text);font-size:12px;font-weight:700;border:1px solid var(--line);border-radius:100px;padding:8px var(--record-space-sm);line-height:1.4;text-align:center}
+.record-intro{font-size:16px;line-height:1.65;color:var(--text);margin-bottom:var(--record-space-lg);max-width:43ch}
+.record-details{margin:0;padding:0;border-top:1px solid var(--line)}
+.record-details>div{display:grid;grid-template-columns:minmax(115px,34%) 1fr;align-items:start;gap:var(--record-space-sm);border-bottom:1px solid var(--line);padding:17px 0}
+.record-details dt{color:var(--muted);font-size:13px;font-weight:600;line-height:1.5}
+.record-details dd{margin:0;font-size:14px;font-weight:700;line-height:1.55;overflow-wrap:anywhere}
+.record-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:var(--record-space-md);padding-top:var(--record-space-lg)}
+.record-bottom>span{color:var(--muted);font-size:12px;line-height:1.5}
+.record-bottom>a{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:5px;padding:10px 0;min-height:44px}
+.record-bottom>a:hover{text-decoration-thickness:2px}
+[data-theme=light] .record-bottom>a{color:#456f21}
+@media(max-width:860px){.hero-record{max-width:620px;padding:0;margin:0;width:100%}}
+@media(max-width:520px){.record-top{align-items:flex-start;flex-direction:column;gap:var(--record-space-sm)}.record-details>div{grid-template-columns:1fr;gap:4px}.record-bottom{gap:var(--record-space-sm)}.project-record{padding:24px 20px}}
+@media(prefers-reduced-motion:reduce){.record-bottom>a{scroll-behavior:auto}}
 </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"João Antônio Neves","url":"https://nevez06.github.io/portfolio/","sameAs":["https://github.com/Nevez06"],"email":"joaoantonioneves487@gmail.com","jobTitle":"Estudante de Análise e Desenvolvimento de Sistemas","knowsAbout":["JavaScript","React","React Native","C#","ASP.NET Core","PostgreSQL","APIs REST"]}</script>
 </head>
@@ -60,17 +80,22 @@ html,body{overflow-x:hidden}
     <section class="hero container" id="inicio">
       <div class="hero-copy"><div class="availability"><span class="pulse" aria-hidden="true"></span> Aberto a estágio, vagas júnior e projetos freelance</div>
         <p class="hero-kicker">Olá, eu sou João Antônio Neves <span aria-hidden="true">✳</span></p>
-        <h1>Desenvolvo ideias em <em>software que funciona.</em></h1>
+        <h1>Desenvolvo interfaces e <em>APIs para a web.</em></h1>
         <p class="hero-lead">Estudante de Análise e Desenvolvimento de Sistemas na Fatec, com formação técnica em Desenvolvimento de Sistemas pela ETEC. Construo projetos web e mobile, conectando interfaces, APIs e bancos de dados.</p>
         <div class="hero-ctas"><a class="button button-primary" href="#projetos">Explorar projetos <span aria-hidden="true">↘</span></a><a class="button button-secondary" href="https://github.com/Nevez06" target="_blank" rel="noopener noreferrer">Meu GitHub <span aria-hidden="true">↗</span></a></div>
         <div class="hero-meta"><span><span class="meta-icon">⌁</span> Jales · São Paulo</span><span><span class="meta-icon">⌘</span> React · .NET · PostgreSQL</span></div>
       </div>
-      <div class="hero-visual hero-code-visual" aria-label="Demonstração ilustrativa de desenvolvimento de software">
-        <div class="code-window"><div class="code-window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>eventX / protótipo pessoal</span><span>⌘</span></div>
-          <div class="code-tabs"><span class="selected">eventx.ts</span><span>interface.tsx</span></div>
-          <div class="code-body"><div><span class="ln">01</span><span class="syntax-muted">// ideia iniciada, ainda não concluída</span></div><div><span class="ln">02</span><span class="syntax-violet">const</span> projeto = {</div><div><span class="ln">03</span>&nbsp;&nbsp;<span class="syntax-green">nome</span>: <span class="syntax-yellow">'EventX'</span>,</div><div><span class="ln">04</span>&nbsp;&nbsp;<span class="syntax-green">interface</span>: <span class="syntax-yellow">'Next.js'</span>,</div><div><span class="ln">05</span>&nbsp;&nbsp;<span class="syntax-green">estudosApi</span>: <span class="syntax-yellow">'C#/.NET'</span>,</div><div><span class="ln">06</span>&nbsp;&nbsp;<span class="syntax-green">status</span>: <span class="syntax-yellow">'não concluído'</span></div><div><span class="ln">07</span>};</div><div><span class="ln">08</span>&nbsp;</div><div><span class="ln">09</span><span class="syntax-violet">export default</span> projeto;</div></div>
-          <div class="code-footer"><span class="code-online">●</span> Projeto em desenvolvimento interrompido <span>UTF-8 · JS</span></div>
-        </div><div class="code-note">Visual ilustrativo — protótipo sem versão final publicada</div>
+      <div class="hero-visual hero-record" aria-label="Registro de desenvolvimento do EventX">
+        <article class="project-record">
+          <div class="record-top"><span class="record-title">EventX</span><span class="record-status">Protótipo não concluído</span></div>
+          <p class="record-intro">Comecei uma plataforma para criar e explorar eventos. O trabalho ficou inacabado, mas os protótipos mostram o que estudei e construí.</p>
+          <dl class="record-details">
+            <div><dt>Interface iniciada</dt><dd>Next.js, TypeScript e Tailwind CSS</dd></div>
+            <div><dt>Estudos de API</dt><dd>C# / ASP.NET Core</dd></div>
+            <div><dt>Entrega atual</dt><dd>Protótipos de estudo; não há produto lançado</dd></div>
+          </dl>
+          <div class="record-bottom"><span>Projeto iniciado por mim · desenvolvimento interrompido</span><a href="https://github.com/Nevez06/ProjetoEventX2" target="_blank" rel="noopener noreferrer">Consultar código público <span aria-hidden="true">↗</span></a></div>
+        </article>
       </div>
     </section>
     <div class="container"><div class="ticker" aria-label="Tecnologias utilizadas"><span>JavaScript</span><span>TypeScript</span><span>React</span><span>React Native</span><span>ASP.NET Core</span><span>PostgreSQL</span><span>Git &amp; GitHub</span></div></div>
